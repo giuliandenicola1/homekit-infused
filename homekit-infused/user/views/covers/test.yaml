@@ -1,0 +1,48 @@
+- type: vertical-stack
+  cards:
+    - !include
+      - '../../../base/templates/other/title-text.yaml'
+      - name: Kleine Kamer
+    - type: horizontal-stack
+      cards:
+        - !include ../../../base/includes/gap.yaml
+        - !include
+          - '../../../base/templates/button/button.yaml'
+          - entity: light.office_led_lampen
+            label: !include ../../../base/includes/brightness-label.yaml
+            grid:
+              '!include ../../../base/includes/light-devices-grid.yaml'
+            template: '../popup-cards/light-rgb.yaml'
+        - !include
+          - '../../../base/templates/button/button.yaml'
+          - entity: light.kleine_kamer
+            label: !include ../../../base/includes/brightness-label.yaml
+            grid:
+              '!include ../../../base/includes/light-devices-grid.yaml'
+            template: '../popup-cards/light-color-temp.yaml'
+        - !include
+          - '../../../base/templates/button/button.yaml'
+          - entity: light.kleine_kamer
+            label: !include ../../../base/includes/brightness-label.yaml
+            grid:
+              '!include ../../../base/includes/light-devices-grid.yaml'
+            template: '../popup-cards/light-color-temp.yaml'
+        - !include ../../../base/includes/gap.yaml
+    - type: horizontal-stack
+      cards:
+        - !include ../../../base/includes/gap.yaml
+        - !include
+          - '../../../base/templates/button/button.yaml'
+          - entity: light.office_led_lampen
+            label: !include ../../../base/includes/brightness-label.yaml
+            grid:
+              '!include ../../../base/includes/light-devices-grid.yaml'
+            template: '../popup-cards/light-rgb.yaml'
+        - !include
+          - '../../../base/templates/button/button.yaml'
+          - entity: light.kleine_kamer
+            label: !include ../../../base/includes/brightness-label.yaml
+            grid:
+              '!include ../../../base/includes/light-devices-grid.yaml'
+            template: '../popup-cards/light-color-temp.yaml'
+        - !include ../../../base/includes/gap.yaml

@@ -1,0 +1,106 @@
+- type: vertical-stack
+  cards:
+    - !include
+      - '../../../base/templates/other/title-text.yaml'
+      - name: Lights
+    - type: horizontal-stack
+      cards:
+        - !include ../../../base/includes/gap.yaml
+        - !include
+          - '../../../base/templates/button/service-call.yaml'
+          - entity: input_boolean.scene_dagverlichting
+            name: Dag
+            label: Verlichting
+            icon: mdi:weather-sunny
+            service_entity: scene.dagverlichting
+        - !include
+          - '../../../base/templates/button/service-call.yaml'
+          - entity: input_boolean.scene_avondverlichting
+            name: Avond
+            label: Verlichting
+            icon: mdi:weather-sunset-down
+            service_entity: scene.avondverlichting
+        - !include
+          - '../../../base/templates/button/service-call.yaml'
+          - entity: input_boolean.scene_nachtverlichting
+            name: Nacht
+            label: Verlichting
+            icon: mdi:weather-night
+            service_entity: scene.nachtverlichting
+        - !include ../../../base/includes/gap.yaml
+    - type: horizontal-stack
+      cards:
+        - !include ../../../base/includes/gap.yaml
+        - !include
+          - '../../../base/templates/button/service-call.yaml'
+          - entity: input_boolean.dummy1
+            name: Film Kijken
+            icon: mdi:movie-open
+            service_entity: scene.living_movie
+        - !include
+          - '../../../base/templates/button/service-call.yaml'
+          - entity: group.scene_schoonmaken_on
+            name: Alle lampen
+            label: Inschakelen
+            icon: mdi:lightbulb-multiple
+            service_entity: scene.schoonmaken
+        - !include
+          - '../../../base/templates/button/service-call.yaml'
+          - entity: input_boolean.scene_lichtuit
+            name: Alle Lampen
+            label: Uitschakelen
+            icon: mdi:lightbulb-multiple-off-outline
+            service_entity: scene.lichtuit
+        - !include ../../../base/includes/gap.yaml
+- type: vertical-stack
+  cards:
+    - !include
+      - '../../../base/templates/other/title-text.yaml'
+      - name: Other Scenes
+    - type: horizontal-stack
+      cards:
+        - !include ../../../base/includes/gap.yaml
+        - !include
+          - '../../../base/templates/button/service-call.yaml'
+          - entity: group.scene_koken_on
+            name: Koken
+            icon: mdi:chef-hat
+            service_entity: scene.koken
+        - !include
+          - '../../../base/templates/button/service-call.yaml'
+          - entity: group.scene_wassen_on
+            name: Wassen
+            icon: mdi:washing-machine
+            service_entity: scene.wassen
+        - !include
+          - '../../../base/templates/button/service-call.yaml'
+          - entity: group.scene_naarbed
+            name: Naar Bed
+            icon: mdi:bed-king
+            service_entity: scene.naarbed
+        - !include ../../../base/includes/gap.yaml
+    - type: horizontal-stack
+      cards:
+        - !include ../../../base/includes/gap.yaml
+        - !include
+          - '../../../base/templates/button/service-call.yaml'
+          - entity: input_boolean.scene_klaar_met_koken
+            name: Klaar met
+            label: Koken
+            icon: mdi:power
+            service_entity: scene.klaar_met_koken
+        - !include
+          - '../../../base/templates/button/service-call.yaml'
+          - entity: input_boolean.scene_klaar_met_wassen
+            name: Klaar met
+            label: Wassen
+            icon: mdi:power
+            service_entity: scene.klaar_met_wassen
+        - !include
+          - '../../../base/templates/button/service-call.yaml'
+          - entity: input_boolean.scene_welterusten
+            name: Welterusten
+            label: Alles Uit
+            icon: mdi:sleep
+            service_entity: scene.welterusten
+        - !include ../../../base/includes/gap.yaml

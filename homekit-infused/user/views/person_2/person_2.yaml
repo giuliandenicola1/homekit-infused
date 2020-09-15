@@ -1,0 +1,309 @@
+- type: conditional
+  conditions:
+    - entity: input_select.person_2
+      state: "Location"
+  card:
+    type: custom:layout-card
+    max_columns: 3
+    cards:
+      - type: vertical-stack
+        cards:
+          - !include
+            - '../../../base/templates/other/title-text.yaml'
+            - name: Travel Times
+          - type: horizontal-stack
+            cards:
+              - !include ../../../base/includes/gap.yaml
+              - type: custom:ha-card-waze-travel-time
+                style: |
+                  ha-card {
+                    background: var(--paper-card-background-color);
+                    --paper-item-icon-color: var(--paper-item-icon-color);
+                    border-radius: var(--border-radius);
+                    box-shadow: var(--box-shadow);
+                    font-family: Helvetica;
+                    font-size: 12px;
+                    opacity: 0.8;
+                    overflow: hidden;
+                  }
+                  .ha-card-waze td {
+                    color: var(--primary-text-color) !important;
+                  }
+                unit: km
+                columns:
+                  - to
+                  - duration
+                  - distance
+                  - icon
+                header: 'false'
+                destinations:
+                  - entity: sensor.reistijd_jimmy
+                    to: "Home"
+                  - entity: sensor.reistijd_jimmy_work
+                    to: "Work"
+                  - entity: sensor.reistijd_jimsteph
+                    to: "Stephanie"
+              - !include ../../../base/includes/gap.yaml
+      - type: vertical-stack
+        cards:
+          - !include
+            - '../../../base/templates/other/title-text.yaml'
+            - name: Current Location
+          - type: horizontal-stack
+            cards:
+              - !include ../../../base/includes/gap.yaml
+              - type: map
+                style: |
+                  ha-card {
+                    border-radius: var(--border-radius);
+                    box-shadow: var(--box-shadow);
+                    font-family: Helvetica;
+                    font-size: 12px;
+                    opacity: 0.8;
+                    overflow: hidden;
+                  }
+                aspect_ratio: 4x5
+                default_zoom: 15
+                entities:
+                  - person.jimmy
+              - !include ../../../base/includes/gap.yaml   
+- type: conditional
+  conditions:
+    - entity: input_select.person_2
+      state: "Calendar"
+  card:
+    type: custom:layout-card
+    max_columns: 3
+    cards:
+      - type: vertical-stack
+        cards:
+          - !include
+            - '../../../base/templates/other/title-text.yaml'
+            - name: Personal Agenda
+          - type: horizontal-stack
+            cards:
+              - !include ../../../base/includes/gap.yaml
+              - type: custom:calendar-card
+                style: |
+                  ha-card {
+                    border-radius: var(--border-radius);
+                    box-shadow: var(--box-shadow);
+                    font-family: Helvetica;
+                    font-size: 12px;
+                    opacity: 0.8;
+                    overflow: hidden;
+                  }
+                numberOfDays: 14
+                hideHeader: true
+                entities:
+                  - calendar.jimmy
+                showColors: true
+              - !include ../../../base/includes/gap.yaml  
+      - type: vertical-stack
+        cards:
+          - !include
+            - '../../../base/templates/other/title-text.yaml'
+            - name: Family Agenda
+          - type: horizontal-stack
+            cards:
+              - !include ../../../base/includes/gap.yaml
+              - type: custom:calendar-card
+                style: |
+                  ha-card {
+                    border-radius: var(--border-radius);
+                    box-shadow: var(--box-shadow);
+                    font-family: Helvetica;
+                    font-size: 12px;
+                    opacity: 0.8;
+                    overflow: hidden;
+                  }
+                numberOfDays: 14
+                hideHeader: true
+                entities:
+                  - calendar.family
+                showColors: true
+              - !include ../../../base/includes/gap.yaml  
+- type: conditional
+  conditions:
+    - entity: input_select.person_2
+      state: "Vehicle"
+  card:
+    type: custom:layout-card
+    max_columns: 3
+    cards:
+      - type: vertical-stack
+        cards:
+          - !include
+            - '../../../base/templates/other/title-text.yaml'
+            - name: Image
+          - type: horizontal-stack
+            cards:
+              - !include ../../../base/includes/gap.yaml
+              - type: picture
+                style: |
+                  ha-card {
+                    border-radius: var(--border-radius);
+                    box-shadow: var(--box-shadow);
+                  }
+                image: /local/images/peugeot207.jpg
+              - !include ../../../base/includes/gap.yaml
+      - type: vertical-stack
+        cards:
+          - !include
+            - '../../../base/templates/other/title-text.yaml'
+            - name: General Information
+          - type: horizontal-stack
+            cards:
+              - !include ../../../base/includes/gap.yaml
+              - type: entities
+                style: |
+                  ha-card {
+                    border-radius: var(--border-radius);
+                    box-shadow: var(--box-shadow);
+                    font-family: Helvetica;
+                    font-size: 12px;
+                    opacity: 0.8;
+                  }
+                entities:  
+                  - entity: sensor.kenteken_jimmy
+                    name: Kenteken
+                    icon: mdi:numeric  
+                  - entity: sensor.peugeot_207_expdate
+                    name: APK
+                    icon: mdi:tools
+                  - entity: sensor.peugeot_207_insured
+                    name: Verzekerd
+                    icon: mdi:shield-car
+              - !include ../../../base/includes/gap.yaml
+      - type: vertical-stack
+        cards:
+          - !include
+            - '../../../base/templates/other/title-text.yaml'
+            - name: Maintenance
+          - type: horizontal-stack
+            cards:
+              - !include ../../../base/includes/gap.yaml
+              - type: 'custom:vertical-stack-in-card'
+                cards:
+                  - !include
+                    - '../../../user/templates/check-button.yaml'
+                    - title: Olie
+                      entity: sensor.peugeot_207_olie
+                      value_1: 3 months
+                      value_2: 6 months
+                      value_3: 9 months
+                  - !include
+                    - '../../../user/templates/check-button.yaml'
+                    - title: Banden
+                      entity: sensor.peugeot_207_banden
+                      value_1: 3 months
+                      value_2: 6 months
+                      value_3: 9 months
+                  - !include
+                    - '../../../user/templates/check-button.yaml'
+                    - title: Wassen
+                      entity: sensor.peugeot_207_clean
+                      value_1: 1 month
+                      value_2: 3 months
+                      value_3: 6 months
+                  - !include
+                    - '../../../user/templates/check-button.yaml'
+                    - title: Stofzuigen
+                      entity: sensor.peugeot_207_stof
+                      value_1: 1 month
+                      value_2: 3 months
+                      value_3: 6 months
+                  - !include
+                    - '../../../user/templates/check-button.yaml'
+                    - title: Ruiten
+                      entity: sensor.peugeot_207_window
+                      value_1: 1 month
+                      value_2: 3 months
+                      value_3: 6 months
+              - !include ../../../base/includes/gap.yaml
+      - type: vertical-stack
+        cards:
+          - !include
+            - '../../../base/templates/other/title-text.yaml'
+            - name: Other Information
+          - type: horizontal-stack
+            cards:
+              - !include ../../../base/includes/gap.yaml
+              - type: entities
+                style: |
+                  ha-card {
+                    border-radius: var(--border-radius);
+                    box-shadow: var(--box-shadow);
+                    font-family: Helvetica;
+                    font-size: 12px;
+                    opacity: 0.8;
+                  }
+                entities:  
+                  - entity: sensor.euro_95_e10_advies
+                    name: Adviesprijs E10 (Euro 95) 
+                    icon: mdi:gas-station  
+                  - entity: sensor.car_wash
+                    name: Kan ik de auto wassen?
+                    icon: mdi:car-wash
+              - !include ../../../base/includes/gap.yaml
+      - type: vertical-stack
+        cards:
+          - !include
+            - '../../../base/templates/other/title-text.yaml'
+            - name: Help
+          - type: horizontal-stack
+            cards:
+              - !include ../../../base/includes/gap.yaml
+              - type: entities
+                style: |
+                  ha-card {
+                    border-radius: var(--border-radius);
+                    box-shadow: var(--box-shadow);
+                    font-family: Helvetica;
+                    font-size: 12px;
+                    opacity: 0.8;
+                  }
+                entities:              
+                  - type: weblink
+                    style: |
+                      a {
+                        color: var(--primary-text-color) !important;
+                      }
+                    name: ANWB Bellen
+                    url: tel:+31882692222
+                    icon: 'fal:phone'  
+              - !include ../../../base/includes/gap.yaml
+- type: conditional
+  conditions:
+    - entity: input_select.person_2
+      state: "Overview"
+  card:
+    type: custom:layout-card
+    max_columns: 3
+    cards:
+      - type: vertical-stack
+        cards:
+          - !include
+            - '../../../base/templates/other/title-text.yaml'
+            - name: Spotify Player
+          - type: horizontal-stack
+            cards:
+              - !include ../../../base/includes/gap.yaml
+              - type: media-control
+                style: |
+                  ha-card {
+                    border-radius: var(--border-radius);
+                    box-shadow: var(--box-shadow);
+                  }
+                entity: media_player.spotify_jimmy_schings
+              - !include ../../../base/includes/gap.yaml
+      - type: vertical-stack
+        cards:
+          - !include
+            - '../../../base/templates/other/title-text.yaml'
+            - name: Playlists
+          - type: horizontal-stack
+            cards:
+              - !include ../../../base/includes/gap.yaml
+              - type: 'custom:spotify-card'
+              - !include ../../../base/includes/gap.yaml

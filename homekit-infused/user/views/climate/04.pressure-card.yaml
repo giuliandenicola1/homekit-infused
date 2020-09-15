@@ -1,0 +1,10 @@
+- type: vertical-stack
+  cards:
+    - !include
+      - '../../../base/templates/other/title-text.yaml'
+      - name: Air Pressure
+    - !include
+      - '../../../base/templates/auto-fill/auto-fill-sensors-template.yaml'
+      - type: pressure
+        columns: 3
+        sort: name

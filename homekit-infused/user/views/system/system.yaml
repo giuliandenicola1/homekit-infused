@@ -1,0 +1,271 @@
+          - type: vertical-stack
+            cards:
+              - !include
+                - '../../../base/templates/other/title-text.yaml'
+                - name: Unraid Systeem
+              - type: horizontal-stack
+                cards:
+                  - !include ../../../base/includes/gap.yaml
+                  - type: vertical-stack
+                    cards:
+                      - type: custom:vertical-stack-in-card
+                        style: |
+                          ha-card {
+                            border-radius: var(--border-radius);
+                          }
+                        cards:
+                          - type: custom:bar-card
+                            positions:
+                              indicator: 'off'
+                              minmax: inside
+                              title: inside
+                              value: inside
+                            title: CPU Usage
+                            style: |-
+                              .contentbar-direction-right {
+                               flex-direction: column;
+                              }
+                              .min-direction-right {
+                                margin: 0px;
+                                margin-left: 4px;
+                                margin-right: auto;
+                                margin-bottom: -20px;
+                                bottom: 10px;
+                              }
+                                bar-card-value {
+                                margin: 0px;
+                              }
+                              bar-card-name {
+                                margin: 0px;
+                              }
+                              bar-card-max {
+                                margin: 0px;
+                                margin-left: auto;
+                                margin-top: -20px;
+                                top: 10px;
+                              }
+                              bar-card-divider {
+                                display: none;
+                              }
+                              .card-header {
+                                font-size: 16px;
+                                color: '#727272' !important;
+                                font-weight: 500;
+                              }
+                            entities: 
+                              - sensor.processor_use
+                            limit_value: true
+                            max: 100
+                            min: 0
+                            severity:
+                              - color: Green
+                                from: 0
+                                to: 50
+                              - color: Orange
+                                from: 50
+                                to: 75
+                              - color: Crimson
+                                from: 75
+                                to: 100
+                          - type: custom:bar-card
+                            positions:
+                              indicator: 'off'
+                              minmax: inside
+                              title: inside
+                              value: inside
+                            style: |-
+                              .contentbar-direction-right {
+                               flex-direction: column;
+                              }
+                              .min-direction-right {
+                                margin: 0px;
+                                margin-left: 4px;
+                                margin-right: auto;
+                                margin-bottom: -20px;
+                                bottom: 10px;
+                              }
+                                bar-card-value {
+                                margin: 0px;
+                              }
+                              bar-card-name {
+                                margin: 0px;
+                              }
+                              bar-card-max {
+                                margin: 0px;
+                                margin-left: auto;
+                                margin-top: -20px;
+                                top: 10px;
+                              }
+                              bar-card-divider {
+                                display: none;
+                              }
+                            entities: 
+                              - sensor.memory_use
+                            limit_value: true
+                            max: 30517.6
+                            min: 0
+                            severity:
+                              - color: Green
+                                from: 0
+                                to: 10000
+                              - color: Orange
+                                from: 10000
+                                to: 20000
+                              - color: Crimson
+                                from: 20000
+                                to: 30517.6
+                      - type: entity
+                        style: |
+                          ha-card {
+                            border-radius: var(--border-radius);
+                            box-shadow: var(--box-shadow);
+                            text-align: center;
+                          }
+                          .value {
+                            font-size: 20px !important;
+                          }
+                        entity: binary_sensor.schings_server
+                        attribute: diskSpace
+                        name: Total All Disks
+                        icon: mdi:harddisk
+                      - type: custom:vertical-stack-in-card
+                        style: |
+                          ha-card {
+                            border-radius: var(--border-radius);
+                          }
+                        cards:
+                          - type: custom:bar-card
+                            positions:
+                              indicator: 'off'
+                              minmax: inside
+                              title: inside
+                              value: inside
+                            title: Cache Disk Usage
+                            style: |-
+                              .contentbar-direction-right {
+                               flex-direction: column;
+                              }
+                              .min-direction-right {
+                                margin: 0px;
+                                margin-left: 4px;
+                                margin-right: auto;
+                                margin-bottom: -20px;
+                                bottom: 10px;
+                              }
+                                bar-card-value {
+                                margin: 0px;
+                              }
+                              bar-card-name {
+                                margin: 0px;
+                              }
+                              bar-card-max {
+                                margin: 0px;
+                                margin-left: auto;
+                                margin-top: -20px;
+                                top: 10px;
+                              }
+                              bar-card-divider {
+                                display: none;
+                              }
+                              .card-header {
+                                font-size: 16px;
+                                color: '#727272' !important;
+                                font-weight: 500;
+                              }
+                            entities: 
+                              - sensor.disk_use_percent_home
+                            limit_value: true
+                            max: 100
+                            min: 0
+                            severity:
+                              - color: Green
+                                from: 0
+                                to: 50
+                              - color: Orange
+                                from: 50
+                                to: 75
+                              - color: Crimson
+                                from: 75
+                                to: 100
+                  - !include ../../../base/includes/gap.yaml
+          - type: vertical-stack
+            cards:
+              - !include
+                - '../../../base/templates/other/title-text.yaml'
+                - name: Running Docker Containers
+              - type: horizontal-stack
+                cards:
+                  - !include ../../../base/includes/gap.yaml
+                  - type: custom:auto-entities
+                    filter:
+                      include:
+                        - entity_id: '*docker*'
+                          state: "on"
+                    show_empty: false
+                    sort:
+                      method: name
+                      numeric: true
+                    card:
+                      type: glance
+                      style: |
+                        ha-card {
+                          border-radius: var(--border-radius);
+                          box-shadow: var(--box-shadow);
+                        }
+                      show_state: false
+                      columns: 3
+                  - !include ../../../base/includes/gap.yaml
+          - type: vertical-stack
+            cards:
+              - !include
+                - '../../../base/templates/other/title-text.yaml'
+                - name: Stopped Docker Containers
+              - type: horizontal-stack
+                cards:
+                  - !include ../../../base/includes/gap.yaml
+                  - type: custom:auto-entities
+                    filter:
+                      include:
+                        - entity_id: '*docker*'
+                          state: "off"
+                    show_empty: false
+                    sort:
+                      method: name
+                      numeric: true
+                    card:
+                      type: glance
+                      style: |
+                        ha-card {
+                          border-radius: var(--border-radius);
+                          box-shadow: var(--box-shadow);
+                        }
+                      show_state: false
+                      columns: 3
+                  - !include ../../../base/includes/gap.yaml
+          - type: vertical-stack
+            cards:
+              - !include
+                - '../../../base/templates/other/title-text.yaml'
+                - name: Virtual Machines
+              - type: horizontal-stack
+                cards:
+                  - !include ../../../base/includes/gap.yaml
+                  - type: custom:auto-entities
+                    filter:
+                      exclude:
+                        - entity_id: '*usb*'
+                      include:
+                        - entity_id: 'switch.schings_vm*'
+                    show_empty: false
+                    sort:
+                      method: name
+                      numeric: true
+                    card:
+                      type: glance
+                      style: |
+                        ha-card {
+                          border-radius: var(--border-radius);
+                          box-shadow: var(--box-shadow);
+                        }
+                      columns: 3
+                  - !include ../../../base/includes/gap.yaml

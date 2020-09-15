@@ -1,0 +1,49 @@
+
+- type: vertical-stack
+  cards:
+    - !include
+      - '../../../base/templates/other/title-text.yaml'
+      - name: Family Calendar
+    - type: horizontal-stack
+      cards:
+        - !include ../../../base/includes/gap.yaml
+        - type: custom:calendar-card
+          style: |
+            ha-card {
+              border-radius: var(--border-radius);
+              box-shadow: var(--box-shadow);
+              font-family: Helvetica;
+              font-size: 12px;
+              opacity: 0.8;
+              overflow: hidden;
+            }
+          numberOfDays: 60
+          dateTopFormat: DD/MM
+          hideHeader: true
+          entities:
+            - calendar.family
+          showColors: true
+        - !include ../../../base/includes/gap.yaml
+    - !include
+      - '../../../base/templates/other/title-text.yaml'
+      - name: Birthday Calendar
+    - type: horizontal-stack
+      cards:
+        - !include ../../../base/includes/gap.yaml
+        - type: custom:calendar-card
+          style: |
+            ha-card {
+              border-radius: var(--border-radius);
+              box-shadow: var(--box-shadow);
+              font-family: Helvetica;
+              font-size: 12px;
+              opacity: 0.8;
+              overflow: hidden;
+            }
+          numberOfDays: 60
+          dateTopFormat: DD/MM
+          hideHeader: true
+          entities:
+            - calendar.contacts
+          showColors: true
+        - !include ../../../base/includes/gap.yaml

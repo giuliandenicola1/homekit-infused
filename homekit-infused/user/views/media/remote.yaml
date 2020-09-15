@@ -1,0 +1,18 @@
+- type: conditional
+  conditions:
+    - entity: input_select.media_view_selector
+      state: "Remote Control"
+  card:
+    type: vertical-stack
+    cards:
+      - !include
+        - '../../../base/templates/other/title-text.yaml'
+        - name: Woonkamer
+      - type: horizontal-stack
+        cards:
+          - !include ../../../base/includes/gap.yaml
+          - !include
+            - '../../../base/templates/other/remote-control.yaml'
+            - entity_media_player_sound: media_player.samsung_ue65ku6000
+              entity_media_player: media_player.nvidia_s_h_i_e_l_d_tv_pro
+          - !include ../../../base/includes/gap.yaml

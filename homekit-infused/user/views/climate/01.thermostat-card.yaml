@@ -1,0 +1,9 @@
+- type: vertical-stack
+  cards:
+    - !include
+      - '../../../base/templates/other/title-text.yaml'
+      - name: Thermostats
+    - !include
+      - '../../../base/templates/auto-fill/auto-fill-thermostat-template.yaml'
+      - lock: false
+        columns: 3

@@ -1,0 +1,99 @@
+- type: vertical-stack
+  cards:
+    - !include
+      - '../../../base/templates/other/title-text.yaml'
+      - name: Current Location
+    - type: horizontal-stack
+      cards:
+        - !include ../../../base/includes/gap.yaml
+        - type: map
+          style: |
+            ha-card {
+              border-radius: var(--border-radius);
+            }
+          aspect_ratio: 4x3
+          default_zoom: 15
+          entities:
+            - person.tala
+        - !include ../../../base/includes/gap.yaml
+- type: vertical-stack
+  cards:
+    - !include
+      - '../../../base/templates/other/title-text.yaml'
+      - name: Grooming
+    - type: horizontal-stack
+      cards:
+        - !include ../../../base/includes/gap.yaml
+        - type: 'custom:vertical-stack-in-card'
+          cards:
+            - !include
+              - '../../../user/templates/check-button.yaml'
+              - title: Borstelen
+                entity: sensor.animals_tala_borstel
+                value_1: 3 days
+                value_2: 6 days
+                value_3: 9 days
+            - !include
+              - '../../../user/templates/check-button.yaml'
+              - title: Vaccinaties
+                entity: sensor.animals_tala_vaccinations
+                value_1: 3 months
+                value_2: 6 months
+                value_3: 9 months
+            - !include
+              - '../../../user/templates/check-button.yaml'
+              - title: Vlooien
+                entity: sensor.animals_tala_fleadrops
+                value_1: 1 month
+                value_2: 3 months
+                value_3: 6 months
+            - !include
+              - '../../../user/templates/check-button.yaml'
+              - title: Ontwormen
+                entity: sensor.animals_tala_worm
+                value_1: 2 months
+                value_2: 3 months
+                value_3: 4 months
+            - !include
+              - '../../../user/templates/check-button.yaml'
+              - title: Trimmen
+                entity: sensor.animals_tala_trim
+                value_1: 9 months
+                value_2: 12 months
+                value_3: 18 months
+        - !include ../../../base/includes/gap.yaml
+- type: vertical-stack
+  cards:
+    - !include
+      - '../../../base/templates/other/title-text.yaml'
+      - name: Other Information
+    - type: horizontal-stack
+      cards:
+        - !include ../../../base/includes/gap.yaml
+        - type: entities
+          style: |
+            ha-card {
+              border-radius: var(--border-radius);
+              box-shadow: var(--box-shadow);
+              font-family: Helvetica;
+              font-size: 12px;
+              opacity: 0.8;
+            }
+          entities:        
+            - type: weblink
+              style: |
+                a {
+                  color: var(--primary-text-color) !important;
+                }
+              name: Nossek & Verheijden Bellen
+              icon: 'mdi:phone'
+              url: tel:+31402571517
+            - type: weblink
+              style: |
+                a {
+                  color: var(--primary-text-color) !important;
+                }
+              name: Dierenvoeding 
+              icon: 'mdi:earth'
+              url: https://www.zooplus.nl
+        - !include ../../../base/includes/gap.yaml

@@ -1,0 +1,9 @@
+- type: vertical-stack
+  cards:
+    - !include
+      - '../../../base/templates/other/title-text.yaml'
+      - name: Fans
+    - !include
+      - '../../../base/templates/auto-fill/auto-fill-fan-template.yaml'
+      - columns: 3
+        sort: name

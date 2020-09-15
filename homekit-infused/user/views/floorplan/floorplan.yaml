@@ -1,0 +1,17 @@
+- type: vertical-stack
+  cards:
+    - !include
+      - '../../../base/templates/other/title-text.yaml'
+      - name: Simple Floor Plan
+    - type: horizontal-stack
+      cards:
+        - !include ../../../base/includes/gap.yaml
+        - type: picture
+          style: |
+            ha-card {
+              border-radius: var(--border-radius);
+              box-shadow: var(--box-shadow);
+            }
+          aspect_ratio: 1.78
+          image: /local/images/floorplan.jpg
+        - !include ../../../base/includes/gap.yaml

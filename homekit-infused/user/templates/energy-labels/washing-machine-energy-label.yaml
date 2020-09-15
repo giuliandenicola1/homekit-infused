@@ -1,0 +1,1 @@
+"[[[ return `${states['sensor.wasmachine_power'].state} W`; ]]]"

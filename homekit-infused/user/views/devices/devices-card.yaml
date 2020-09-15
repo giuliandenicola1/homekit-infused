@@ -1,0 +1,198 @@
+- type: custom:layout-card
+  max_columns: 3
+  layout: horizontal
+  cards:
+    - type: vertical-stack
+      cards:
+        - !include
+          - '../../../base/templates/other/title-text.yaml'
+          - name: Woonkamer
+        - type: horizontal-stack
+          cards:
+            - !include ../../../base/includes/gap.yaml
+            - !include
+              - '../../../base/templates/button/button.yaml'
+              - entity: switch.receiver
+                grid:
+                  '!include ../../../base/includes/light-devices-grid.yaml'
+            - !include
+              - '../../../base/templates/button/button.yaml'
+              - entity: switch.samsung_tv
+                grid:
+                  '!include ../../../base/includes/light-devices-grid.yaml'
+            - !include
+              - '../../../base/templates/button/button.yaml'
+              - entity: switch.xbox_one
+                grid:
+                  '!include ../../../base/includes/light-devices-grid.yaml'
+                lock: false
+                color: green
+                spin_on: true
+            - !include ../../../base/includes/gap.yaml
+    
+    - type: vertical-stack
+      cards:
+        - !include
+          - '../../../base/templates/other/title-text.yaml'
+          - name: Slaapkamer
+        - type: horizontal-stack
+          cards:
+            - !include ../../../base/includes/gap.yaml
+            - !include
+              - '../../../base/templates/button/button.yaml'
+              - entity: switch.receiver_slaapkamer_2
+                grid:
+                  '!include ../../../base/includes/light-devices-grid.yaml'
+            - !include
+              - '../../../base/templates/button/button.yaml'
+              - entity: switch.tv_slaapkamer
+                grid:
+                  '!include ../../../base/includes/light-devices-grid.yaml'
+            - !include ../../../base/includes/empty-button.yaml
+            - !include ../../../base/includes/gap.yaml
+    
+    - type: vertical-stack
+      cards:
+        - !include
+          - '../../../base/templates/other/title-text.yaml'
+          - name: Kleine Kamer
+        - type: horizontal-stack
+          cards:
+            - !include ../../../base/includes/gap.yaml
+            - !include
+              - '../../../base/templates/button/button.yaml'
+              - entity: switch.monitors_jimmy
+                grid:
+                  '!include ../../../base/includes/light-devices-grid.yaml'
+                lock: true
+            - !include
+              - '../../../base/templates/button/button.yaml'
+              - entity: switch.monitors_stephanie
+                grid:
+                  '!include ../../../base/includes/light-devices-grid.yaml'
+                lock: true
+            - !include
+              - '../../../base/templates/button/button.yaml'
+              - entity: switch.printer
+                grid:
+                  '!include ../../../base/includes/light-devices-grid.yaml'
+                lock: true
+            - !include ../../../base/includes/gap.yaml
+    
+        - type: horizontal-stack
+          cards:
+            - !include ../../../base/includes/gap.yaml
+            - !include
+              - '../../../base/templates/button/button.yaml'
+              - entity: switch.pc_van_jimmy
+                grid:
+                  '!include ../../../base/includes/light-devices-grid.yaml'
+                lock: true
+            - !include
+              - '../../../base/templates/button/button.yaml'
+              - entity: switch.pc_van_stephanie
+                grid:
+                  '!include ../../../base/includes/light-devices-grid.yaml'
+                lock: true
+            - !include
+              - '../../../base/templates/button/button.yaml'
+              - entity: switch.piano
+                grid:
+                  '!include ../../../base/includes/light-devices-grid.yaml'
+            - !include ../../../base/includes/gap.yaml
+    
+    - type: vertical-stack
+      cards:
+        - !include
+          - '../../../base/templates/other/title-text.yaml'
+          - name: Keuken
+        - type: horizontal-stack
+          cards:
+            - !include ../../../base/includes/gap.yaml
+            - !include
+              - '../../../base/templates/button/button.yaml'
+              - entity: switch.afzuigkap
+                grid:
+                  '!include ../../../base/includes/light-devices-grid.yaml'
+                spin_on: true
+                color: DodgerBlue
+            - !include
+              - '../../../base/templates/button/button.yaml'
+              - entity: switch.oven
+                grid:
+                  '!include ../../../base/includes/light-devices-grid.yaml'
+            - !include
+              - '../../../base/templates/button/button.yaml'
+              - entity: switch.airfryer
+                grid:
+                  '!include ../../../base/includes/light-devices-grid.yaml'
+            - !include ../../../base/includes/gap.yaml
+        - type: horizontal-stack
+          cards:
+            - !include ../../../base/includes/gap.yaml
+            - !include
+              - '../../../base/templates/button/button.yaml'
+              - entity: switch.nespresso_apparaat
+                grid:
+                  '!include ../../../base/includes/light-devices-grid.yaml'
+            - !include
+              - '../../../base/templates/button/button.yaml'
+              - entity: switch.cappumaker
+                grid:
+                  '!include ../../../base/includes/light-devices-grid.yaml'
+            - !include
+              - '../../../base/templates/button/button.yaml'
+              - entity: switch.waterkoker
+                grid:
+                  '!include ../../../base/includes/light-devices-grid.yaml'
+            - !include ../../../base/includes/gap.yaml
+        - type: horizontal-stack
+          cards:
+            - !include ../../../base/includes/gap.yaml
+            - !include
+              - '../../../base/templates/button/button.yaml'
+              - entity: switch.vaatwasser
+                grid:
+                  '!include ../../../base/includes/light-devices-grid.yaml'
+                label: "[[[ return `${states['sensor.vaatwasser_power'].state} W`; ]]]"
+            - !include
+              - '../../../base/templates/button/button.yaml'
+              - entity: switch.koelkast_always_on
+                grid:
+                  '!include ../../../base/includes/light-devices-grid.yaml'
+                label: "[[[ return `${states['sensor.koelkast_power'].state} W`; ]]]"
+                lock: true
+            - !include ../../../base/includes/empty-button.yaml
+            - !include ../../../base/includes/gap.yaml
+    
+    - type: vertical-stack
+      cards:
+        - !include
+          - '../../../base/templates/other/title-text.yaml'
+          - name: Bijkeuken
+        - type: horizontal-stack
+          cards:
+            - !include ../../../base/includes/gap.yaml
+            - !include
+              - '../../../base/templates/button/button.yaml'
+              - entity: switch.wasmachine
+                grid:
+                  '!include ../../../base/includes/light-devices-grid.yaml'
+                label: "[[[ return `${states['sensor.wasmachine_power'].state} W`; ]]]"
+            - !include
+              - '../../../base/templates/button/button.yaml'
+              - entity: switch.droger
+                grid:
+                  '!include ../../../base/includes/light-devices-grid.yaml'
+                label: "[[[ return `${states['sensor.droger_power'].state} W`; ]]]"
+            - !include
+              - '../../../base/templates/button/button.yaml'
+              - entity: switch.vriezer_always_on
+                grid:
+                  '!include ../../../base/includes/light-devices-grid.yaml'
+                label: "[[[ return `${states['sensor.power_52'].state} W`; ]]]"
+                lock: true
+            - !include ../../../base/includes/gap.yaml
+
+    - !include ../../../base/includes/empty-button.yaml
+    

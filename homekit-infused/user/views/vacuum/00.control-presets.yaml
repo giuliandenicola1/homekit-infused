@@ -1,0 +1,8 @@
+- type: vertical-stack
+  cards:
+    - !include
+      - '../../../base/templates/other/title-text.yaml'
+      - name: Controls
+    - !include
+      - '../../../base/templates/vacuum/controls.yaml'
+      - entity: vacuum.xiaomi_vacuum_cleaner

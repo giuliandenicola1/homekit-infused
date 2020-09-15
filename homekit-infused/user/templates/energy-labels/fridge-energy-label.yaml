@@ -1,0 +1,1 @@
+"[[[ return `${states['sensor.koelkast_power'].state} W`; ]]]"

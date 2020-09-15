@@ -1,0 +1,71 @@
+- type: conditional
+  conditions:
+    - entity: input_select.media_view_selector
+      state: "Media Players"
+  card:
+    type: vertical-stack
+    cards:
+      - !include
+        - '../../../base/templates/other/title-text.yaml'
+        - name: Spotify
+      - type: horizontal-stack
+        cards:
+          - !include ../../../base/includes/gap.yaml
+          - type: media-control
+            style: |
+              ha-card {
+                border-radius: var(--border-radius);
+                box-shadow: var(--box-shadow);
+              }
+            entity: media_player.spotify_stephanie_schings
+          - !include ../../../base/includes/gap.yaml
+      - type: horizontal-stack
+        cards:
+          - !include ../../../base/includes/gap.yaml
+          - type: media-control
+            style: |
+              ha-card {
+                border-radius: var(--border-radius);
+                box-shadow: var(--box-shadow);
+              }
+            entity: media_player.spotify_jimmy_schings
+          - !include ../../../base/includes/gap.yaml
+
+- type: conditional
+  conditions:
+    - entity: input_select.media_view_selector
+      state: "Media Players"
+  card:
+    type: vertical-stack
+    cards:
+      - !include
+        - '../../../base/templates/other/title-text.yaml'
+        - name: All Media Players
+      - type: horizontal-stack
+        cards:
+          - !include ../../../base/includes/gap.yaml
+          - type: custom:auto-entities
+            filter:
+              exclude:
+                - entity_id: media_player.plex_chrome
+                - entity_id: media_player.2651ab215423234hb
+              include:
+                - group: group.all_media_players
+                  options:
+                    type: media-control
+                    style: |
+                      ha-card {
+                        border-radius: var(--border-radius);
+                        box-shadow: var(--box-shadow);
+                      }
+                    entity: this.entity_id
+            show_empty: false
+            sort:
+              method: name
+              numeric: true
+            card:
+              type: custom:layout-card
+              column_num: 1
+              justify_content: start
+              layout: horizontal
+          - !include ../../../base/includes/gap.yaml

@@ -7,73 +7,116 @@
 # All Radiator Valves or Climate entities (ONLY climate entities can be used here!, if you have a single thermostat put it here as well)
 all_climate_entities:
   entities:
-   # - climate.tado_smart_radiator_thermostat_va1671957504
-   # - climate.tado_smart_radiator_thermostat_va2898201344
+    - climate.woonkamer
+    - climate.kleine_kamer
+    - climate.slaapkamer
+    - climate.keuken
 
 # All Fans (Enter all your fans in here)
-all_fans:
+all_fan_entities:
   entities:
-
-# All Temperature Sensors
-all_temperature_sensors:
-  entities:
-
-# All Humidity Sensors
-all_humidity_sensors:
-  entities:
-
-# All Air Pressure Sensors
-all_air_pressure_sensors:
-  entities:
+    - switch.ventilator
 
 # Window Sensors
-all_window_sensors:
+all_window_sensor_entities:
   entities:
+    - binary_sensor.bijkeukenraam
+    - binary_sensor.kleine_kamerraam
+    - binary_sensor.keukenraam
 
 # Door Sensors
-all_door_sensors:
+all_door_sensor_entities:
   entities:
+    - binary_sensor.voordeur
+    - binary_sensor.woonkamer_deur
+    - binary_sensor.slaapkamer_deur
 
 # Motion Sensors
-all_motion_sensors:
+all_motion_sensor_entities:
   entities:
+    - binary_sensor.motion_gallerij_camera
+    - binary_sensor.motion_bijkeuken
+    - binary_sensor.motion_toilet
+    - binary_sensor.motion_woonkamer_camera
+    - binary_sensor.motion_office
+    - binary_sensor.motion_gang
 
-# Smoke Detectors
-all_smoke_detectors:
+# All Detectors (smoke/gas/fire etc)
+all_detector_entities:
   entities:
+    - binary_sensor.smoke_sensor
 
-# All Binary Sensors (door/window/motion/smoke/gas etc)
-all_binary_sensors:
+# All Binary Sensors (put all your binary sensors here e.g. smoke/gas/fire/door/window/motion etc. You can use this as a counter on the security button)
+all_binary_sensor_entities:
   entities:
+    - binary_sensor.voordeur
+    - binary_sensor.woonkamer_deur
+    - binary_sensor.slaapkamer_deur
+    - binary_sensor.motion_bijkeuken
+    - binary_sensor.motion_toilet
+    - binary_sensor.motion_woonkamer
+    - binary_sensor.motion_office
+    - binary_sensor.motion_gang
+    - binary_sensor.dafang_motion_sensor
+    - binary_sensor.lumi_sensor_smoke
+    
+# All Lights
+all_light_entities:
+  entities:
+    - light.woonkamer_led_lampen
+    - light.gateway_light_7811dcdef324
+    - light.plafond
+    - light.eettafel
+    - light.tafellamp
+    - light.vloerlamp
+    - light.slaapkamer_led_lampen
+    - light.nachtkastje_jimmy
+    - light.nachtkastje_stephanie
+    - light.bed_lamp
+    - light.kast_lamp
+    - light.office_led_lampen
+    - light.kleine_kamer
+    - light.keuken
+    - light.keuken_leds
+    - light.bijkeuken
+    - light.entree_lamp
+    - light.gang_lamp
+    - light.berging
+    - switch.koogeek_sw_056ce9
+    - light.toilet
+    - light.balkon
 
-# All Motion, Smoke, Fire and Gas Sensors
-all_motion_smoke_sensors:
+# All Devices
+all_device_switch_entities:
   entities:
-  
-# All Lights (Used in counters only)
-all_lighting:
-  entities:
-
-# All Devices (Used in counters only)
-all_device_switches:
-  entities:
-
-# All Computers (This isn't used yet, though you can just fill it in)
-all_computers:
-  entities:
-
-# All TV's (Can be shown on the remote button to show the number of tv's)
-all_tvs:
-  entities:
-
-# All Laundry Devices (e.g. washing-machine, tumble-dryer or dishwasher)
-all_laundry_devices:
-  entities:
-
+    - switch.ventilator
+    - switch.receiver
+    - switch.samsung_tv
+    - switch.nespresso_apparaat
+    - switch.receiver_slaapkamer_2
+    - switch.tv_slaapkamer
+    - switch.pc_van_stephanie
+    - switch.pc_van_jimmy
+    - switch.printer
+    - switch.xbox_one
+    - switch.waterkoker
+    - switch.afzuigkap
+    - switch.koelkast_always_on
+    - switch.vriezer_always_on
+    - switch.cappumaker
+    - switch.vaatwasser
+    - switch.airfryer
+    - switch.wasmachine
+    - switch.droger
+    - switch.oven
+    - switch.piano
+    - switch.monitors_jimmy
+    - switch.monitors_stephanie
+    
 # All Covers
-all_covers:
+all_cover_entities:
   entities:
 
 # All Garage Doors
-all_garage_doors:
+all_garage_door_entities:
   entities:

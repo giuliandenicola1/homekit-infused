@@ -1,0 +1,1 @@
+"[[[ return `${states['sensor.droger_power'].state} W`; ]]]"

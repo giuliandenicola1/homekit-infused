@@ -1,0 +1,12 @@
+- type: vertical-stack
+  cards:
+    - !include
+      - '../../../base/templates/other/title-text.yaml'
+      - name: Modus
+    - !include
+      - '../../../base/templates/vacuum/modes.yaml'
+      - name_silent: Silent
+        name_turbo: Turbo
+        name_max: Max
+        name_balanced: Balanced
+        name_mop: Mop

@@ -1,0 +1,54 @@
+- type: vertical-stack
+  cards:
+    - !include
+      - '../../../base/templates/other/title-text.yaml'
+      - name: Automations
+    - type: horizontal-stack
+      cards:
+        - !include ../../../base/includes/gap.yaml
+        - !include
+          - '../../../base/templates/button/button.yaml'
+          - entity: group.film_kijken_automation
+            name: Dim Light
+            icon: mdi:movie
+            label: Movie
+            grid:
+              '!include ../../../user/templates/automations-grid.yaml'
+        - !include
+          - '../../../base/templates/button/button.yaml'
+          - entity: group.deur_notifications
+            name: Door
+            icon: mdi:door
+            label: Notifications
+            grid:
+              '!include ../../../user/templates/automations-grid.yaml' 
+        - !include
+          - '../../../base/templates/button/button.yaml'
+          - entity: group.vaatwasser_starten
+            name: Dishwasher On
+            icon: mdi:dishwasher
+            label: After Laundry
+            grid:
+              '!include ../../../user/templates/automations-grid.yaml' 
+        - !include ../../../base/includes/gap.yaml
+    - type: horizontal-stack
+      cards:
+        - !include ../../../base/includes/gap.yaml
+        - !include
+          - '../../../base/templates/button/button.yaml'
+          - entity: automation.motion_detected_no_one_home_gallerij
+            name: Movement
+            icon: mdi:motion-sensor
+            label: Notification
+            grid:
+              '!include ../../../user/templates/automations-grid.yaml' 
+        - !include
+          - '../../../base/templates/button/button.yaml'
+          - entity: group.all_automations
+            name: Automations
+            icon: mdi:alpha-a-box
+            label: All
+            grid:
+              '!include ../../../user/templates/automations-grid.yaml' 
+        - !include ../../../base/includes/empty-button.yaml
+        - !include ../../../base/includes/gap.yaml

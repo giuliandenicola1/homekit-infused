@@ -1,0 +1,87 @@
+- type: conditional
+  conditions:
+    - entity: input_select.media_view_selector
+      state: "Upcoming Media"
+  card:
+    type: vertical-stack
+    cards:
+      - !include
+        - '../../../base/templates/other/title-text.yaml'
+        - name: Recently Added TV
+      - type: horizontal-stack
+        cards:
+          - !include ../../../base/includes/gap.yaml
+          - type: 'custom:upcoming-media-card'
+            style: |
+              ha-card {
+                border-radius: var(--border-radius);
+                box-shadow: var(--box-shadow);
+              }
+            entity: sensor.recently_added_tv 
+          - !include ../../../base/includes/gap.yaml
+
+- type: conditional
+  conditions:
+    - entity: input_select.media_view_selector
+      state: "Upcoming Media"
+  card:
+    type: vertical-stack
+    cards:
+      - !include
+        - '../../../base/templates/other/title-text.yaml'
+        - name: Recently Added Movies
+      - type: horizontal-stack
+        cards:
+          - !include ../../../base/includes/gap.yaml
+          - type: 'custom:upcoming-media-card'
+            style: |
+              ha-card {
+                border-radius: var(--border-radius);
+                box-shadow: var(--box-shadow);
+              }
+            entity: sensor.recently_added_movies
+          - !include ../../../base/includes/gap.yaml
+
+- type: conditional
+  conditions:
+    - entity: input_select.media_view_selector
+      state: "Upcoming Media"
+  card:
+    type: vertical-stack
+    cards:
+      - !include
+        - '../../../base/templates/other/title-text.yaml'
+        - name: Upcoming Movies
+      - type: horizontal-stack
+        cards:
+          - !include ../../../base/includes/gap.yaml
+          - type: 'custom:upcoming-media-card'
+            style: |
+              ha-card {
+                border-radius: var(--border-radius);
+                box-shadow: var(--box-shadow);
+              }
+            entity: sensor.radarr_upcoming_media
+          - !include ../../../base/includes/gap.yaml
+
+- type: conditional
+  conditions:
+    - entity: input_select.media_view_selector
+      state: "Upcoming Media"
+  card:
+    type: vertical-stack
+    cards:
+      - !include
+        - '../../../base/templates/other/title-text.yaml'
+        - name: Upcoming TV Series
+      - type: horizontal-stack
+        cards:
+          - !include ../../../base/includes/gap.yaml
+          - type: 'custom:upcoming-media-card'
+            style: |
+              ha-card {
+                border-radius: var(--border-radius);
+                box-shadow: var(--box-shadow);
+              }
+            entity: sensor.sonarr_upcoming_media
+          - !include ../../../base/includes/gap.yaml

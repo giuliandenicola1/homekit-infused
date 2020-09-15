@@ -1,0 +1,7 @@
+- type: horizontal-stack
+  cards:
+    - !include ../../../base/includes/gap.yaml
+    - type: iframe
+      url: https://embed.waze.com/iframe
+      aspect_ratio: 150%
+    - !include ../../../base/includes/gap.yaml

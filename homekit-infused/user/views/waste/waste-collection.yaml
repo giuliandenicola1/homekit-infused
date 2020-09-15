@@ -1,0 +1,20 @@
+- type: vertical-stack
+  cards:
+    - !include
+      - '../../../base/templates/other/title-text.yaml'
+      - name: Waste Collection Schedule
+    - type: horizontal-stack
+      cards:
+        - !include ../../../base/includes/gap.yaml
+        - type: entities
+          style: |
+            ha-card {
+              box-shadow: var(--box-shadow);
+              border-radius: var(--border-radius);
+              opacity: 0.8;
+            }
+          entities:
+            - sensor.mijnafvalwijzer_gft
+            - sensor.mijnafvalwijzer_papier
+            - sensor.mijnafvalwijzer_restafval
+        - !include ../../../base/includes/gap.yaml
