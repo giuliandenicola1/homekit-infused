@@ -1,0 +1,195 @@
+# Kitchen Automations
+
+# HA RESTART WILL TURN ON REFRIGERATOR
+- alias: refrigerator_on_at_restart
+  initial_state: 'true'
+  trigger:
+    - platform: homeassistant
+      event: start
+    - platform: state
+      entity_id: switch.koelkast
+    - platform: state
+      entity_id: switch.koelkast_2
+    - platform: state
+      entity_id: switch.koelkast_always_on
+  action:
+    - service: switch.turn_on
+      data:
+        entity_id: 
+          - switch.koelkast
+          - switch.koelkast_2
+
+# HA RESTART WILL TURN ON REFRIGERATOR
+- alias: refrigerator_merge_entities_to_on
+  initial_state: 'true'
+  trigger:
+    - platform: state
+      entity_id: switch.koelkast
+      to: "on"
+    - platform: state
+      entity_id: switch.koelkast_2
+      to: "on"
+    - platform: state
+      entity_id: switch.koelkast_always_on
+      to: "on"
+  action:
+    - service: switch.turn_on
+      data:
+        entity_id: 
+          - switch.koelkast
+          - switch.koelkast_2
+          - switch.koelkast_always_on
+
+- alias: refrigerator_merge_entities_to_off
+  initial_state: 'true'
+  trigger:
+    - platform: state
+      entity_id: switch.koelkast
+      to: "off"
+    - platform: state
+      entity_id: switch.koelkast_2
+      to: "off"
+    - platform: state
+      entity_id: switch.koelkast_always_on
+      to: "off"
+  action:
+    - service: switch.turn_on
+      data:
+        entity_id: 
+          - switch.koelkast
+          - switch.koelkast_2
+          - switch.koelkast_always_on
+
+# HA RESTART WILL TURN ON freezer
+- alias: freezer_on_at_restart
+  initial_state: 'true'
+  trigger:
+    - platform: homeassistant
+      event: start
+    - platform: state
+      entity_id: switch.vriezer
+    - platform: state
+      entity_id: switch.koelkast_always_on
+  action:
+    - service: switch.turn_on
+      data:
+        entity_id: switch.vriezer
+
+# HA RESTART WILL TURN ON freezer
+- alias: freezer_merge_entities_to_on
+  initial_state: 'true'
+  trigger:
+    - platform: state
+      entity_id: switch.vriezer
+      to: "on"
+    - platform: state
+      entity_id: switch.vriezer_always_on
+      to: "on"
+  action:
+    - service: switch.turn_on
+      data:
+        entity_id: switch.vriezer
+
+- alias: freezer_merge_entities_to_off
+  initial_state: 'true'
+  trigger:
+    - platform: state
+      entity_id: switch.vriezer
+      to: "off"
+    - platform: state
+      entity_id: switch.vriezer_always_on
+      to: "off"
+  action:
+    - service: switch.turn_on
+      data:
+        entity_id: switch.vriezer
+
+
+# WATERKOKER TURNS ON CAPU MAKER
+- alias: waterkoker_cap_on
+  initial_state: 'true'
+  trigger:
+    platform: state
+    entity_id: switch.waterkoker
+  action:
+  - service_template: >
+      {% if is_state('switch.waterkoker', 'on') %}
+        switch.turn_on
+      {% elif is_state('switch.waterkoker', 'off') %}
+        switch.turn_off
+      {% endif %}
+    data:
+      entity_id: switch.cappumaker
+
+# WHEN KEUKENLAMP TURNS ON, TURN KEUKENSPOTS ON (FROM 19.00H-06.00H)
+- id: '1533504863293'
+  alias: Keukenspotjes aan
+  initial_state: 'true'
+  trigger:
+  - entity_id: light.keuken
+    platform: state
+    to: 'on'
+  condition:
+    condition: or
+    conditions:
+      - after: sunset
+        condition: sun
+        after_offset: "-01:00:00"
+      - before: sunrise
+        condition: sun
+  action:
+  - data:
+      entity_id: light.keuken_leds
+    service: light.turn_on
+
+# WHEN KEUKENLAMP TURNS OFF, BIJKEUKENLAMP TURNS OFF
+- alias: keuken_bijkeuken_uit
+  initial_state: 'true'
+  trigger:
+  - entity_id: light.keuken
+    from: 'on'
+    platform: state
+    to: 'off'
+  action:
+  - service: light.turn_off
+    entity_id: light.bijkeuken
+
+# SEND MESSAGE TO IOS AFZUIGKAP ON FOR 30 MIN, BUT ONLY TO 
+- alias: Afzuigkap Alert
+  initial_state: 'true'
+  trigger:
+    - platform: state
+      entity_id: switch.afzuigkap
+      to: 'on'
+      for:
+        minutes: 30
+  action:
+    - service_template: >
+          {% if (is_state('person.jimmy', 'home')) and (is_state('person.stephanie', 'home'))  %}
+            notify.all_devices
+          {% elif is_state('person.jimmy', 'home') %}
+            notify.mobile_app_sm_n976b
+          {% elif is_state('person.stephanie', 'home') %}
+            notify.mobile_app_iphone_stephanie
+          {% endif %}
+      data:
+        title: "Afzuigkap"
+        message: "Ik sta al 30 minuten aan, zou je me niet eens uitzetten?"
+        data:
+          push:
+            sound: "afzuigkap.wav"
+            badge: 0
+            category: "afzuigkap_alert" 
+          actions:
+            - action: "AFZUIGKAP_UITZETTEN"
+              title: "Uitschakelen"
+    - delay:
+        minutes: 45
+    - service: switch.turn_off
+      entity_id: switch.afzuigkap
+           #   uri: "https://google.com" # 
+#  - service: xiaomi_aqara.play_ringtone
+#    data_template:
+#      ringtone_id: 10001
+#      ringtone_vol: 100
+#      gw_mac: 78:11:DC:DE:F3:24

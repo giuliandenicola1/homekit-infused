@@ -1,0 +1,47 @@
+  - platform: template
+    sensors:
+      media_players_playing:
+        value_template: >
+          {% if states.media_player.badkamer_speaker.state == 'playing' %}
+            Playing
+          {% elif states.media_player.bijkeuken_speaker.state == 'playing' %}
+            Playing
+          {% elif states.media_player.woonkamer_speaker.state == 'playing' %}
+            Playing
+          {% elif states.media_player.slaapkamer_display.state == 'playing' %}
+            Playing
+          {% elif states.media_player.keuken_display.state == 'playing' %}
+            Playing
+          {% elif states.media_player.kleine_kamer_speaker.state == 'playing' %}
+            Playing
+          {% elif states.media_player.nvidia_s_h_i_e_l_d_tv_pro.state == 'playing' %}
+            Playing
+          {% elif states.media_player.xbox_one.state == 'playing' %}
+            Playing
+          {% elif states.media_player.spotify_jimmy_schings.state == 'playing' %}
+            Playing
+          {% elif states.media_player.spotify_stephanie_schings.state == 'playing' %}
+            Playing
+          {% elif states.media_player.badkamer_speaker.state == 'paused' %}
+            Paused
+          {% elif states.media_player.bijkeuken_speaker.state == 'paused' %}
+            Paused
+          {% elif states.media_player.woonkamer_speaker.state == 'paused' %}
+            Paused
+          {% elif states.media_player.slaapkamer_display.state == 'paused' %}
+            Paused
+          {% elif states.media_player.keuken_display.state == 'paused' %}
+            Paused
+          {% elif states.media_player.kleine_kamer_speaker.state == 'paused' %}
+            Paused
+          {% elif states.media_player.nvidia_s_h_i_e_l_d_tv_pro.state == 'paused' %}
+            Paused
+          {% elif states.media_player.xbox_one.state == 'paused' %}
+            Paused
+          {% elif states.media_player.spotify_jimmy_schings.state == 'paused' %}
+            Paused
+          {% elif states.media_player.spotify_stephanie_schings.state == 'paused' %}
+            Paused
+          {% else %}
+            Not Playing
+          {% endif %}

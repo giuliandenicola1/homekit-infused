@@ -1,0 +1,24 @@
+- platform: dsmr
+  host: 192.168.0.17
+  port: 8088
+  dsmr_version: 5
+
+- platform: template
+  sensors:
+    daily_energy:
+      friendly_name: Daily Energy
+      unit_of_measurement: kWh
+      value_template: "{{ (states('sensor.daily_energy_offpeak')|float + states('sensor.daily_energy_peak')|float)|round(3) }}"
+    monthly_energy:
+      friendly_name: Monthly Energy
+      unit_of_measurement: kWh
+      value_template: "{{ (states('sensor.monthly_energy_offpeak')|float + states('sensor.monthly_energy_peak')|float)|round(3) }}"
+
+- platform: dsmr_reader
+
+- platform: template
+  sensors:
+    current_power_usage:
+      value_template: "{{ (states('sensor.dsmr_reading_phase_currently_delivered_l1')|float * 1000) |round(0) }} W"
+      unit_of_measurement: 'W'
+      friendly_name: Current Power Usage

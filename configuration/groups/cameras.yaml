@@ -1,0 +1,2 @@
+all_cameras:
+  entities: camera.gallerij_camera, camera.woonkamer_camera

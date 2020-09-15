@@ -1,0 +1,192 @@
+# Scene Groups (used for Apple style scenes)
+
+scene_dagverlichting_on:
+  all: true
+  entities:
+    - light.office_led_lampen
+scene_dagverlichting_off:
+  entities:
+    - light.plafond
+    - light.tafellamp
+    - light.keuken_leds
+    - light.keuken
+    - light.slaapkamer_led_lampen
+    - light.entree_lamp
+    - light.gang_lamp
+    - light.kleine_kamer
+    - light.bijkeuken
+    - light.eettafel
+    - light.vloerlamp
+    - light.woonkamer_led_lampen
+    - light.gateway_light_7811dcdef324
+    
+scene_avondverlichting_on:
+  all: true
+  entities:
+    - light.tafellamp
+    - light.woonkamer_led_lampen
+    - light.gateway_light_7811dcdef324
+    - light.office_led_lampen
+    - light.keuken_leds
+    - light.kleine_kamer
+    - light.vloerlamp
+scene_avondverlichting_off:
+  entities:
+    - light.plafond
+    - light.keuken
+    - light.entree_lamp
+    - light.gang_lamp
+    - light.bijkeuken
+    - light.eettafel
+
+scene_nachtverlichting_on:
+  all: true
+  entities:
+    - light.woonkamer_led_lampen
+    - light.gateway_light_7811dcdef324
+    - light.office_led_lampen
+    - light.keuken_leds
+scene_nachtverlichting_off:
+  entities:
+    - light.plafond
+    - light.tafellamp
+    - light.keuken
+    - light.entree_lamp
+    - light.gang_lamp
+    - light.bijkeuken
+    - light.eettafel
+    - light.kleine_kamer
+    - light.vloerlamp
+    
+scene_welterusten_on:
+  all: true
+  entities:
+    - light.gateway_light_7811dcdef324
+scene_welterusten_off:
+  entities:
+    - light.plafond
+    - light.tafellamp
+    - light.woonkamer_led_lampen
+    - light.eettafel
+    - light.vloerlamp
+    - light.kleine_kamer
+    - light.office_led_lampen
+    - light.keuken_leds 
+    - light.nachtkastje_jimmy
+    - light.nachtkastje_stephanie
+    - light.slaapkamer_led_lampen
+    - light.keuken 
+    - light.bijkeuken
+    - light.toilet
+    - light.balkon
+    - light.berging
+    - switch.koogeek_sw_056ce9 
+    - switch.receiver
+    - switch.waterkoker 
+    - switch.afzuigkap 
+    - switch.airfryer 
+    - switch.printer 
+    - switch.ventilator
+    - switch.samsung_tv
+    - switch.tv_slaapkamer
+    - switch.cappumaker
+    - light.entree_lamp 
+    - light.gang_lamp 
+    - light.kast_lamp
+    - light.bed_lamp
+    - switch.oven
+
+scene_schoonmaken_on:
+  all: true
+  entities:
+    - light.plafond
+    - light.tafellamp
+    - light.woonkamer_led_lampen
+    - light.eettafel
+    - light.vloerlamp
+    - light.gateway_light_7811dcdef324
+    - light.kleine_kamer
+    - light.office_led_lampen
+    - light.nachtkastje_jimmy
+    - light.nachtkastje_stephanie
+    - light.slaapkamer_led_lampen
+    - light.keuken
+    - light.bijkeuken
+    - light.toilet 
+    - switch.koogeek_sw_056ce9 
+    - light.entree_lamp 
+    - light.gang_lamp
+    - light.kast_lamp
+    - light.bed_lamp
+scene_schoonmaken_off:
+  entities:
+    - light.plafond
+    - light.tafellamp
+    - light.woonkamer_led_lampen
+    - light.eettafel
+    - light.vloerlamp
+    - light.gateway_light_7811dcdef324
+    - light.kleine_kamer
+    - light.office_led_lampen
+    - light.nachtkastje_jimmy
+    - light.nachtkastje_stephanie
+    - light.slaapkamer_led_lampen
+    - light.keuken
+    - light.bijkeuken
+    - light.toilet 
+    - switch.koogeek_sw_056ce9 
+    - light.entree_lamp 
+    - light.gang_lamp
+    - light.kast_lamp
+    - light.bed_lamp
+
+scene_wassen_on:
+  all: true
+  entities:
+    - switch.vaatwasser
+    - switch.wasmachine
+    - switch.droger
+scene_wassen_off:
+  entities:
+    - switch.vaatwasser
+    - switch.wasmachine
+    - switch.droger
+
+scene_naarbed:
+  all: true
+  entities:
+    - light.nachtkastje_jimmy
+    - light.nachtkastje_stephanie
+    - light.slaapkamer_led_lampen
+
+scene_koken_on:
+  all: true
+  entities:
+    - light.keuken_leds
+    - light.keuken
+    - switch.waterkoker
+    - switch.airfryer
+    - switch.afzuigkap
+    - switch.oven
+scene_koken_off:
+  entities:
+    - light.keuken_leds
+    - light.keuken
+    - switch.waterkoker
+    - switch.airfryer
+    - switch.oven
+    - switch.afzuigkap
+
+alle_scenes:
+  entities:
+    - input_boolean.scene_dagverlichting
+    - input_boolean.scene_avondverlichting
+    - input_boolean.scene_nachtverlichting
+    - input_boolean.scene_lichtuit
+    - input_boolean.scene_klaar_met_koken
+    - input_boolean.scene_klaar_met_wassen
+    - input_boolean.scene_welterusten    
+    - group.scene_koken_on
+    - group.scene_wassen_on
+    - group.scene_naarbed
+    - group.scene_schoonmaken_on

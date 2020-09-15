@@ -1,0 +1,17 @@
+# - platform: template
+#   switches:
+#     nachtverlichting:
+#       value_template: >-
+#         {% if (is_state('light.plafond', 'off')) and
+#             (is_state('light.tafellamp', 'off')) and
+#             (is_state_attr('light.woonkamer_led_lampen', 'brightness',  191 )) and
+#             (is_state('light.gateway_light_7811dcdef324', 'on')) and
+#             (is_state_attr('light.office_led_lampen', 'brightness', 191 )) %}
+#           "On"
+#         {% else %}
+#           "Off"
+#         {% endif %}
+#       turn_on:
+#         service: scene.turn_on
+#         data:
+#           entity_id: scene.nachtverlichting

@@ -1,0 +1,37 @@
+# Sensors
+energy_kwh:
+  name: Energy Sensors
+  entities:
+    - sensor.droger_energy_today
+    - sensor.vaatwasser_energy_today
+    - sensor.wasmachine_energy_today
+
+reistijd:
+  name: Reistijden
+  entities:
+    - sensor.reistijd_werk_jimmy
+    - sensor.reistijd_werk_stephanie
+
+all_temperature_sensors:
+  entities:
+    - sensor.woonkamer
+    - sensor.slaapkamer
+    - sensor.keuken_temperatuur
+    - sensor.kleine_kamer_temperatuur
+    - sensor.badkamer
+    - sensor.motion_bijkeuken_temperature
+    - sensor.voordeur_temperature
+    - sensor.motion_toilet_temperature
+
+all_humidity_sensors:
+  entities:
+    - sensor.badkamer_2
+    - sensor.keuken_luchtvochtigheid
+    - sensor.kleine_kamer_luchtvochtigheid
+    - sensor.slaapkamer_2
+    - sensor.woonkamer_2
+
+all_air_pressure_sensors:
+  entities:
+    - sensor.badkamer_3
+    - sensor.slaapkamer_3

@@ -1,0 +1,488 @@
+project_id: home-assistant-ca465
+service_account: !include gservice_account.json
+secure_devices_pin: !secret secure_devices_pin
+report_state: true
+expose_by_default: false
+entity_config:
+  alarm_control_panel.home_alarm:
+    name: Thuis Alarm
+    expose: true
+    room: Overige
+  sensor.dark_sky_temperature:
+    name: Temperatuur
+    expose: true
+    aliases: 
+      - BUITEN_TEMPERATUUR
+      - DE_BUITEN_TEMPERATUUR
+      - OUTSIDE_TEMPERATURE
+      - TEMPERATURE_OUTSIDE
+    room: Balkon
+  sensor.dark_sky_Luchtvochtigheid:
+    name: Luchtvochtigheid
+    expose: true
+    aliases: 
+      - BUITEN_LUCHTVOCHTIGHEID
+      - DE_BUITEN_LUCHTVOCHTIGHEID
+      - OUTSIDE_HUMIDITY
+      - HUMIDITY_OUTSIDE
+    room: Balkon
+  light.woonkamer_led_lampen:
+    name: LED Strips
+    expose: true
+    room: Woonkamer
+    aliases:
+      - LED_VERLICHTING
+      - LED_LAMPEN
+      - LEDS
+      - LED_LIGHTS
+      - DE_LED_VERLICHTING
+      - DE_LED_LAMPEN
+      - DE_LEDS
+      - THE_LED_LIGHTS
+  light.gateway_light_7811dcdef324:
+    name: Gateway
+    expose: true
+    aliases: 
+      - XIAOMI_PUCK
+    room: Woonkamer
+  light.plafond:
+    name: Plafond
+    expose: true
+    room: Woonkamer
+    aliases:
+      - PLAFOND_LAMP
+      - DE_PLAFOND_LAMP
+      - HET_PLAFOND
+      - CEILING
+      - THE_CEILING
+      - CEILING_LIGHT
+      - THE_CEILING_LIGHT
+  light.eettafel:
+    name: Eettafel
+    expose: true
+    aliases: 
+      - EETTAFEL_LAMP
+      - DINER
+      - THE_DINER
+      - DE_EETTAFEL_LAMP
+    room: Woonkamer
+  light.tafellamp:
+    name: Tafellamp
+    expose: true
+    room: Woonkamer
+  light.vloerlamp:
+    name: Vloerlamp
+    expose: true
+    room: Woonkamer
+  light.slaapkamer_led_lampen:
+    name: LED Strips
+    expose: true
+    room: Slaapkamer
+  light.nachtkastje_jimmy:
+    name: Nachtkastje Jimmy
+    expose: true
+    room: Slaapkamer
+  light.nachtkastje_stephanie:
+    name: Nachtkastje Stephanie
+    expose: true
+    room: Slaapkamer
+  light.bed_lamp:
+    name: Bed Plafond
+    expose: true
+    room: Slaapkamer
+  light.kast_lamp:
+    name: Kast Plafond
+    expose: true
+    room: Slaapkamer
+  light.office_led_lampen:
+    name: LED Strips
+    expose: true
+    room: Kleine Kamer
+  light.kleine_kamer:
+    name: Plafond
+    expose: true
+    room: Kleine Kamer
+    aliases:
+      - PLAFOND_LAMP
+      - DE_PLAFOND_LAMP
+      - HET_PLAFOND
+      - CEILING
+      - THE_CEILING
+      - CEILING_LIGHT
+      - THE_CEILING_LIGHT
+  light.keuken:
+    name: Plafond
+    expose: true
+    room: Keuken
+    aliases:
+      - PLAFOND_LAMP
+      - DE_PLAFOND_LAMP
+      - HET_PLAFOND
+      - CEILING
+      - THE_CEILING
+      - CEILING_LIGHT
+      - THE_CEILING_LIGHT
+  light.keuken_leds:
+    name: LED Strip
+    expose: true
+    room: Keuken
+  light.bijkeuken:
+    name: Plafond
+    expose: true
+    room: Keuken
+    aliases:
+      - PLAFOND_LAMP
+      - DE_PLAFOND_LAMP
+      - HET_PLAFOND
+      - CEILING
+      - THE_CEILING
+      - CEILING_LIGHT
+      - THE_CEILING_LIGHT
+  light.entree_lamp:
+    name: Plafond
+    expose: true
+    room: Hal
+    aliases:
+      - PLAFOND_LAMP
+      - DE_PLAFOND_LAMP
+      - HET_PLAFOND
+      - CEILING
+      - THE_CEILING
+      - CEILING_LIGHT
+      - THE_CEILING_LIGHT
+  light.gang_lamp:
+    name: Plafond
+    expose: true
+    room: Gang
+    aliases:
+      - PLAFOND_LAMP
+      - DE_PLAFOND_LAMP
+      - HET_PLAFOND
+      - CEILING
+      - THE_CEILING
+      - CEILING_LIGHT
+      - THE_CEILING_LIGHT
+  light.berging:
+    name: Plafond
+    expose: true
+    room: Berging
+    aliases:
+      - PLAFOND_LAMP
+      - DE_PLAFOND_LAMP
+      - HET_PLAFOND
+      - CEILING
+      - THE_CEILING
+      - CEILING_LIGHT
+      - THE_CEILING_LIGHT
+  light.koogeek_sw_056ce9:
+    name: Plafond
+    expose: true
+    room: Badkamer
+    aliases:
+      - PLAFOND_LAMP
+      - DE_PLAFOND_LAMP
+      - HET_PLAFOND
+      - CEILING
+      - THE_CEILING
+      - CEILING_LIGHT
+      - THE_CEILING_LIGHT
+  light.toilet:
+    name: Plafond
+    expose: true
+    room: Toilet
+    aliases:
+      - PLAFOND_LAMP
+      - DE_PLAFOND_LAMP
+      - HET_PLAFOND
+      - CEILING
+      - THE_CEILING
+      - CEILING_LIGHT
+      - THE_CEILING_LIGHT
+  light.balkon:
+    name: Lamp
+    expose: true
+    room: Balkon
+  switch.ventilator:
+    name: Ventilator
+    expose: true
+    room: Slaapkamer
+  switch.receiver:
+    name: Receiver
+    expose: true
+    room: Woonkamer
+  switch.samsung_tv:
+    name: TV
+    expose: true
+    room: Woonkamer
+  switch.receiver_slaapkamer_2:
+    name: Receiver
+    expose: true
+    room: Slaapkamer
+  switch.tv_slaapkamer:
+    name: TV
+    expose: true
+    room: Slaapkamer
+  switch.pc_van_stephanie:
+    name: PC Stephanie
+    expose: true
+    aliases: 
+      - PC_VAN_STEPHANIE
+      - STEPHANIES_PC
+    room: Kleine Kamer
+  switch.pc_van_jimmy:
+    name: PC Jimmy
+    expose: true
+    aliases: 
+      - PC_VAN_JIMMY
+      - JIMMYS_PC
+    room: Kleine Kamer
+  switch.printer:
+    name: Printer
+    expose: true
+    room: Kleine Kamer
+  switch.waterkoker:
+    name: Waterkoker
+    expose: true
+    room: Keuken
+  switch.afzuigkap:
+    name: Afzuigkap
+    expose: true
+    room: Keuken
+  switch.cappumaker:
+    name: Cappumaker
+    expose: true
+    room: Keuken
+  switch.vaatwasser:
+    name: Vaatwasser
+    expose: true
+    room: Keuken
+  switch.airfryer:
+    name: Airfryer
+    expose: true
+    room: Keuken
+  switch.wasmachine:
+    name: Wasmachine
+    expose: true
+    room: Bijkeuken
+  switch.droger:
+    name: Droger
+    expose: true
+    room: Bijkeuken
+  switch.oven:
+    name: Oven
+    expose: true
+    room: Keuken
+  switch.vriezer_always_on:
+    name: Vriezer
+    expose: true
+    room: Bijkeuken
+  switch.koelkast_always_on:
+    name: Koelkast
+    expose: true 
+    room: Keuken
+  sensor.woonkamer:
+    name: Temperatuur
+    expose: true
+    room: Woonkamer
+  sensor.kleine_kamer_temperatuur:
+    name: Temperatuur
+    expose: true
+    room: Kleine Kamer
+  sensor.slaapkamer:
+    name: Temperatuur
+    expose: true
+    room: Slaapkamer
+  sensor.keuken_temperatuur:
+    name: Temperatuur
+    expose: true
+    room: Keuken
+  sensor.badkamer_4:
+    name: Temperatuur
+    expose: true
+    room: Badkamer
+  sensor.motion_bijkeuken_temperature:
+    name: Temperatuur
+    expose: true
+    room: Bijkeuken
+  sensor.voordeur_temperature:
+    name: Temperatuur
+    expose: true
+    room: Hal
+  sensor.motion_toilet_temperature:
+    name: Temperatuur
+    expose: true
+    room: Toilet
+  sensor.woonkamer_2:
+    name: Luchtvochtigheid
+    expose: true
+    room: Woonkamer
+  sensor.kleine_kamer_luchtvochtigheid:
+    name: Luchtvochtigheid
+    expose: true
+    room: Kleine Kamer
+  sensor.slaapkamer_2:
+    name: Luchtvochtigheid
+    expose: true
+    room: Slaapkamer
+  sensor.keuken_luchtvochtigheid:
+    name: Luchtvochtigheid
+    expose: true
+    room: Keuken
+  sensor.badkamer_2:
+    name: Luchtvochtigheid
+    expose: true
+    room: Badkamer
+  sensor.slaapkamer_3:
+    name: Air Pressure
+    expose: true
+    room: Slaapkamer
+  sensor.badkamer_3:
+    name: Air Pressure
+    expose: true
+    room: Badkamer
+  camera.gallerij_camera:
+    name: Gallerij
+    expose: true
+    room: Gallerij
+  binary_sensor.dafang_motion_sensor:
+    name: Beweging
+    expose: true
+    room: Gallerij
+  binary_sensor.motion_bijkeuken:
+    name: Beweging
+    expose: true
+    room: Bijkeuken
+  binary_sensor.motion_toilet:
+    name: Beweging
+    expose: true
+    room: Toilet
+  binary_sensor.lumi_sensor_smoke:
+    name: Smoke Sensor
+    expose: true
+    room: Keuken
+  binary_sensor.motion_woonkamer:
+    name: Beweging
+    expose: true
+    room: Woonkamer
+  binary_sensor.motion_office:
+    name: Beweging
+    expose: true
+    room: Kleine Kamer
+  binary_sensor.motion_gang:
+    name: Beweging
+    expose: true
+    room: Gang
+  switch.piano:
+    name: Piano
+    expose: true
+    room: Kleine Kamer
+  switch.monitors_jimmy:
+    name: Monitors Jimmy
+    expose: true
+    aliases:
+      - JIMMYS_MONITORS
+      - JIMMYS_SCHERMEN
+      - SCHERMEN_VAN_JIMMY
+      - MONITORS_VAN_JIMMY
+    room: Kleine Kamer
+  switch.monitors_stephanie:
+    name: Monitors Stephanie
+    expose: true
+    aliases:
+      - STEPHANIES_MONITORS
+      - STEPHANIES_SCHERMEN
+      - SCHERMEN_VAN_STEPHANIE
+      - MONITORS_VAN_STEPHANIE
+    room: Kleine Kamer
+  binary_sensor.voordeur:
+    name: Voordeur
+    expose: true
+    room: Gang
+  binary_sensor.woonkamer_deur:
+    name: Deur
+    expose: true
+    room: Woonkamer
+  binary_sensor.slaapkamer_deur:
+    name: Deur
+    expose: true
+    room: Slaapkamer
+  vacuum.xiaomi_vacuum_cleaner:
+    name: Stofzuiger
+    expose: true
+    room: Woonkamer
+
+
+  scene.avondverlichting:
+    name: Avond Verlichting
+    expose: true
+    room: Routines
+  scene.dagverlichting:
+    name: Dag Verlichting
+    expose: true
+    room: Routines
+  scene.gamen:
+    name: Gamen
+    expose: true
+    room: Routines
+  scene.klaar_met_koken:
+    name: Klaar Met Koken
+    expose: true
+    room: Routines
+  scene.klaar_met_wassen:
+    name: Klaar Met Wassen
+    expose: true
+    room: Routines
+  scene.koken:
+    name: Koken
+    expose: true
+    room: Routines
+  scene.naarbed:
+    name: Naar Bed
+    expose: true
+    room: Routines
+  scene.nachtverlichting:
+    name: Nacht Verlichting
+    expose: true
+    room: Routines
+  scene.schoonmaken:
+    name: Schoonmaken
+    expose: true
+    room: Routines
+  scene.wassen:
+    name: Wassen
+    expose: true
+    room: Routines
+  scene.welterusten:
+    name: Welterusten
+    expose: true
+    room: Routines
+
+  media_player.samsung_ue46es5500:
+    name: TV
+    expose: true
+    room: Slaapkamer
+ 
+  media_player.samsung_ue65ku6000:
+    name: TV
+    expose: true
+    room: Woonkamer
+
+  media_player.slaapkamer_apple_tv:
+    name: Apple TV
+    expose: true 
+    room: Slaapkamer
+
+  media_player.woonkamer_apple_tv:
+    name: Apple TV
+    expose: true 
+    room: Woonkamer
+
+  script.restart_homeassistant:
+    name: Restart Home Assistant
+    expose: true 
+    room: Scripts
+    aliases:
+      - REBOOT_OF_HOME_ASSISTANT
+      - HERSTART_HOME_ASSISTANT
+      - RESTART_OF_HOME_ASSISTANT
+      - HA_RESTART

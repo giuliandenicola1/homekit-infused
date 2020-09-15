@@ -1,0 +1,4 @@
+- platform: wake_on_lan
+  mac: !secret mac_server
+  name: Unraid Server
+  host: "192.168.0.2"

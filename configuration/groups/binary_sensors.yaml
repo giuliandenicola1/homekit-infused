@@ -1,0 +1,14 @@
+room_01_binary_sensors:
+  entities: binary_sensor.motion_woonkamer_camera, binary_sensor.woonkamer_deur
+room_02_binary_sensors:
+  entities: binary_sensor.slaapkamer_deur
+room_03_binary_sensors:
+  entities: binary_sensor.motion_office
+room_04_binary_sensors:
+  entities: binary_sensor.smoke_sensor
+room_05_binary_sensors:
+  entities: binary_sensor.motion_bijkeuken
+room_06_binary_sensors:
+  entities: binary_sensor.motion_gallerij_camera, binary_sensor.voordeur, binary_sensor.motion_gang
+room_08_binary_sensors:
+  entities: binary_sensor.motion_toilet

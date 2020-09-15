@@ -1,0 +1,34 @@
+# Media Player Groups
+
+samsung_tv:
+  name: Samsung TV
+  entities:
+    - media_player.samsung_ue65ku6000
+    - media_player.woonkamer_apple_tv
+    - remote.woonkamer_apple_tv
+    - switch.receiver
+
+televisions:
+  entities:
+    - switch.tv_slaapkamer
+    - media_player.samsung_ue65ku6000
+
+all_media_players:
+  entities:
+    - media_player.slaapkamer_display
+    - media_player.keuken_display
+    - media_player.nvidia_s_h_i_e_l_d_tv_pro
+    - media_player.xbox_one
+
+google_home:
+  entities:
+    - media_player.badkamer_speaker
+    - media_player.bijkeuken_speaker
+    - media_player.woonkamer_speaker
+    - media_player.slaapkamer_display
+    - media_player.keuken_display
+    - media_player.kleine_kamer_speaker
+    - media_player.shield_android_tv_4
+
+google_home_all_speakers:
+  entities: media_player.all_speakers

@@ -1,0 +1,18 @@
+# Afvalbeheer (Cure)
+  - platform: afvalbeheer
+    wastecollector: MijnAfvalwijzer
+    resources:
+      - restafval
+      - gft
+      - papier
+      - pmd
+    postcode: !secret postcode
+    streetnumber: 223
+    upcomingsensor: 1
+    dateformat: '%d-%m-%Y'
+
+# - platform: afvalwijzer
+#   provider: mijnafvalwijzer
+#   zipcode: !secret postcode
+#   housenumber: 223
+#   count_today: true

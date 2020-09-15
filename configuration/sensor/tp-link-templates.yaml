@@ -1,0 +1,22 @@
+- platform: template
+  sensors:
+    koelkast_current:
+      friendly_name_template: "{{ states.switch.koelkast.name}} Current"
+      value_template: '{{ states.switch.koelkast.attributes["current_a"] | float }}'
+      unit_of_measurement: 'A'
+    koelkast_power:
+      friendly_name_template: "{{ states.switch.koelkast.name}} Current Consumption"
+      value_template: '{{ states.switch.koelkast.attributes["current_power_w"] | float }}'
+      unit_of_measurement: 'W'
+    koelkast_total_kwh:
+      friendly_name_template: "{{ states.switch.koelkast.name}} Total Consumption"
+      value_template: '{{ states.switch.koelkast.attributes["total_energy_kwh"] | float }}'
+      unit_of_measurement: 'kWh'
+    koelkast_voltage:
+      friendly_name_template: "{{ states.switch.koelkast.name}} Voltage"
+      value_template: '{{ states.switch.koelkast.attributes["voltage"] | float }}'
+      unit_of_measurement: 'V'
+    koelkast_today_kwh:
+      friendly_name_template: "{{ states.switch.koelkast.name}} Today's Consumption"
+      value_template: '{{ states.switch.koelkast.attributes["today_energy_kwh"] | float }}'
+      unit_of_measurement: 'kWh'

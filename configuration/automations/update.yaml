@@ -1,0 +1,16 @@
+# Update Notifications
+
+- alias: 'Update Available Notifications'
+  initial_state: 'true'
+  trigger:
+  - platform: state
+    entity_id: sensor.ha_updater
+    to: "Update available"
+  action:
+  - service: notify.mobile_app_sm_n976b
+    data:
+      title: 'Home Assistant Update'
+      message: 'Er is een update voor Home Assistant uitgebracht. HA Versie {{ states.sensor.latest_version.state }}. De huidig geinstalleerde versie van HA is {{ states.sensor.version_current.state }}.'
+      data:
+        push:
+          sound: default

@@ -1,0 +1,5 @@
+all_thermostats:
+  entities: climate.keuken, climate.woonkamer, climate.slaapkamer, climate.kleine_kamer
+
+all_fans:
+  entities: switch.ventilator

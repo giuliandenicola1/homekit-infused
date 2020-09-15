@@ -1,0 +1,41 @@
+- alias: refrigerator_disengaged
+  initial_state: 'true'
+  trigger:
+    - platform: state
+      entity_id: switch.koelkast_2
+      to: 'off'
+      for:
+        seconds: 10
+  action:
+    - service: notify.all_devices
+      data_template:
+        title: "Koelkast"
+        message: De koelkast is uitgeschakeld!!
+        data:
+          push:
+            badge: 0
+            category: "koelkast_alert" 
+          actions:
+            - action: "KOELKAST_TURN_ON"
+              title: "Inschakelen"
+
+- alias: freezer_disengaged
+  initial_state: 'true'
+  trigger:
+    - platform: state
+      entity_id: switch.vriezer
+      to: 'off'
+      for:
+        seconds: 10
+  action:
+    - service: notify.all_devices
+      data_template:
+        title: "Vriezer"
+        message: De vriezer is uitgeschakeld!!
+        data:
+          push:
+            badge: 0
+            category: "vriezer_alert" 
+          actions:
+            - action: "VRIEZER_TURN_ON"
+              title: "Inschakelen"

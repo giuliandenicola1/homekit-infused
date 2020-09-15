@@ -1,0 +1,6 @@
+- platform: xiaomi_miio_airconditioningcompanion
+  name: Aqara Air Conditioning Companion
+  host: 192.168.0.219
+  token: !secret xiaomi_airco_gateway_token_32
+  target_sensor: sensor.kleine_kamer_temperatuur
+  scan_interval: 60

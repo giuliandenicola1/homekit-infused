@@ -1,0 +1,238 @@
+# DOORS OPEN WILL SEND ALERTS TO IOS APP (v2.0 required)
+
+
+- alias: Voordeur Opened
+  initial_state: 'true'
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.voordeur
+      from: 'off'
+      to: 'on'
+  action:
+    - service_template: >
+        {% if (not is_state('person.jimmy', 'home')) and (not is_state('person.stephanie', 'home'))  %}
+          notify.all_devices
+        {% elif (is_state('person.jimmy', 'home')) and (not is_state('person.stephanie', 'home')) %}
+          notify.all_devices
+        {% elif (not is_state('person.jimmy', 'home')) and (is_state('person.stephanie', 'home')) %}
+          notify.mobile_app_sm_n976b
+        {% elif (is_state('person.jimmy', 'home')) and (is_state('person.stephanie', 'home')) %}
+          notify.mobile_app_sm_n976b
+        {% else %}
+          notify.mobile_app_sm_n976b
+        {% endif %}
+      data_template:
+        title: "Voordeur"
+        message: De deur is zojuist geopend!
+        data:
+          push:
+            sound: >
+              {% if is_state('binary_sensor.voordeur', 'on') %}
+                frontdoor_opened.wav
+              {% elif is_state('binary_sensor.voordeur', 'off') %}
+                frontdoor_closed.wav
+              {% endif %}
+    - service: light.turn_on
+      data: 
+        entity_id: light.woonkamer_led_lampen, light.office_led_lampen, light.gateway_light_7811dcdef324
+        color_name: red
+        brightness: 255
+        white_value: 0
+
+- alias: Voordeur Closed
+  initial_state: 'true'
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.voordeur
+      from: 'on'
+      to: 'off'
+  action:
+    - service_template: >
+        {% if (not is_state('person.jimmy', 'home')) and (not is_state('person.stephanie', 'home'))  %}
+          notify.all_devices
+        {% elif (is_state('person.jimmy', 'home')) and (not is_state('person.stephanie', 'home')) %}
+          notify.all_devices
+        {% elif (not is_state('person.jimmy', 'home')) and (is_state('person.stephanie', 'home')) %}
+          notify.mobile_app_sm_n976b
+        {% elif (is_state('person.jimmy', 'home')) and (is_state('person.stephanie', 'home')) %}
+          notify.mobile_app_sm_n976b
+        {% else %}
+          notify.mobile_app_sm_n976b
+        {% endif %}
+      data_template:
+        title: "Voordeur"
+        message: De deur is zojuist gesloten!
+        data:
+          push:
+            sound: >
+              {% if is_state('binary_sensor.voordeur', 'on') %}
+                frontdoor_opened.wav
+              {% elif is_state('binary_sensor.voordeur', 'off') %}
+                frontdoor_closed.wav
+              {% endif %}
+    - service: scene.turn_on
+      data_template: 
+        entity_id: scene.before
+
+- alias: Woonkamer Deur Opened
+  initial_state: 'true'
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.woonkamer_deur
+      from: 'off'
+      to: 'on'
+  action:
+    - service_template: >
+        {% if (not is_state('person.jimmy', 'home')) and (not is_state('person.stephanie', 'home'))  %}
+          notify.all_devices
+        {% elif (is_state('person.jimmy', 'home')) and (not is_state('person.stephanie', 'home')) %}
+          notify.all_devices
+        {% elif (not is_state('person.jimmy', 'home')) and (is_state('person.stephanie', 'home')) %}
+          notify.mobile_app_sm_n976b
+        {% elif (is_state('person.jimmy', 'home')) and (is_state('person.stephanie', 'home')) %}
+          notify.mobile_app_sm_n976b
+        {% else %}
+          notify.mobile_app_sm_n976b
+        {% endif %}
+      data_template:
+        title: "Woonkamer"
+        message: De deur is zojuist geopend!
+        data:
+          push:
+            sound: >
+              {% if is_state('binary_sensor.woonkamer_deur', 'on') %}
+                frontdoor_opened.wav
+              {% elif is_state('binary_sensor.woonkamer_deur', 'off') %}
+                frontdoor_closed.wav
+              {% endif %}
+    - service: light.turn_on
+      data: 
+        entity_id: light.woonkamer_led_lampen, light.office_led_lampen, light.gateway_light_7811dcdef324
+        color_name: red
+        brightness: 255
+        white_value: 0
+
+- alias: Woonkamer Deur Closed
+  initial_state: 'true'
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.woonkamer_deur
+      from: 'on'
+      to: 'off'
+  action:
+    - service_template: >
+        {% if (not is_state('person.jimmy', 'home')) and (not is_state('person.stephanie', 'home'))  %}
+          notify.all_devices
+        {% elif (is_state('person.jimmy', 'home')) and (not is_state('person.stephanie', 'home')) %}
+          notify.all_devices
+        {% elif (not is_state('person.jimmy', 'home')) and (is_state('person.stephanie', 'home')) %}
+          notify.mobile_app_sm_n976b
+        {% elif (is_state('person.jimmy', 'home')) and (is_state('person.stephanie', 'home')) %}
+          notify.mobile_app_sm_n976b
+        {% else %}
+          notify.mobile_app_sm_n976b
+        {% endif %}
+      data_template:
+        title: "Woonkamer"
+        message: De deur is zojuist gesloten!
+        data:
+          push:
+            sound: >
+              {% if is_state('binary_sensor.woonkamer_deur', 'on') %}
+                livingroom_door_opened.wav
+              {% elif is_state('binary_sensor.woonkamer_deur', 'off') %}
+                livingroom_door_closed.wav
+              {% endif %}
+    - service: scene.turn_on
+      data_template: 
+        entity_id: scene.before
+
+
+
+- alias: Slaapkamer Deur Opened
+  initial_state: 'true'
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.slaapkamer_deur
+      from: 'off'
+      to: 'on'
+  action:
+    - service_template: >
+        {% if (not is_state('person.jimmy', 'home')) and (not is_state('person.stephanie', 'home'))  %}
+          notify.all_devices
+        {% elif (is_state('person.jimmy', 'home')) and (not is_state('person.stephanie', 'home')) %}
+          notify.all_devices
+        {% elif (not is_state('person.jimmy', 'home')) and (is_state('person.stephanie', 'home')) %}
+          notify.mobile_app_sm_n976b
+        {% elif (is_state('person.jimmy', 'home')) and (is_state('person.stephanie', 'home')) %}
+          notify.mobile_app_sm_n976b
+        {% else %}
+          notify.mobile_app_sm_n976b
+        {% endif %}
+      data_template:
+        title: "Slaapkamer"
+        message: De deur is zojuist geopend!
+        data:
+          push:
+            sound: >
+              {% if is_state('binary_sensor.slaapkamer_deur', 'on') %}
+                frontdoor_opened.wav
+              {% elif is_state('binary_sensor.slaapkamer_deur', 'off') %}
+                frontdoor_closed.wav
+              {% endif %}
+    - service: light.turn_on
+      data: 
+        entity_id: light.woonkamer_led_lampen, light.office_led_lampen, light.gateway_light_7811dcdef324
+        color_name: red
+        brightness: 255
+        white_value: 0
+
+- alias: Slaapkamer Deur Closed
+  initial_state: 'true'
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.slaapkamer_deur
+      from: 'on'
+      to: 'off'
+  action:
+    - service_template: >
+        {% if (not is_state('person.jimmy', 'home')) and (not is_state('person.stephanie', 'home'))  %}
+          notify.all_devices
+        {% elif (is_state('person.jimmy', 'home')) and (not is_state('person.stephanie', 'home')) %}
+          notify.all_devices
+        {% elif (not is_state('person.jimmy', 'home')) and (is_state('person.stephanie', 'home')) %}
+          notify.mobile_app_sm_n976b
+        {% elif (is_state('person.jimmy', 'home')) and (is_state('person.stephanie', 'home')) %}
+          notify.mobile_app_sm_n976b
+        {% else %}
+          notify.mobile_app_sm_n976b
+        {% endif %}
+      data_template:
+        title: "Slaapkamer"
+        message: De deur is zojuist gesloten!
+        data:
+          push:
+            sound: >
+              {% if is_state('binary_sensor.slaapkamer_deur', 'on') %}
+                frontdoor_opened.wav
+              {% elif is_state('binary_sensor.slaapkamer_deur', 'off') %}
+                frontdoor_closed.wav
+              {% endif %}
+    - service: scene.turn_on
+      data_template: 
+        entity_id: scene.before
+
+- alias: Scene Create on opening door
+  initial_state: true
+  trigger:
+    - platform: state
+      entity_id: group.all_door_sensors
+      to: 'on'
+  action:
+    - service: scene.create
+      data:
+        scene_id: before
+        snapshot_entities:
+        - light.office_led_lampen
+        - light.woonkamer_led_lampen
+        - light.gateway_light_7811dcdef324

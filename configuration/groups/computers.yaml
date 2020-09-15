@@ -1,0 +1,5 @@
+monitors:
+  name: PC Monitors
+  entities:
+    - switch.monitors_jimmy
+    - switch.monitors_stephanie

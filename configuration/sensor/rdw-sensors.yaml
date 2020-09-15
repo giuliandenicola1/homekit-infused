@@ -1,0 +1,24 @@
+# RDW Sensor (For Dutch users only!)
+
+# Peugeot 207 SW 1.4 VTI X-Line (2007)
+  - platform: rdw
+    name: "Peugeot 207"
+    plate: 21XXDL
+    sensors:
+      - expdate
+      - insured
+
+# Citroën C1 1.0 (2007)
+  - platform: rdw
+    name: "Citroen C1"
+    plate: 55GFF3
+    sensors:
+      - expdate
+      - insured
+
+  - platform: template
+    sensors:
+      kenteken_stephanie:
+        value_template: '55-GFF-3'
+      kenteken_jimmy:
+        value_template: '21-XX-DL'

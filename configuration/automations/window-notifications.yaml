@@ -1,0 +1,158 @@
+- alias: Bijkeuken window Opened
+  initial_state: 'true'
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.bijkeukenraam
+      from: 'off'
+      to: 'on'
+  action:
+    - service_template: >
+        {% if (not is_state('person.jimmy', 'home')) and (not is_state('person.stephanie', 'home'))  %}
+          notify.all_devices
+        {% elif (is_state('person.jimmy', 'home')) and (not is_state('person.stephanie', 'home')) %}
+          notify.all_devices
+        {% elif (not is_state('person.jimmy', 'home')) and (is_state('person.stephanie', 'home')) %}
+          notify.mobile_app_sm_n976b
+        {% elif (is_state('person.jimmy', 'home')) and (is_state('person.stephanie', 'home')) %}
+          notify.mobile_app_sm_n976b
+        {% else %}
+          notify.mobile_app_sm_n976b
+        {% endif %}
+      data_template:
+        title: "Bijkeuken"
+        message: Het raam is zojuist geopend!
+        data:
+          push:
+
+
+- alias: Bijkeuken window Closed
+  initial_state: 'true'
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.bijkeukenraam
+      from: 'on'
+      to: 'off'
+  action:
+    - service_template: >
+        {% if (not is_state('person.jimmy', 'home')) and (not is_state('person.stephanie', 'home'))  %}
+          notify.all_devices
+        {% elif (is_state('person.jimmy', 'home')) and (not is_state('person.stephanie', 'home')) %}
+          notify.all_devices
+        {% elif (not is_state('person.jimmy', 'home')) and (is_state('person.stephanie', 'home')) %}
+          notify.mobile_app_sm_n976b
+        {% elif (is_state('person.jimmy', 'home')) and (is_state('person.stephanie', 'home')) %}
+          notify.mobile_app_sm_n976b
+        {% else %}
+          notify.mobile_app_sm_n976b
+        {% endif %}
+      data_template:
+        title: "Bijkeuken"
+        message: Het raam is zojuist gesloten!
+        data:
+          push:
+
+- alias: Keuken window Opened
+  initial_state: 'true'
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.keukenraam
+      from: 'off'
+      to: 'on'
+  action:
+    - service_template: >
+        {% if (not is_state('person.jimmy', 'home')) and (not is_state('person.stephanie', 'home'))  %}
+          notify.all_devices
+        {% elif (is_state('person.jimmy', 'home')) and (not is_state('person.stephanie', 'home')) %}
+          notify.all_devices
+        {% elif (not is_state('person.jimmy', 'home')) and (is_state('person.stephanie', 'home')) %}
+          notify.mobile_app_sm_n976b
+        {% elif (is_state('person.jimmy', 'home')) and (is_state('person.stephanie', 'home')) %}
+          notify.mobile_app_sm_n976b
+        {% else %}
+          notify.mobile_app_sm_n976b
+        {% endif %}
+      data_template:
+        title: "Keuken"
+        message: Het raam is zojuist geopend!
+        data:
+          push:
+
+
+- alias: Keuken window Closed
+  initial_state: 'true'
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.keukenraam
+      from: 'on'
+      to: 'off'
+  action:
+    - service_template: >
+        {% if (not is_state('person.jimmy', 'home')) and (not is_state('person.stephanie', 'home'))  %}
+          notify.all_devices
+        {% elif (is_state('person.jimmy', 'home')) and (not is_state('person.stephanie', 'home')) %}
+          notify.all_devices
+        {% elif (not is_state('person.jimmy', 'home')) and (is_state('person.stephanie', 'home')) %}
+          notify.mobile_app_sm_n976b
+        {% elif (is_state('person.jimmy', 'home')) and (is_state('person.stephanie', 'home')) %}
+          notify.mobile_app_sm_n976b
+        {% else %}
+          notify.mobile_app_sm_n976b
+        {% endif %}
+      data_template:
+        title: "Keuken"
+        message: Het raam is zojuist gesloten!
+        data:
+          push:
+
+- alias: Kleine Kamer window Opened
+  initial_state: 'true'
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.kleine_kamerraam
+      from: 'off'
+      to: 'on'
+  action:
+    - service_template: >
+        {% if (not is_state('person.jimmy', 'home')) and (not is_state('person.stephanie', 'home'))  %}
+          notify.all_devices
+        {% elif (is_state('person.jimmy', 'home')) and (not is_state('person.stephanie', 'home')) %}
+          notify.all_devices
+        {% elif (not is_state('person.jimmy', 'home')) and (is_state('person.stephanie', 'home')) %}
+          notify.mobile_app_sm_n976b
+        {% elif (is_state('person.jimmy', 'home')) and (is_state('person.stephanie', 'home')) %}
+          notify.mobile_app_sm_n976b
+        {% else %}
+          notify.mobile_app_sm_n976b
+        {% endif %}
+      data_template:
+        title: "Kleine Kamer"
+        message: Het raam is zojuist geopend!
+        data:
+          push:
+
+
+- alias: Kleine Kamer window Closed
+  initial_state: 'true'
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.kleine_kamerraam
+      from: 'on'
+      to: 'off'
+  action:
+    - service_template: >
+        {% if (not is_state('person.jimmy', 'home')) and (not is_state('person.stephanie', 'home'))  %}
+          notify.all_devices
+        {% elif (is_state('person.jimmy', 'home')) and (not is_state('person.stephanie', 'home')) %}
+          notify.all_devices
+        {% elif (not is_state('person.jimmy', 'home')) and (is_state('person.stephanie', 'home')) %}
+          notify.mobile_app_sm_n976b
+        {% elif (is_state('person.jimmy', 'home')) and (is_state('person.stephanie', 'home')) %}
+          notify.mobile_app_sm_n976b
+        {% else %}
+          notify.mobile_app_sm_n976b
+        {% endif %}
+      data_template:
+        title: "Kleine Kamer"
+        message: Het raam is zojuist gesloten!
+        data:
+          push:

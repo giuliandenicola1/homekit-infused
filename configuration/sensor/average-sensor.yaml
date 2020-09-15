@@ -1,0 +1,14 @@
+- platform: average
+  name: 'Average Temperature'
+  precision: 1
+  entities:
+    - sensor.woonkamer
+    - sensor.kleine_kamer_temperatuur
+    - sensor.slaapkamer
+    - sensor.keuken_temperatuur
+    - sensor.badkamer
+
+- platform: template
+  sensors:
+    average_house_temperature:
+      value_template: '{{ states.sensor.average_temperature.state }}°C'

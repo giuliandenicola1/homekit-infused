@@ -1,0 +1,6 @@
+  - platform: template
+    sensors:
+      current_scenes_on:
+        friendly_name: All Scenes Currently On
+        value_template: >-
+          {{ states|selectattr('entity_id','in',state_attr('group.alle_scenes','entity_id'))|selectattr('state','eq','on')|list|count }}

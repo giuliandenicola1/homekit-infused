@@ -1,0 +1,35 @@
+- platform: wake_on_lan
+  mac: !secret mac_stephanie
+  name: PC van Stephanie
+  host: "192.168.0.50"
+  turn_off:
+    service: mqtt.publish
+    data:
+      topic: "iotlink/schings/desktop-steph/commands/shutdown"
+      payload: ""
+
+- platform: wake_on_lan
+  mac: !secret mac_jimmy
+  name: PC van Jimmy
+  host: "192.168.0.51"
+  turn_off:
+    service: mqtt.publish
+    data:
+      topic: "iotlink/schings/desktop-jimmy/commands/shutdown"
+      payload: ""
+
+- platform: wake_on_lan
+  mac: !secret mac_server
+  name: Unraid Server
+  host: "192.168.0.2"
+
+- platform: wake_on_lan
+  mac: !secret mac_win10_vm
+  name: Windows 10 VM
+  host: "192.168.0.53"
+
+- platform: wake_on_lan
+  mac: !secret mac_macos_vm
+  name: MacOS Catalina VM
+  host: "192.168.0.212"
+

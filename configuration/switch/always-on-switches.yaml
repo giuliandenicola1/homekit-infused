@@ -1,0 +1,38 @@
+- platform: template
+  switches:
+    koelkast_always_on:
+      value_template: "{{ is_state('switch.koelkast', 'on') }}"
+      turn_on:
+        service: switch.turn_on
+        data:
+          entity_id: switch.koelkast
+      turn_off:
+        service: switch.turn_on
+        data:
+          entity_id: switch.koelkast
+
+- platform: template
+  switches:
+    vriezer_always_on:
+      value_template: "{{ is_state('switch.vriezer', 'on') }}"
+      turn_on:
+        service: switch.turn_on
+        data:
+          entity_id: switch.vriezer
+      turn_off:
+        service: switch.turn_on
+        data:
+          entity_id: switch.vriezer
+
+- platform: template
+  switches:
+    network_switch_always_on:
+      value_template: "{{ is_state('switch.network_switch', 'on') }}"
+      turn_on:
+        service: switch.turn_on
+        data:
+          entity_id: switch.network_switch
+      turn_off:
+        service: switch.turn_on
+        data:
+          entity_id: switch.network_switch

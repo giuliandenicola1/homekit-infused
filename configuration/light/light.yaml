@@ -1,0 +1,21 @@
+- platform: group
+  name: Woonkamer LED Lampen
+  entities:
+    - light.woonkamer_tv
+    - light.woonkamer_dressoir
+    - light.woonkamer_bank
+
+- platform: group
+  name: Slaapkamer LED Lampen
+  entities:
+    - light.bfb4e244cda19c807fhz5e
+
+- platform: group
+  name: Office LED Lampen
+  entities:
+    - light.computer_led
+    - light.vloer_led
+
+- platform: switch
+  name: koogeek_sw_056ce9
+  entity_id: switch.koogeek_sw_056ce9

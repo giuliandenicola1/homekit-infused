@@ -1,0 +1,40 @@
+# Light Groups
+
+sunset_sunrise_leds:
+  name: Sunset and Sunrise LED Group
+  entities:
+    - light.woonkamer_led_lampen
+    - light.office_led_lampen
+
+all_leds:
+  name: Alle LED Strips
+  entities:
+    - light.woonkamer_led_lampen
+    - light.slaapkamer_led_lampen
+    - light.office_led_lampen
+    - light.keuken_leds
+
+light_group:
+  name: Gang Plafond
+  entities:
+    - light.entree_lamp
+    - light.gang_lamp
+
+nachtkastjes:
+  name: nachtkastjes
+  icon: mdi:lightbulb
+  entities:
+    - light.nachtkastje_jimmy
+    - light.nachtkastje_stephanie
+
+bedroom_ceiling:
+  name: Slaapkamer Plafond
+  entities:
+    - light.kast_lamp
+    - light.bed_lamp
+
+christmas_lights:
+  name: Kerst Verlichting
+  entities:
+    - switch.temporary_1
+    - switch.temporary_2

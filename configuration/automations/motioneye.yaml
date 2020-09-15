@@ -1,0 +1,37 @@
+# Camera 1
+- alias: "Motioneye - Woonkamer - Motion Detected"
+  trigger:
+    platform: webhook
+    webhook_id: motioneye-camera1-started
+  action:
+    service: input_boolean.turn_on
+    data:
+      entity_id: input_boolean.motion_woonkamer_camera
+
+- alias: "Motioneye - Woonkamer - Motion Ended"
+  trigger:
+    platform: webhook
+    webhook_id: motioneye-camera1-ended
+  action:
+    service: input_boolean.turn_off
+    data:
+      entity_id: input_boolean.motion_woonkamer_camera
+
+# Camera 2
+- alias: "Motioneye - Gallerij - Motion Detected"
+  trigger:
+    platform: webhook
+    webhook_id: motioneye-camera2-started
+  action:
+    service: input_boolean.turn_on
+    data:
+      entity_id: input_boolean.motion_gallerij_camera
+
+- alias: "Motioneye - Gallerij - Motion Ended"
+  trigger:
+    platform: webhook
+    webhook_id: motioneye-camera2-ended
+  action:
+    service: input_boolean.turn_off
+    data:
+      entity_id: input_boolean.motion_gallerij_camera

@@ -1,0 +1,24 @@
+  - platform: version
+    beta: true
+    image: default
+    source: docker
+
+  - platform: version
+    name: version_current
+
+  - platform: template
+    sensors:
+      ha_updater:
+        value_template: >
+          {% if states.sensor.version_current.state == states.sensor.latest_version.state %}
+            Up to date
+          {% else %}
+            Update available
+          {% endif %}
+      hki_updater:
+        value_template: >
+          {% if states.sensor.hki_latest_version.state == states.hki_current_version.state %}
+            Up to date
+          {% else %}
+            Update available
+          {% endif %}

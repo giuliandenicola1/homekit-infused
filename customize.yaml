@@ -13,8 +13,7 @@
 # Currently there are three custom attributes that you can use. You can use `type:`, `room:` and `lock`. If you do not
 # plan to use any of the HKI auto filling addons you can skip the next part.
 
-# You MUST have the `room` and `type` attribute set up for each device you want to expose to HKI. `lock` is not a requirement, however
-# if you want to lock a button you can try to put the following attribute `lock: true` (note that this only work on buttons)
+# You MUST have the `room` and `type` attribute set up for each device you want to expose to HKI.
 
 # You can name the room any name you want as long as they correspond to what you have
 # setup in the global settings. Note that the room is lowercase!! You can also specify
@@ -25,7 +24,7 @@
 #   friendly_name: Bedroom Lamp
 #   room: bedroom
 
-# The `type` attribute is the other required attribute and has a few options to it, see example:
+# The `type` attribute is the second attribute and has a few options to it, see example:
 
 # light.bedroom:
 #   icon: mdi:lamp
@@ -42,13 +41,13 @@
 # switch                             (use this for devices you want to show on the devices view, ANY device you give this attribute will show up on that view and doesn't have to be a switch!)
 # xbox                               (use this if you have an xbox, it will be exposed on the devices view)
 # playstation                        (use this if you have a playstation)
-# thermostat                         (use this for thermostats only!!!)
+# climate                            (use this for thermostats only!!!)
 # non-climate-fan                    (use this for fans like exhaust fans or kitchen hoods, these will only be exposed on the devices view)
 # sensor-temperature                 (use this for temperature sensors)
 # sensor-humidity                    (use this for humidity sensors)
 # sensor-pressure                    (use this for air pressure sensors)
 # door                               (use this for door sensors)
-# window                             (use this for window sensors)
+# windows                            (use this for window sensors)
 # camera                             (use this for camera's)
 # motion                             (use this for motion sensors)
 # smoke                              (use this for smoke sensors)

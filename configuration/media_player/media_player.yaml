@@ -1,0 +1,8 @@
+  - platform: xboxone
+    device: xxxxxxxxxxxxxxx
+    name: Xbox One
+    ip_address: 192.168.0.22
+
+  - platform: androidtv
+    name: Nvidia S.H.I.E.L.D TV Pro
+    host: 192.168.0.60

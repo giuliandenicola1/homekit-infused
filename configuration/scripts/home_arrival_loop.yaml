@@ -1,0 +1,28 @@
+home_arrival:
+  alias: Home Arrival
+  sequence:
+    - service: light.turn_on
+      data:
+        entity_id: light.woonkamer_led_lampen, light.gateway_light_7811dcdef324, light.office_led_lampen
+        color_name: deeppink
+        brightness: 255
+    - delay: 
+        seconds: 1
+    - service: light.turn_off
+      data:
+        entity_id: light.woonkamer_led_lampen, light.gateway_light_7811dcdef324, light.office_led_lampen
+    - delay:
+        seconds: 1
+    - service: script.turn_on
+      data:
+        entity_id: script.home_arrival_loop
+
+# LOOP BACK TO START SCRIPT AGAIN         
+home_arrival_loop:
+  alias: Home Arrival loop
+  sequence:
+    - delay:
+        seconds: .1
+    - service: script.turn_on
+      data:
+        entity_id: script.home_arrival

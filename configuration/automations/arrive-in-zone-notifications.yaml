@@ -1,0 +1,79 @@
+# Notify Jimmy/Stephanie when arrive home
+- alias: Jimmy Home Alert
+  initial_state: 'true'
+  trigger:
+  - platform: state
+    entity_id: person.jimmy
+    to: 'home'
+    for:
+      seconds: 30
+  action:
+  - service: notify.mobile_app_iphone_stephanie
+    data:
+      title: "Locatie"
+      message: "Jimmy is zojuist Thuis gearriveerd"
+      data:
+        push:
+          sound: default
+          category: map
+        action_data:
+          latitude: !secret latitude
+          longitude: !secret longitude
+
+- alias: Stephanie Home Alert
+  initial_state: 'true'
+  trigger:
+    - platform: state
+      entity_id: person.stephanie
+      to: 'home'
+      for:
+        seconds: 30
+  action:
+    - service: notify.mobile_app_sm_n976b
+      data:
+        title: "Locatie"
+        message: "Stephanie is zojuist Thuis gearriveerd"
+        data:
+          push:
+            badge: 0
+            sound: default
+            category: map
+          action_data:
+            latitude: !secret latitude
+            longitude: !secret longitude
+    - service: script.turn_off
+      data:
+        entity_id: script.home_arrival, script.home_arrival_loop
+    - service: scene.turn_on
+      data_template: 
+        entity_id: scene.before_wife_underway
+    - service: tts.google_translate_say
+      entity_id: media_player.all_speakers
+      data:
+        message: Stephanie has arrived home!
+
+- alias: Stephanie Away Alert
+  initial_state: 'true'
+  trigger:
+    - platform: state
+      entity_id: person.stephanie
+      from: 'AH Eindhoven'
+  action:
+    - service: notify.mobile_app_sm_n976b
+      data:
+        title: "Locatie"
+        message: "Stephanie heeft zojuist de Albert Heijn verlaten"
+    - service: scene.create
+      data:
+        scene_id: before_wife_underway
+        snapshot_entities:
+        - light.office_led_lampen
+        - light.woonkamer_led_lampen
+        - light.gateway_light_7811dcdef324
+    - service: script.turn_on
+      data: 
+        entity_id: script.home_arrival
+    - service: tts.google_translate_say
+      entity_id: media_player.all_speakers
+      data:
+        message: Attention, Stephanie is on her way home!

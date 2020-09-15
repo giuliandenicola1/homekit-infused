@@ -1,0 +1,10 @@
+room_01_switches:
+  entities: switch.receiver, switch.samsung_tv, switch.xbox_one
+room_02_switches:
+  entities: switch.receiver_slaapkamer_2, switch.tv_slaapkamer
+room_03_switches:
+  entities: switch.pc_van_stephanie, switch.pc_van_jimmy, switch.printer, switch.monitors_jimmy, switch.monitors_stephanie, switch.piano
+room_04_switches:
+  entities: switch.afzuigkap, switch.waterkoker, switch.airfryer, switch.cappumaker, switch.oven, switch.vaatwasser
+room_05_switches:
+  entities: switch.wasmachine, switch.droger
