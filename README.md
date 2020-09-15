@@ -1,5 +1,7 @@
-# Homekit Infused Framework
-Homekit Infused v3.x.x Framework
+# Home Assistant (Personal)
+This is my personal home assistant setup with Homekit Infused v3.0.5
+
+This is meant for inspiration and not to copy, if you are looking for Homekit Infused click the links below:
 
 For documentation please visit: https://jimz011.github.io/homekit-infused/framework.html
 
