@@ -20,7 +20,6 @@ This is the default HKI menu (in case you require this and deleted it by acciden
 - Copy the code below and make changes if needed
 
 ```
-# lovelace_gen
 - type: horizontal-stack
   cards:
     - !include ../../../base/includes/gap.yaml
