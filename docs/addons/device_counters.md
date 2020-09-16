@@ -22,9 +22,9 @@ By default HKI has device counters to create sensors that will show you the amou
 ### Header Configuration
 The following three groups are used from device_counters.yaml to show the status of these in the header.
 ```
-all_door_sensors:
-all_window_sensors:
-all_motion_sensors:
+all_door_sensor_entities:
+all_window_sensor_entities:
+all_motion_sensor_entities:
 ```
 
 ### Extra Information
