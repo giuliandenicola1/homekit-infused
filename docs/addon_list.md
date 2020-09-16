@@ -87,6 +87,7 @@
 
 ### Other Documentation
 #### Extra Information
+  - [Custom Views](addons/custom-views.md) *new
   - [Device Counters](addons/device_counters.md) *new
   - [Header Templates](addons/header_templates.md)
   - [Notifications](addons/notifications.md) *new
