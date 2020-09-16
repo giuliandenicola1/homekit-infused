@@ -21,7 +21,6 @@ For detailed instructions on how to use this, please follow read the [button (na
 - Copy the code below and make changes if needed
 
 ```
-# lovelace_gen
 - type: horizontal-stack
   cards:
     - !include ../../../base/includes/gap.yaml
