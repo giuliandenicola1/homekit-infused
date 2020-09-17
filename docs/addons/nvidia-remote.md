@@ -60,6 +60,7 @@ This is a predefined remote control solution for your Nvidia SHIELD TV (pro). Th
 - Copy the code below and make changes if needed
 
 ```
+# example of minimal required config
 - type: horizontal-stack
   cards:
     - !include ../../../base/includes/gap.yaml
