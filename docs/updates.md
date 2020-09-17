@@ -19,13 +19,16 @@ To update the HKI framework in most cases you can copy the entire repo and repla
 - `configuration.yaml`
 - `customize.yaml`
 - `secrets.yaml`
+All other files should be copied and replace your existing ones
+
+*NOTE: check the release notes for additional things to do, in most cases this is not necessary, but sometimes it is! Failing to do so might break your setup!
 
 ### Updates post HKI 3.1.0
 To update the HKI framework you can simply download the update pacakage from here. In most cases it is best to update one by one, but in some cases you can update directly to the new version. The update page will show you the upgrade paths.
 
 [Download updates here](https://github.com/jimz011/homekit-infused/tree/updates/)
 
-All other files should be copied and replace your existing ones. IF there are additional things to do I will mention this in the update notes!
+*NOTE: check the release notes for additional things to do, in most cases this is not necessary, but sometimes it is! Failing to do so might break your setup!
 
 ## Current Version 
 [Current Version](version.html)
