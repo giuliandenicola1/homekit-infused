@@ -3,7 +3,7 @@
 Back to [Addon List](../addon_list.md)
 
 # Auto Filled Cameras Card
-*HKI Framework 3.0.1 or higher required
+*HKI Framework 3.1.3 or higher required
 
 ![Homekit Infused](../images/auto-fill-cameras-card.png)
 
@@ -26,6 +26,10 @@ camera.living_room:
 | aspect_ratio | no | 16x9 | Sets the aspect ratio of the camera image |
 | columns | no | 1 | Sets the number of images stacked horizontally |
 | sort | no | name | Sorts the cards in a different order, choose from: domain, entity_id, name, state, attribute, last_changed last_updated or last_triggered |
+| camera_view | no | auto | Either show a live feed or image on the thumbnail, setting it to live may be heavy on your system (choose between `auto` and `live`) |
+| show_name | no | false | Shows the name of the camera |
+| show_state | no | false | Shows the state of the camera (if available) |
+
 
 ### Install
 - Create a new file inside the folder of the view you want (e.g. /homekit-infused/user/views/security/), you can name the file however you want (e.g. camera-card.yaml)
