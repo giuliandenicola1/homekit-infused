@@ -22,7 +22,7 @@
 ### Default Addons
 #### Auto Fill Addons
   - [Auto-Filled Automations Card](addons/auto-fill-automations-card.md)
-  - [Auto-Filled Battery Card](addons/auto-fill-battery-card.md) *updated
+  - [Auto-Filled Battery Card](addons/auto-fill-battery-card.md)
   - [Auto-Filled Camera Card](addons/auto-fill-camera-card.md)
   - [Auto-Filled Certificates Card](addons/auto-fill-certificates-card.md)
   - [Auto-Filled Devices Card](addons/auto-fill-devices-card.md) (including popups)
@@ -41,10 +41,10 @@
   - [Single Homekit Button](addons/button-light-switch.md) (light, switch or sensor)
   
 #### Calendar
-  - [Calendar Card](addons/calendar-card.md) *updated
+  - [Calendar Card](addons/calendar-card.md)
 
 #### Map
-  - [Map Card](addons/map-card.md) *updated
+  - [Map Card](addons/map-card.md)
   - [Waze Card](addons/waze-card.md)
   
 #### Media 
@@ -56,31 +56,31 @@
   - [iFrame Card](addons/iframe-card.md)
   - [Mini Graph Card](addons/mini-graph-card.md)
   - [Search Card](addons/search-card.md)
-  - [Waste Collection Card](addons/waste-collection-card.md) *updated
+  - [Waste Collection Card](addons/waste-collection-card.md)
 
 #### Picture Elements
   - [Appliance Card](addons/appliances-card.md)
   - [Frontpage Photo/Image](addons/frontpage-photo.md)
 
 #### Unraid
-  - [Docker Container/VM Card](addons/unraid-docker.md) *new
+  - [Docker Container/VM Card](addons/unraid-docker.md)
 
 #### Utilities
-  - [Empty Button](addons/empty-button.md) *new
+  - [Empty Button](addons/empty-button.md)
   - [Title Text](addons/title-text-card.md)
   - [Gap Card](addons/gap-card.md)
   
 #### Vacuum
-  - [Simple Vacuum Card](addons/simple-vacuum-card.md) (Any Vacuum) *new
-  - [Vacuum Basic Controls](addons/vacuum-controls.md) (Any Vacuum) *new
-  - [Vacuum Speed Controls](addons/vacuum-mode-presets.md) (Any Vacuum) *new
-  - [Vacuum Live Map](addons/vacuum-live-map.md) (Valetudo/Valetudo RE only!) *new
-  - [Valetudo Preset Button](addons/valetudo-preset-button.md) (Valetudo/Valetudo RE only!) *new
+  - [Simple Vacuum Card](addons/simple-vacuum-card.md) (Any Vacuum)
+  - [Vacuum Basic Controls](addons/vacuum-controls.md) (Any Vacuum)
+  - [Vacuum Speed Controls](addons/vacuum-mode-presets.md) (Any Vacuum)
+  - [Vacuum Live Map](addons/vacuum-live-map.md) (Valetudo/Valetudo RE only!)
+  - [Valetudo Preset Button](addons/valetudo-preset-button.md) (Valetudo/Valetudo RE only!)
   
 #### Weather
   - [Air Visual Card](addons/air-visual-card.md)
-  - [Simple Weather Card](addons/simple-weather-card.md) *updated
-  - [Weather Card](addons/weather-card.md) (animated) *updated
+  - [Simple Weather Card](addons/simple-weather-card.md)
+  - [Weather Card](addons/weather-card.md) (animated)
 
 ### User submitted addons
   - Coming Soon
@@ -88,8 +88,8 @@
 ### Other Documentation
 #### Extra Information
   - [Custom Views](addons/custom-views.md) *new
-  - [Device Counters](addons/device_counters.md) *new
+  - [Device Counters](addons/device_counters.md)
   - [Header Templates](addons/header_templates.md)
-  - [Notifications](addons/notifications.md) *new
+  - [Notifications](addons/notifications.md)
   - [Stacks and Layout-Card](addons/stacks.md) (horizontal/vertical)
-  - [Theming](addons/theming.md) *new
+  - [Theming](addons/theming.md)
