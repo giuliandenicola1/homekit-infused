@@ -23,7 +23,7 @@
 #### Auto Fill Addons
   - [Auto-Filled Automations Card](addons/auto-fill-automations-card.md)
   - [Auto-Filled Battery Card](addons/auto-fill-battery-card.md)
-  - [Auto-Filled Camera Card](addons/auto-fill-camera-card.md)
+  - [Auto-Filled Camera Card](addons/auto-fill-camera-card.md) *new options available in 3.1.3
   - [Auto-Filled Certificates Card](addons/auto-fill-certificates-card.md)
   - [Auto-Filled Devices Card](addons/auto-fill-devices-card.md) (including popups)
   - [Auto-Filled Fans Card](addons/auto-fill-fans-card.md)
