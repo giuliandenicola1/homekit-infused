@@ -11,7 +11,7 @@ This is a card that can show you the vms/docker containers that are currently ru
 
 ### Requirements (HACS)
 - For this to work you must have a working MQTT broker setup
-- For this to work you must download the Unraid-API container in the Unraid Community Applications store. You will then have to open the containers webUI and setup MQTT.
+- For this to work you must download the Unraid-API container in the Unraid Community Applications store. You will then have to open the containers webUI and setup MQTT after installing the container.
 
 ### Configuration
 - To use this properly you will have to add a picture_entity to each of your containers, you must do this in `customize.yaml`. 
