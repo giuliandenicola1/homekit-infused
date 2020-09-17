@@ -50,7 +50,7 @@
 #### Media 
   - [Google Home Card](addons/google-home-card.md)
   - [Upcoming Media Card](addons/upcoming-recently-added.md)
-  - [Remote Control Card](addons/nvidia-remote.md) (for Nvidia SHIELD TV/Android TV)
+  - [Remote Control Card](addons/nvidia-remote.md) (for Nvidia SHIELD TV/Android TV) *updated
 
 #### Other
   - [iFrame Card](addons/iframe-card.md)
@@ -87,7 +87,7 @@
 
 ### Other Documentation
 #### Extra Information
-  - [Custom Views](addons/custom-views.md) *new
+  - [Custom Views](addons/custom-views.md) *updated
   - [Device Counters](addons/device_counters.md)
   - [Header Templates](addons/header_templates.md)
   - [Notifications](addons/notifications.md)
