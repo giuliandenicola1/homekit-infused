@@ -26,6 +26,7 @@ This is a button that can call a service to either clean a zone or go to a spot.
 | icon | no | none | Icon for the button |
 | zone_id | yes/no | ['Living Room'] | Enter the zone_id here, this must be the same name as the zone you've set in the Valetudo webinterface! Don't forget the brackets! e.g. `['Zone']` (only available when selected the zoned-preset-button) |
 | spot_id | yes/no | 'Trash Can' | Enter the spot_id here, this must be the same name as the go_to spot you've set in the Valetudo webinterface! Notice that there are NO brackets! e.g. `'Spot'` (only available when selected the go-to-spot-preset-button) |
+| grid | no | '!include ../../../base/includes/default-hki-grid.yaml' | Change the grid (best to leave this alone if you don't know what the grid is for) |
 
 ### Install
 - Create a new file inside the folder of the view you want (e.g. /homekit-infused/user/views/vacuum/), you can name the file however you want (e.g. vacuum-valetudo-presets.yaml)
