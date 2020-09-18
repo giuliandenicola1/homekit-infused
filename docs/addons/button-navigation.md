@@ -19,6 +19,9 @@ This is the default HKI navigation button, it is by default used in the [menu](m
 | Properties | Required | Default | Description |
 |----------------------------------|-------------|----------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | name | yes/no | none | Sets the name for the button, if the entity has a friendly name in customize.yaml this is not required! (this accepts JS templates, see examples below) |
+| entity | no | input_boolean.dummy1 | Only use this is you want to have a navigation button that doubles as a switch |
+| hold_action | no | more-info | Set this to toggle, so that a hold_action will toggle the entity mentioned above |
+| custom_state | no | "on" | This is the state the above entity must have to have the button to be shown as "switched on" |
 | icon | yes/no | none | Sets the icon for the button, if an entity_picture is set either in this config or in customize.yaml, the icon will be hidden! if this entity has an icon set in customize.yaml this is not required (this accepts JS templates, see examples below) |
 | size | no | 25% | Sets the size of the icon |
 | icon_color_off | no | var(--paper-item-icon-color) | Sets the color of the icon |
