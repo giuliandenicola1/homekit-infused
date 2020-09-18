@@ -3,7 +3,7 @@
 Back to [Addon List](../addon_list.md)
 
 # Auto Filled Cameras Card
-*HKI Framework 3.0.2 or higher required (new options in 3.1.3)
+*HKI Framework 3.0.2 or higher required
 
 ![Homekit Infused](../images/auto-fill-cameras-card.png)
 
