@@ -142,8 +142,7 @@ service_color_6 | no | [3, 0, 255] | Sets the color of the actual service-call |
     label: !include ../../../base/includes/brightness-label.yaml
     lock: true
     template: '../popup-cards/light-color-temp.yaml'
-    grid:
-      '!include ../../../base/includes/light-devices-grid.yaml'
+    grid: '!include ../../../base/includes/light-devices-grid.yaml'
 ```
 
 ### Templating
@@ -169,8 +168,7 @@ The example below is how to easily create a template to show as the label, I use
 - !include
   - '../../../base/templates/button/button.yaml'
   - entity: switch.refrigerator
-    grid:
-      '!include ../../../base/includes/light-devices-grid.yaml'
+    grid: '!include ../../../base/includes/light-devices-grid.yaml'
     label: "[[[ return `${states['sensor.refrigerator_power'].state} W`; ]]]"
     lock: true
 ```
