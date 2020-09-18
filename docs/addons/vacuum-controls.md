@@ -34,6 +34,7 @@ vacuum:
 | icon_pause | no | mdi:pause-circle-outline | Change the icon of this button |
 | icon_stop | no | mdi:stop-circle-outline | Change the icon of this button |
 | icon_find_me | no | mdi:map-marker | Change the icon of this button |
+| grid | no | '!include ../../../base/includes/default-hki-grid.yaml' | Change the grid (best to leave this alone if you don't know what the grid is for) |
 
 ### Install
 - Create a new file inside the folder of the view you want (e.g. /homekit-infused/user/views/vacuum/), you can name the file however you want (e.g. vacuum-live-map.yaml)
