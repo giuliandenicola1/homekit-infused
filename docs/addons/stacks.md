@@ -9,6 +9,19 @@ Horizontal and vertical stacks are useful to make cards appear the way you want.
 Layout card is an addon that can do this as well, but makes it slightly easier since you can set the number of used columns. Since layout-card is a Framework requirement you already have this addon.
 Neither of the methods are better than the other, however I must note that horizontal and vertical stacks are core HA code and layout-card is a custom-card. In my opinion it is safer to run stacks than a layout-card!
 
+### Important Note
+All the default views are wrapped inside a layout-card, by default this will be set to a max of 3 columns (meaning when viewed on a tablet or in a browser it will spread the cards in columns of 3). If the max_columns is set to 6 you can have 6 columns on the screen, which will be dynamic depending on the view width. You can change the column numbers in the ../user/config/view_config.yaml file.
+
+WARNING! The light and devices view do NOT have a layout-card fixed, to properly use these pages start with a layout card like the example below. Because of the nature of this you must either reuse this same piece of code in each file, or put all the code in a single file. (this does not apply when using the auto-fill addons)
+```
+# example of light or devices view starting code
+- type: custom:layout-card
+  max_columns: 3
+  layout: horizontal
+  cards:
+    - your view cards here
+```
+
 ### Vertical and Horizontal stacks
 ```
 # example with a vertical and horizontal stack (3 buttons horizontally)
