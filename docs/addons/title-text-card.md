@@ -16,6 +16,14 @@ This card is used to create a header style name for the views (see screenshot)
 | Properties | Required | Default | Description |
 |----------------------------------|-------------|----------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | name | yes | none | Sets the name/title to show |
+| show_icon | no | false | show/hide icon |
+| icon | no | none | Set if you want to display an icon, this only works when show_icon is set to true |
+| background_color | no | 'rgba(0,0,0,0.0)' | Sets the background color of the card, by default this is transparant |
+| box_shadow | no | none | Sets a box-shadow (only useful when background is not transparant) |
+| border_radius | no | none | Sets a border-radius (only useful when background is not transparant) |
+| font_size | no | var(--title-text-font-size) | Sets an individual font_size for this card, if you seek to set title text styles globally please refer to the themes section of the documentation |
+| font_weight | no | var(--title-text-font-weight) | Sets an individual font_weight for this card, if you seek to set title text styles globally please refer to the themes section of the documentation |
+| font_color | no | var(--title-text-color) | Sets an individual text color for this card, if you seek to set title text styles globally please refer to the themes section of the documentation |
 
 ### Install
 - Create a new file inside the folder of the view you want (e.g. /homekit-infused/user/views/location/), you can name the file however you want (e.g. title-text-card.yaml)
