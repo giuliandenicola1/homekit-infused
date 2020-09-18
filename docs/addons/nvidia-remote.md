@@ -53,7 +53,8 @@ This is a predefined remote control solution for your Nvidia SHIELD TV (pro). Th
 | icon_preset_button_4 | no | mdi:spotify | Change the icon of the fourth preset button |
 | icon_color_preset_button_4 | no | limegreen | Change the icon color of the fourth preset button, this can also be a hex or rgb value |
 | source_preset_button_4 | no | Spotify | Change the source of the fourth preset button, this is usually the app name (case-sensitive), if you need help finding sources check [here](https://community.home-assistant.io/t/native-support-for-android-tv-android-devices/82792/485) |
-
+||||
+| grid | no | '!include ../../../base/includes/default-hki-grid.yaml' | Change the grid (best to leave this alone if you don't know what the grid is for) |
 
 ### Install
 - Create a new file inside the folder of the view you want (e.g. /homekit-infused/user/views/frontpage/), you can name the file however you want (e.g. frontpage-buttons.yaml)
