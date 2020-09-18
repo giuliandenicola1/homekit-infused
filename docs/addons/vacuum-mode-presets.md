@@ -100,6 +100,7 @@ automation:
 | name_max | no | Max | Change the name of this button |
 | name_balanced | Balanced | Find Me | Change the name of this button |
 | name_mop | no | Mop | Change the name of this button |
+| grid | no | '!include ../../../base/includes/default-hki-grid.yaml' | Change the grid (best to leave this alone if you don't know what the grid is for) |
 
 ### Install
 - Create a new file inside the folder of the view you want (e.g. /homekit-infused/user/views/vacuum/), you can name the file however you want (e.g. vacuum-speed-controls.yaml)
