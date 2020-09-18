@@ -24,7 +24,10 @@ This is the default HKI navigation button, it is by default used in the [menu](m
 | custom_state | no | "on" | This is the state the above entity must have to have the button to be shown as "switched on" |
 | icon | yes/no | none | Sets the icon for the button, if an entity_picture is set either in this config or in customize.yaml, the icon will be hidden! if this entity has an icon set in customize.yaml this is not required (this accepts JS templates, see examples below) |
 | size | no | 25% | Sets the size of the icon |
-| icon_color_off | no | var(--paper-item-icon-color) | Sets the color of the icon |
+| icon_color_off | no | var(--paper-item-icon-color) | Sets the color of the icon, if no entity is set than this is the variable you want to change |
+| icon_color_on | no | var(--paper-item-icon-color) | Sets the color of the icon if it matches the custom_state of an entity, you must have an entity setup to use this as mentioned above |
+| spin_off | no | false | Makes the icon spin, if no entity is set than this is the variable you want to change |
+| spin_on | no | false | Makes the icon spin if it matches the custom_state of an entity, you must have an entity setup to use this as mentioned above |
 | label | yes | none | Sets the label for the button (this accepts JS templates) |
 | show_entity_picture | no | true | Set to show entity_picture instead of an icon, set this to false if you've set an entity_picture in customize.yaml and want to override it by showing an icon instead, else just leave the default setting | 
 | entity_picture | no | none | Sets an entity_picture for this icon, this must be a path to an image (e.g. /local/images/your_image.png). This will override the icon setting! |
