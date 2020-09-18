@@ -34,6 +34,7 @@ This is the default HKI navigation button, it is by default used in the [menu](m
 | navigation_path | yes | /homekit-infused/home | Sets the path the button should point to, you can ONLY choose any of the included views, to find out the path names you can open the `/homekit-infused/user/views/` folder. The folder names are exactly the same as their paths |
 | notification | yes | "[[[ if (states['input_number.empty'].state == 0) return '&nbsp'; else return `${states['input_number.empty'].state}`; ]]]" | Set a badge on a button, the badge will show what is set in the template, to make it easy all you'd need to do is replace the `input_number.empty` entity for an entity of which you want the state to be shown inside the badge (this accepts JS templates) |
 | background_color | yes | "[[[ if (states['input_number.empty'].state == 0) return 'rgba(0,0,0,0.0)'; else return 'var(--paper-item-icon-color)'; ]]]" | Sets background color of the badge, to make it easy all you'd need to do is replace the `input_number.empty` with the exact same entity as you have put inside the notification parameter explained above |
+| grid | no | '!include ../../../base/includes/default-hki-grid.yaml' | Change the grid (best to leave this alone if you don't know what the grid is for) |
 
 
 ### Install
