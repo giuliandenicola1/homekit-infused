@@ -19,8 +19,8 @@ This is a card that will fetch all your scenes and create a button page for it a
 |----------------------------------|-------------|----------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | column_num | no | 1 | Sets how many battery entities should be stacked horizontally on each column |
 | method | no | name | Sorts the cards in a different order, choose from: domain, entity_id, name, state, attribute, last_changed last_updated or last_triggered |
+| grid | no | light-devices-grid | Change the grid of the button, choose from `default-hki-grid`, `light-devices-grid`, `old-hki-grid` or `old-light-devices-grid` |
 | other | | | It is probably best if you leave all the other settings alone! |
-| grid | no | '!include ../../../base/includes/default-hki-grid.yaml' | Change the grid (best to leave this alone if you don't know what the grid is for) |
 
 ### Install
 - Create a new file inside the folder of the view you want (e.g. /homekit-infused/user/views/scenes/), you can name the file however you want (e.g. scenes-card.yaml)
