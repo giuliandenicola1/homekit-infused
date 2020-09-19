@@ -59,8 +59,9 @@ When using multi floor setups you will have to change the code slightly, you can
 | max_columns | no | 3 | Do NOT touch this!! Use the parameter below for setting the columns! |
 | columns | no | 3 | Sets the number of buttons stacked horizontally |
 | sort | no | name | Sorts the cards in a different order, choose from: domain, entity_id, name, state, attribute, last_changed last_updated or last_triggered |
+| grid | no | light-devices-grid | Change the grid of the button, choose from `default-hki-grid`, `light-devices-grid`, `old-hki-grid` or `old-light-devices-grid` |
 | _global.devices_rooms_floor_X | yes/no | 0 | Replace `X` with a floor number, this MUST match the state condition when using multi-floor. When using a single floor make sure you use the same floor as defined in room_config.yaml |
-| grid | no | '!include ../../../base/includes/light-devices-grid.yaml' | Change the grid (best to leave this alone if you don't know what the grid is for) |
+
 
 ### Install
 - Create a new file inside the folder of the view you want (e.g. /homekit-infused/user/views/devices/), you can name the file however you want (e.g. devices-card.yaml)
