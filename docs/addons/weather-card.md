@@ -42,6 +42,7 @@ sun:
 | Properties | Required | Default | Description |
 |----------------------------------|-------------|----------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | entity | yes | weather.dark_sky | Sets the weather entity used for this card |
+| name | no | none | Sets a custom city name (by default the name is unused) |
 | current | no | true | Show the current weather icon, the current temperature and title |
 | forecast | no | true | Shows forecast |
 | hourly_forecast | no | False | Shows hourly forecast |
