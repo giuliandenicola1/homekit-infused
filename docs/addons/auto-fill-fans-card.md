@@ -26,7 +26,7 @@ switch.living_room_fan:
 |----------------------------------|-------------|----------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | columns | no | 3 | Sets the number of images stacked horizontally |
 | sort | no | name | Sorts the cards in a different order, choose from: domain, entity_id, name, state, attribute, last_changed last_updated or last_triggered |
-| grid | no | '!include ../../../base/includes/default-hki-grid.yaml' | Change the grid (best to leave this alone if you don't know what the grid is for) |
+| grid | no | light-devices-grid | Change the grid of the button, choose from `default-hki-grid`, `light-devices-grid`, `old-hki-grid` or `old-light-devices-grid` |
 
 ### Install
 - Create a new file inside the folder of the view you want (e.g. /homekit-infused/user/views/climate/), you can name the file however you want (e.g. auto-fill-fan-card.yaml)
