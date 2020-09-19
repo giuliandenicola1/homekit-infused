@@ -21,6 +21,7 @@ The docs might be incomplete or not completely comprehensible for all. Remember 
 #### Known Issues
   - Sometimes notifications would suddenly stop scrolling, solution is to touch the notification slightly, it will go back to automatic scrolling if you do that. I can't and wont fix this as it is a non-issue.
   - The interface can scroll slightly from left to right, this is a byproduct of using panel view (to make it compatible with desktops) also on ios it might give a white scroll bar at the right side. I will look into this in the future.
+  - When having 3 or more columns set in view_config the interface might become unstable when resizing the browser window, this is inherent to the same problem mentioned above and I will look into this in the future.
 
 #### QUESTIONS?
 
