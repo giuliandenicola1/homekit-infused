@@ -60,7 +60,7 @@ Add the following lines to your lovelace resources
 | tap_action | no | toggle | The options here are limited, choose between `toggle`, `more-info` or `none` |
 | hold_action | no | service-call | The options here are limited, choose between `toggle`, `more-info`, `none` or `service-call` (the service-call can't be edited and will always show a switch popup with a more-info card) |
 | template | no | `'../popup-cards/light-switch.yaml'` | Only change this if you need a different popup for your lights, by default you have the choice between `light-switch.yaml`, `light-rgb.yaml` and `light-color-temp.yaml`, but you could copy one of these light templates from the base folder and create your own (which is useful if you want to change the preset colors in the popup) |
-| grid | no | `'!include ../../../base/includes/light-devices-grid.yaml'` | By default this will set the label to be shown at the bottom right corner of the button, to have the name, state and label alligned vertically you must remove this line! Experienced users could slightly change the grid to their likings, but it has to be in a separate file! (e.g. `../user/templates/custom-grid.yaml`) |
+| grid | no | default-hki-grid | Change the grid of the button, choose from `default-hki-grid`, `light-devices-grid`, `old-hki-grid` or `old-light-devices-grid` |
 
 ##### Popup Settings
 *Requires HKI Framework 3.0.5 or higher
@@ -168,7 +168,7 @@ The example below is how to easily create a template to show as the label, I use
 - !include
   - '../../../base/templates/button/button.yaml'
   - entity: switch.refrigerator
-    grid: '!include ../../../base/includes/light-devices-grid.yaml'
+    grid: light-devices-grid
     label: "[[[ return `${states['sensor.refrigerator_power'].state} W`; ]]]"
     lock: true
 ```
