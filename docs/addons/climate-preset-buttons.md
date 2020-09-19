@@ -22,6 +22,7 @@ This is a predefined set of buttons to use with your climate entities. It is adv
 | label | yes | none | Sets the label of the button |
 | icon | yes | none | Sets the icon of the button |
 | option | yes | none | Sets the temperature preset of the button |
+| grid | no | light-devices-grid | Change the grid of the button, choose from `default-hki-grid`, `light-devices-grid`, `old-hki-grid` or `old-light-devices-grid` |
 | other | | | Do NOT touch the other stuff! |
 
 ### Install
