@@ -142,7 +142,7 @@ service_color_6 | no | [3, 0, 255] | Sets the color of the actual service-call |
     label: !include ../../../base/includes/brightness-label.yaml
     lock: true
     template: '../popup-cards/light-color-temp.yaml'
-    grid: '!include ../../../base/includes/light-devices-grid.yaml'
+    grid: light-devices-grid
 ```
 
 ### Templating
