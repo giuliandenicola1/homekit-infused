@@ -67,6 +67,7 @@ sun:
           opacity: 0.8;
         }
       entity: weather.dark_sky
+      name: Eindhoven
       current: true
       details: true
       forecast: true
