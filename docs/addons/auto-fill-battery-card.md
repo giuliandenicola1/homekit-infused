@@ -20,6 +20,7 @@ This card is used to automatically fill your battery entities and make a nice ov
 | exclude | no | none | Sets the battery entities to be excluded from the card |
 | column_num | no | 1 | Sets how many battery entities should be stacked horizontally on each column |
 | method | no | name | Sorts the cards in a different order, choose from: domain, entity_id, name, state, attribute, last_changed last_updated or last_triggered |
+| grid | no | light-devices-grid | Change the grid of the button, choose from `default-hki-grid`, `light-devices-grid`, `old-hki-grid` or `old-light-devices-grid` |
 | other | | | It is probably best if you leave all the other settings alone! |
 
 ### Install
