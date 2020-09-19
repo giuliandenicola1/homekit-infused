@@ -80,7 +80,7 @@
 #### Weather
   - [Air Visual Card](addons/air-visual-card.md)
   - [Simple Weather Card](addons/simple-weather-card.md)
-  - [Weather Card](addons/weather-card.md) (animated)
+  - [Weather Card](addons/weather-card.md) (animated) *updated options
 
 ### User submitted addons
   - Coming Soon
