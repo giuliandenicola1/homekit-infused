@@ -13,13 +13,15 @@
 - [Addon List](https://github.com/jimz011/homekit-infused/blob/master/docs/addon_list.md)
 
 # About Homekit Infused
-Homekit Infused v3.x.x is the a lovelace setup out there in YAML mode. The main goal of this project was to make it easy for people to have a nice interface that is similar to Apple's Homekit.
+Homekit Infused v3.x.x is a templated lovelace setup in YAML mode. The main goal of this project was to make it easy for people to have a nice interface that is similar to Apple's Homekit.
 
 HKI consists out of 2 main components, the Framework (which can be run standalone) and the addons (which requires the framework)
-The framework is basically a header that has notification support, some sensors, a greeting, the menu, the footer and 27 empty views that can be filled to your likings.
-You can easily run the Framework on its own without the need for any of the addons, you can use any card you find on either the HA docs or on the forums since it is entirely in YAML.
+The framework is basically a header that has notification support, some sensors, a greeting, the menu, the footer and 35 empty views that can be filled to your likings.
+You can easily run the Framework on its own without the need for any of the addons, you can use any card you find on either the HA docs or on the forums since it is entirely in YAML. This means you can have very wild setups like standard lovelace would, but not needing to worry about the header, notifications and a lot of styling. 
 
-The addons are predefined sets of code that is either plug and play or requires very little user input to make them work. The addons are currently all styled the same way so that the user doesn't need to fiddle with it to get it right.
+The addons are predefined sets of code that are either plug and play or requires very little user input to make them work. The addons are currently all styled the same way so that the user doesn't need to fiddle with it to get it right and there are many 'addons' that just require a copy/paste. Addons can also be made by anyone that wants to contribute to this project. You don't need to be a custom-card developer since addons in HKI are just blocks of code together creating the illusion of having installed an addon whilst in reality you are just learning to code in YAML with a lot of ease (you can ask avid HKI users on how simple this is!). 
+
+HKI v2, v1 and v0 users, this is nothing like any of those versions. The performance of this project is so much better that none of those versions can be compared to this one. I suggest upgrading very soon, updates are so easy since v3 that you would be stupid not to :D!
 
 Homekit Infused was created as a private project and released to the public as it was requested by many. In the past year the setup has changed quite a bit, not only aesthetically but also codewise. My goal was to make it easier for people to use what I have created without compromising too much on customization that users have made after installing my previous versions of HKI. The setup is still just as 'modular' as it ever was and you will find many improvements over the previous versions if you are an avid user of my setup. New users might find this project very interesting as well, as not only does it give you this wonderful interface, but it will also give you insight on how a bartender (yes that is me) creates code without having any coding knowledge beforehand other than some basic HTML back in the early 2000s.
 
