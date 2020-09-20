@@ -3,7 +3,7 @@
 Back to [Addon List](../addon_list.md)
 
 # Calendar Card
-![Homekit Infused](../images/calendar-card.png)
+![Homekit Infused](../images/core-calendar-card.png)
 
 ### Description
 This is a calendar card for use with calendar entities.
