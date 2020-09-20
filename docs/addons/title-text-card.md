@@ -4,6 +4,7 @@ Back to [Addon List](../addon_list.md)
 
 # Title Text Card
 ![Homekit Infused](../images/title-text-card.png)
+![Homekit Infused](../images/title-text-card-2.png)
 
 ### Description
 This card is used to create a header style name for the views (see screenshot)
@@ -35,13 +36,36 @@ This card is used to create a header style name for the views (see screenshot)
 ```
 
 ### Extra Information
-This card is probably best used when placed inside a vertical-stack (this will avoid creating a separate file for just a title on each view), in this example I have merged this addon and another addon in single file. This is not necessary however)
+This card is probably best used when placed inside a vertical-stack (this will avoid creating a separate file for just a title on each view)
 ```
 - type: vertical-stack
   cards:
     - !include
       - '../../../base/templates/other/title-text.yaml'
       - name: Living Room
+    - type: horizontal-stack
+      cards:
+        - type: entity-button
+          entity: light.livingroom_lamp_1
+        - type: entity-button
+          entity: light.livingroom_lamp_2
+        - type: entity-button
+          entity: light.livingroom_lamp_3
+```
+![Homekit Infused](../images/title-text-card-3.png)
+```
+# example with 2 title-text-cards in a horizontal stack (see picture)
+- type: vertical-stack
+  cards:
+    - type: horizontal-stack
+       cards:
+         - !include
+           - '../../../base/templates/other/title-text.yaml'
+           - name: Bedroom
+         - !include
+           - '../../../base/templates/other/title-text.yaml'
+           - name: "[[[ return states['sensor.bedroom_temperature'].state °C; ]]]"
+             justify_self: end
     - type: horizontal-stack
       cards:
         - type: entity-button
