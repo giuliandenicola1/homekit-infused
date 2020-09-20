@@ -15,7 +15,6 @@ This is the default HKI switch button, it is by default used in all the addons t
 | Name | Type  | Description |
 |----------------------------------|-------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [Light Popup Card](https://github.com/DBuit/light-popup-card) | Frontend | This is the popup that opens when holding/double tapping the buttons |
-| [More Info Card](https://github.com/thomasloven/lovelace-more-info-card) | Frontend | This is needed to show a color wheel inside the popup when pressing the settings button |
 
 *Note: You do not require the above custom-cards IF you set the properties of the hold_action to `none` or `more-info`!
 
@@ -23,7 +22,6 @@ This is the default HKI switch button, it is by default used in all the addons t
 Add the following lines to your lovelace resources 
 ```
 /hacsfiles/light-popup-card/light-popup-card.js
-/hacsfiles/lovelace-more-info-card/more-info-card.js
 ```
 
 ### Configuration
