@@ -54,7 +54,7 @@ This card is probably best used when placed inside a vertical-stack (this will a
 ```
 ![Homekit Infused](../images/title-text-card-3.png)
 ```
-# example with 2 title-text-cards in a horizontal stack (see picture)
+# example with 2 title-text-cards in a horizontal stack (see image above)
 - type: vertical-stack
   cards:
     - type: horizontal-stack
