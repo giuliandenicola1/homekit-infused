@@ -64,7 +64,7 @@ This card is probably best used when placed inside a vertical-stack (this will a
           - name: Bedroom
         - !include
           - '../../../base/templates/other/title-text.yaml'
-          - name: "[[[ return states['sensor.bedroom_temperature'].state °C; ]]]"
+          - name: "[[[ return `${states['sensor.bedroom_temperature'].state} °C`; ]]]"
             justify_self: end
     - type: horizontal-stack
       cards:
