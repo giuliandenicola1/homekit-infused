@@ -1,16 +1,116 @@
 
-# EXAMPLE CONFIGURATION.YAML, IT CONTAINS ALL THE NECESSARY LINES YOU NEED IN YOUR OWN CONFIGURATION.YAML
-# DO NOT USE THIS FILE!!!!!
-
+# Configure a default setup of Home Assistant (frontend, api, etc)
+default_config:
+api:
+discovery: 
+# Home Assistant
 homeassistant:
   customize: !include customize.yaml
   packages: !include_dir_named packages/
+  external_url: !secret base_url
+  internal_url: !secret base_url
+  media_dirs:
+    media: media/
+  auth_providers:  
+   - type: trusted_networks 
+     trusted_networks: 
+       - 127.0.0.1 
+       - 192.168.0.0/24
+   - type: homeassistant
+
+# SSL 
+http:
+  use_x_forwarded_for: true
+  trusted_proxies:
+    - 192.168.0.4
 
 frontend:
   themes: !include_dir_merge_named themes/
+  extra_module_url:
+    - /local/FontAwesomePro/light.js
+    - /local/FontAwesomePro/solid.js
+    - /local/FontAwesomePro/regular.js
+    - /local/FontAwesomePro/brands.js
+    - /local/FontAwesomePro/duotone.js
 
+# Google Calendar and Google Assistant
+google:
+  client_id: !secret google_client_id
+  client_secret: !secret google_client_secret
+google_assistant: !include configuration/google_assistant/google_assistant.yaml
+
+# Text to speech
+tts:
+  - platform: google_translate
+
+# Stream
+stream:
+
+# Recorder
+recorder:
+  db_url: !secret db_url
+  purge_keep_days: 3
+  exclude:
+    domains:
+      - automation
+    entities:
+      - sensor.xiaomi_map
+
+# iOS and Notifications
+ios: !include configuration/ios/ios.yaml 
+
+# Homekit Configuration
+homekit: !include configuration/homekit/homekit.yaml
+
+# Weather
+weather:
+  - platform: darksky
+    api_key: !secret darksky_api_key
+    mode: daily
+
+# Notify
+notify:
+  - name: all_devices
+    platform: group
+    services:
+      - service: mobile_app_sm_n976b
+      - service: mobile_app_iphone_stephanie
+      - service: discord
+  - name: discord
+    platform: discord
+    token: !secret discord_api_token
+
+# All Sensors/Switches ETC.
+climate: !include_dir_merge_list configuration/climate/
+sensor: !include_dir_merge_list configuration/sensor/
+group: !include_dir_merge_named configuration/groups/ 
+automation: !include_dir_merge_list configuration/automations/
+script: !include_dir_merge_named configuration/scripts/
+camera: !include configuration/camera/camera.yaml 
+media_player: !include configuration/media_player/media_player.yaml 
+light: !include configuration/light/light.yaml 
+switch: !include_dir_merge_list configuration/switch/
+input_boolean: !include_dir_merge_named configuration/input_boolean/ 
+zone: !include configuration/zone/zone.yaml 
+device_tracker: !include configuration/device_tracker/device_tracker.yaml 
+scene: !include_dir_merge_list configuration/scenes/
+shell_command: !include configuration/shell_command/shell_command.yaml 
+input_select: !include_dir_merge_named configuration/input_select/ 
+binary_sensor: !include_dir_merge_list configuration/binary_sensor/
+
+# Python Script (Birthday Sensor)
+python_script:
+
+# Vacuum (Roborock S55)
+vacuum:
+  - platform: xiaomi_miio
+    host: 192.168.0.11
+    token: !secret roborock_token
+
+# Browser-Mod
 browser_mod:
 
+# Alarm Control Panel
 alarm_control_panel:
   - platform: manual
     name: Home Alarm
@@ -23,6 +123,15 @@ alarm_control_panel:
       delay_time: 0
     disarm_after_trigger: false
 
+# NZBget
+nzbget:
+  host: 192.168.0.2
+  port: 6789
+  ssl: false
+  username: !secret nzbget_usr
+  password: !secret nzbget_pwd
+
+# Lovelace Mode
 lovelace:
   mode: storage
   dashboards:
@@ -32,3 +141,112 @@ lovelace:
       icon: mdi:home-assistant
       show_in_sidebar: true
       filename: homekit-infused.yaml
+    homekit-infused-development:
+      mode: yaml
+      title: Development
+      icon: mdi:tools
+      show_in_sidebar: true
+      require_admin: true
+      filename: homekit-infused-development.yaml
+
+# Tado
+tado:
+  username: !secret tado_usr
+  password: !secret tado_pwd
+
+# Panel Iframe
+panel_iframe:
+  grocy:
+    title: "Grocy"
+    url: !secret url_11
+    icon: mdi:cart
+  dsmr:
+    title: "DSMR"
+    url: !secret url_13
+    icon: mdi:power-socket-eu
+  grafana:
+    title: "Grafana"
+    url: !secret url_12
+    icon: mdi:chart-line
+  valetudo:
+    title: "Valetudo"
+    url: !secret url_7
+    icon: "mdi:robot-vacuum"
+  phoscon:
+    title: "Phoscon"
+    url: !secret url_8
+    icon: "mdi:zigbee"
+  vscode:
+    title: VSCode
+    url: !secret url_6
+    icon: "mdi:microsoft-visual-studio"
+  nzbget:
+    title: NZBget
+    url: !secret url_14
+    icon: "mdi:download"
+  vscode:
+    title: Deluge
+    url: !secret url_15
+    icon: "mdi:water"
+    
+# Spotify
+spotify:
+  client_id: !secret spotify_client_id
+  client_secret: !secret spotify_secret
+
+# Grocy
+grocy:
+  url: !secret grocy_url
+  api_key: !secret grocy_api_key
+  sensor:
+    - enabled: true
+
+# Utility Meter
+utility_meter:
+  daily_energy_offpeak:
+    source: sensor.energy_consumption_tarif_1
+    cycle: daily
+  daily_energy_peak:
+    source: sensor.energy_consumption_tarif_2
+    cycle: daily
+  daily_gas:
+    source: sensor.gas_consumption
+    cycle: daily
+  monthly_energy_offpeak:
+    source: sensor.energy_consumption_tarif_1
+    cycle: monthly
+  monthly_energy_peak:
+    source: sensor.energy_consumption_tarif_2
+    cycle: monthly
+  monthly_gas:
+    source: sensor.gas_consumption
+    cycle: monthly
+
+# InfluxDB
+influxdb:
+  host: 192.168.0.19
+  port: 8086
+  database: home_assistant
+
+# SpotCast
+spotcast:
+  sp_dc: !secret jimmy_sp_dc
+  sp_key: !secret jimmy_sp_key
+  accounts:
+    stephanie:
+      sp_dc: !secret stephanie_sp_dc
+      sp_key: !secret stephanie_sp_key
+
+apple_tv:
+
+# o365:
+#   client_secret: !secret O365_secret
+#   client_id: !secret O365_id
+#   alt_auth_flow: True
+#   email_sensor:
+#     - name: inbox
+#       max_items: 5
+#       is_unread: True
+#     - name: focused
+#       max_items: 5
+#       is_unread: True

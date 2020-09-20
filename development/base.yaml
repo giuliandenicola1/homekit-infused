@@ -1,0 +1,19 @@
+# lovelace_gen
+- path: home
+  icon: mdi:home
+  visible: true
+  panel: true
+  cards:
+    - type: vertical-stack
+      cards:
+        - !include
+          - '../homekit-infused/base/templates/header/header-base-template.yaml'
+            {% raw %}
+          - title: "{{ states('sensor.greeting') }}"
+            {% endraw %}
+            header_bottom: header-notifications.yaml
+        - type: custom:layout-card
+          min_columns: 1
+          max_columns: 3
+          cards:
+            !include_dir_merge_list cards/
