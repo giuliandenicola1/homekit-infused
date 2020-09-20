@@ -77,18 +77,18 @@ display_type | no | auto | Force a `slider` or a `switch`, else set to `auto` |
 slider_height | no | 410px | Sets the height for the switch/slider |
 ||||
 slider_colored_by_light | no | true | Set the slider to have the same color as the light currently is |
-color_1 | no | '#ff8800' | Sets the image color of the upper left preset |
-color_2 | no | '#ff005f' | Sets the image color of the upper middle preset |
-color_3 | no | '#28ff00' | Sets the image color of the upper right preset |
-color_4 | no | '#00a0ff' | Sets the image color of the lower left preset |
-color_5 | no | '#8300ff' | Sets the image color of the lower middle preset |
-color_6 | no | '#0300ff' | Sets the image color of the lower right preset |
-service_color_1 | no | [255, 136, 0] | Sets the color of the actual service-call |
-service_color_2 | no | [255, 0, 95] | Sets the color of the actual service-call |
-service_color_3 | no | [40, 255, 0] | Sets the color of the actual service-call |
-service_color_4 | no | [0, 160, 255] | Sets the color of the actual service-call |
-service_color_5 | no | [131, 0, 255] | Sets the color of the actual service-call |
-service_color_6 | no | [3, 0, 255] | Sets the color of the actual service-call |
+color_1 | no | '#ff8800' | Sets the image color of the upper left preset (must be a hex value) |
+color_2 | no | '#ff005f' | Sets the image color of the upper middle preset (must be a hex value) |
+color_3 | no | '#28ff00' | Sets the image color of the upper right preset (must be a hex value) |
+color_4 | no | '#00a0ff' | Sets the image color of the lower left preset (must be a hex value) |
+color_5 | no | '#8300ff' | Sets the image color of the lower middle preset (must be a hex value) |
+color_6 | no | '#0300ff' | Sets the image color of the lower right preset (must be a hex value) |
+service_color_1 | no | [255, 136, 0] | Sets the color of the actual service-call (must be a rgb value) |
+service_color_2 | no | [255, 0, 95] | Sets the color of the actual service-call (must be a rgb value) |
+service_color_3 | no | [40, 255, 0] | Sets the color of the actual service-call (must be a rgb value) |
+service_color_4 | no | [0, 160, 255] | Sets the color of the actual service-call (must be a rgb value) |
+service_color_5 | no | [131, 0, 255] | Sets the color of the actual service-call (must be a rgb value) |
+service_color_6 | no | [3, 0, 255] | Sets the color of the actual service-call (must be a rgb value) |
 
 
 ### Install
