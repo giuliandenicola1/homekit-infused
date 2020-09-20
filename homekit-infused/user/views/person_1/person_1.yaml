@@ -76,7 +76,7 @@
         cards:
           - !include
             - '../../../base/templates/other/title-text.yaml'
-            - name: Personal Agenda
+            - name: Agenda
           - type: horizontal-stack
             cards:
               - !include ../../../base/includes/gap.yaml
@@ -94,31 +94,26 @@
                 hideHeader: true
                 entities:
                   - calendar.stephanievanduuren_gmail_com
+                  - calendar.family
                 showColors: true
               - !include ../../../base/includes/gap.yaml  
       - type: vertical-stack
         cards:
           - !include
             - '../../../base/templates/other/title-text.yaml'
-            - name: Family Agenda
+            - name: Calendar
           - type: horizontal-stack
             cards:
               - !include ../../../base/includes/gap.yaml
-              - type: custom:calendar-card
+              - type: calendar
                 style: |
                   ha-card {
                     border-radius: var(--border-radius);
                     box-shadow: var(--box-shadow);
-                    font-family: Helvetica;
-                    font-size: 12px;
-                    opacity: 0.8;
-                    overflow: hidden;
                   }
-                numberOfDays: 14
-                hideHeader: true
                 entities:
+                  - calendar.stephanievanduuren_gmail_com
                   - calendar.family
-                showColors: true
               - !include ../../../base/includes/gap.yaml  
 - type: conditional
   conditions:

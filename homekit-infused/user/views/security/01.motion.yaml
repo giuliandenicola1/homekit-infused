@@ -1,0 +1,49 @@
+- type: vertical-stack
+  cards:
+    - !include
+      - '../../../base/templates/other/title-text.yaml'
+      - name: Motion
+    - type: horizontal-stack
+      cards:
+        - !include ../../../base/includes/gap.yaml
+        - !include
+          - '../../../base/templates/button/button.yaml'
+          - entity: binary_sensor.motion_gallerij_camera
+            tap_action: more-info
+            hold_action: more-info
+            show_last_changed: true
+        - !include
+          - '../../../base/templates/button/button.yaml'
+          - entity: binary_sensor.motion_gang
+            tap_action: more-info
+            hold_action: more-info
+            show_last_changed: true
+        - !include
+          - '../../../base/templates/button/button.yaml'
+          - entity: binary_sensor.motion_office
+            tap_action: more-info
+            hold_action: more-info
+            show_last_changed: true
+        - !include ../../../base/includes/gap.yaml
+    - type: horizontal-stack
+      cards:
+        - !include ../../../base/includes/gap.yaml
+        - !include
+          - '../../../base/templates/button/button.yaml'
+          - entity: binary_sensor.motion_woonkamer_camera
+            tap_action: more-info
+            hold_action: more-info
+            show_last_changed: true
+        - !include
+          - '../../../base/templates/button/button.yaml'
+          - entity: binary_sensor.motion_bijkeuken
+            tap_action: more-info
+            hold_action: more-info
+            show_last_changed: true
+        - !include
+          - '../../../base/templates/button/button.yaml'
+          - entity: binary_sensor.motion_toilet
+            tap_action: more-info
+            hold_action: more-info
+            show_last_changed: true
+        - !include ../../../base/includes/gap.yaml

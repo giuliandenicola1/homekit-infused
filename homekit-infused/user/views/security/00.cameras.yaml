@@ -1,0 +1,29 @@
+- type: vertical-stack
+  cards:
+    - !include
+      - '../../../base/templates/other/title-text.yaml'
+      - name: Camera's
+    - type: horizontal-stack
+      cards:
+        - !include ../../../base/includes/gap.yaml
+        - type: vertical-stack
+          cards:
+            - type: picture-entity
+              style: |
+                ha-card {
+                  border-radius: var(--border-radius);
+                  box-shadow: var(--box-shadow);
+                  overflow: hidden;
+                }
+              aspect_ratio: 16x9
+              entity: camera.gallerij_camera
+            - type: picture-entity
+              style: |
+                ha-card {
+                  border-radius: var(--border-radius);
+                  box-shadow: var(--box-shadow);
+                  overflow: hidden;
+                }
+              aspect_ratio: 16x9
+              entity: camera.woonkamer_camera
+        - !include ../../../base/includes/gap.yaml
