@@ -1,10 +1,10 @@
-Home Assistant:
-  ### Theme Home Assistant Default for Homekit Infused
+Dwains Theme Light (HKI Edition):
+  ### Theme Dwains Theme Light (modified) for Homekit Infused
 
   ## User Settings
 
   ### Background image (can be an image or a color)
-  background-image: '#FFFFFF' 
+  background-image: '#f2f2f7' 
 
   ### Header Title and Subtitle/Notifications
   header-text-color: 'White'
@@ -42,12 +42,26 @@ Home Assistant:
   badge-font-weight: normal
   badge-text-transform: capitalize
   
-
   #######################################################################################################################################################
   ## Main Home Assistant Colors (ANYTHING YOU CHANGE PAST THIS LINE, IS AT YOUR OWN RISK!)
 
-  # Primary Color
-  primary-color: '#03a9f4'
-  ha-card-background: 'white'
-  paper-card-background-color: 'var(--ha-card-background)'
+  # Toast / Badge
   paper-toast-background-color: '#821414'
+
+  ha-card-background: '#FFFFFF'
+  paper-card-background-color: 'var(--ha-card-background)'
+  paper-item-icon-color: '#262628'
+  paper-item-icon-active-color: '#b58e31'
+  paper-item-icon_-_color: 'var(--primary-text-color)'
+
+  #color for top small bar notch on ios
+  primary-color: '#262628'
+
+  #Custom header
+  ch-active-tab-color: '#2fbae5'
+  ch-tab-indicator-color: '#2fbae5'
+
+  #left sidebar
+  sidebar-icon-color: '#d0d0d0'
+  sidebar-selected-icon-color: '#2fbae5'
+  sidebar-selected-text-color: 'black'
