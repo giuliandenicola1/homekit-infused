@@ -15,13 +15,11 @@ This is an auto filled devices card with a homekit style popup embedded.
 | Name | Type  | Description |
 |----------------------------------|-------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [Light Popup Card](https://github.com/DBuit/light-popup-card) | Frontend | This is the popup that opens when holding/double tapping the buttons |
-| [More Info Card](https://github.com/thomasloven/lovelace-more-info-card) | Frontend | This is needed to show a color wheel inside the popup when pressing the settings button |
 
 ### Resources
 Add the following lines to your lovelace resources 
 ```
 /hacsfiles/light-popup-card/light-popup-card.js
-/hacsfiles/lovelace-more-info-card/more-info-card.js
 ```
 
 ### Configuration
