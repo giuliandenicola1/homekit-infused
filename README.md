@@ -1,6 +1,6 @@
 # Home Assistant (Personal)
-This is my personal home assistant setup with Homekit Infused v3.0.5.
-Lovelace examples for HKI might not be up to date for newer versions than 3.0.5!!
+This is my personal home assistant setup with Homekit Infused v3.2.1.
+Lovelace examples for HKI might not be up to date for newer versions than 3.2.1!!
 
 This is meant for inspiration and not to copy, if you are looking for Homekit Infused click the links below:
 
