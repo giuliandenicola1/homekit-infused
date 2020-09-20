@@ -35,9 +35,9 @@
   
 #### Buttons  
   - [Climate Preset Buttons](addons/climate-preset-buttons.md)
-  - [Custom Button](addons/custom-button.md) *new
   - [Frontpage Button Row](addons/frontpage-buttons.md) (navigation)
   - [Menu Card](addons/menu-card.md)
+  - [Single Homekit Button](addons/custom-button.md) (fully customizable) *new
   - [Single Homekit Button](addons/button-navigation.md) (navigation)
   - [Single Homekit Button](addons/button-light-switch.md) (light, switch or sensor)
   
