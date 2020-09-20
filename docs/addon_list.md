@@ -22,26 +22,27 @@
 ### Default Addons
 #### Auto Fill Addons
   - [Auto-Filled Automations Card](addons/auto-fill-automations-card.md)
-  - [Auto-Filled Battery Card](addons/auto-fill-battery-card.md) *updated options
-  - [Auto-Filled Camera Card](addons/auto-fill-camera-card.md) *updated options
+  - [Auto-Filled Battery Card](addons/auto-fill-battery-card.md)
+  - [Auto-Filled Camera Card](addons/auto-fill-camera-card.md)
   - [Auto-Filled Certificates Card](addons/auto-fill-certificates-card.md)
-  - [Auto-Filled Devices Card](addons/auto-fill-devices-card.md) (including popups) *updated options
-  - [Auto-Filled Fans Card](addons/auto-fill-fans-card.md) *updated options
-  - [Auto-Filled Lights Card](addons/auto-fill-lights-card.md) (including popups) *updated options
+  - [Auto-Filled Devices Card](addons/auto-fill-devices-card.md) (including popups)
+  - [Auto-Filled Fans Card](addons/auto-fill-fans-card.md)
+  - [Auto-Filled Lights Card](addons/auto-fill-lights-card.md) (including popups)
   - [Auto-Filled Media Players Card](addons/auto-fill-media-players-card.md)
-  - [Auto-Filled Scenes Card](addons/auto-fill-scenes-card.md) *updated options
-  - [Auto-Filled Sensors Card](addons/auto-fill-sensors-card.md) *updated options
+  - [Auto-Filled Scenes Card](addons/auto-fill-scenes-card.md) 
+  - [Auto-Filled Sensors Card](addons/auto-fill-sensors-card.md)
   - [Auto-Filled Thermostat Card](addons/auto-fill-thermostats-card.md) (including popups)
   
 #### Buttons  
-  - [Climate Preset Buttons](addons/climate-preset-buttons.md) *updated options
+  - [Climate Preset Buttons](addons/climate-preset-buttons.md)
+  - [Custom Button](addons/custom-button.md) *new
   - [Frontpage Button Row](addons/frontpage-buttons.md) (navigation)
   - [Menu Card](addons/menu-card.md)
-  - [Single Homekit Button](addons/button-navigation.md) (navigation) *updated options
-  - [Single Homekit Button](addons/button-light-switch.md) (light, switch or sensor) *updated options
+  - [Single Homekit Button](addons/button-navigation.md) (navigation)
+  - [Single Homekit Button](addons/button-light-switch.md) (light, switch or sensor)
   
 #### Calendar
-  - [Calendar Card](addons/calendar-card.md)
+  - [Calendar Card](addons/calendar-card.md) *updated
 
 #### Map
   - [Map Card](addons/map-card.md)
@@ -50,7 +51,7 @@
 #### Media 
   - [Google Home Card](addons/google-home-card.md)
   - [Upcoming Media Card](addons/upcoming-recently-added.md)
-  - [Remote Control Card](addons/nvidia-remote.md) (for Nvidia SHIELD TV/Android TV) *updated options
+  - [Remote Control Card](addons/nvidia-remote.md) (for Nvidia SHIELD TV/Android TV)
 
 #### Other
   - [iFrame Card](addons/iframe-card.md)
@@ -72,15 +73,15 @@
   
 #### Vacuum
   - [Simple Vacuum Card](addons/simple-vacuum-card.md) (Any Vacuum)
-  - [Vacuum Basic Controls](addons/vacuum-controls.md) (Any Vacuum) *updated options
-  - [Vacuum Speed Controls](addons/vacuum-mode-presets.md) (Any Vacuum) *updated options
+  - [Vacuum Basic Controls](addons/vacuum-controls.md) (Any Vacuum)
+  - [Vacuum Speed Controls](addons/vacuum-mode-presets.md) (Any Vacuum)
   - [Vacuum Live Map](addons/vacuum-live-map.md) (Valetudo/Valetudo RE only!)
-  - [Valetudo Preset Button](addons/valetudo-preset-button.md) (Valetudo/Valetudo RE only!) *updated options
+  - [Valetudo Preset Button](addons/valetudo-preset-button.md) (Valetudo/Valetudo RE only!)
   
 #### Weather
   - [Air Visual Card](addons/air-visual-card.md)
   - [Simple Weather Card](addons/simple-weather-card.md)
-  - [Weather Card](addons/weather-card.md) (animated) *updated options
+  - [Weather Card](addons/weather-card.md) (animated)
 
 ### User submitted addons
   - Coming Soon
