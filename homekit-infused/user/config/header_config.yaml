@@ -88,12 +88,6 @@ header:
   
   weather_title: Weather
   weather_subtitle: "[[[ return `${states['weather.dark_sky'].state}`; ]]]"
-  
-  about_title: About
-  about_subtitle: FAQ
-  
-  ha_title: Home Assistant
-  ha_subtitle: "[[[ return `The current version is ${states['sensor.version_current'].state}, the latest version is ${states['sensor.latest_version'].state}`; ]]]"
 
   covers_title: Covers
   covers_subtitle: Overview

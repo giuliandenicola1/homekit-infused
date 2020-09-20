@@ -1,41 +1,50 @@
-- type: vertical-stack
+- type: horizontal-stack
   cards:
+    - !include ../../../base/includes/gap.yaml
     - !include
-      - '../../../base/templates/other/title-text.yaml'
-      - name: Appliances
-    - type: horizontal-stack
-      cards:
-        - !include ../../../base/includes/gap.yaml
-        - type: vertical-stack
-          cards:
-            - !include
-              - '../../../base/templates/picture-elements/appliances-card.yaml'
-              - image: /local/images/appliances/washingmachine.jpg
-                entity_status: sensor.wasmachine_status
-                entity_switch: switch.wasmachine
-                entity_wattage: sensor.wasmachine_power
-            - !include
-              - '../../../base/templates/picture-elements/appliances-card.yaml'
-              - image: /local/images/appliances/dryer.jpg
-                entity_status: sensor.droger_status
-                entity_switch: switch.droger
-                entity_wattage: sensor.droger_power
-            - !include
-              - '../../../base/templates/picture-elements/appliances-card.yaml'
-              - image: /local/images/appliances/dishwasher.jpg
-                entity_status: sensor.vaatwasser_status
-                entity_switch: switch.vaatwasser
-                entity_wattage: sensor.vaatwasser_power
-            - !include
-              - '../../../base/templates/picture-elements/appliances-card.yaml'
-              - image: /local/images/appliances/refrigerator.jpg
-                entity_status: switch.koelkast
-                entity_switch: switch.koelkast
-                entity_wattage: sensor.koelkast_power
-            - !include
-              - '../../../base/templates/picture-elements/appliances-card.yaml'
-              - image: /local/images/appliances/freezer.jpg
-                entity_status: switch.vriezer
-                entity_switch: switch.vriezer
-                entity_wattage: sensor.power_52
-        - !include ../../../base/includes/gap.yaml  
+      - '../../../base/templates/picture-elements/appliances-card.yaml'
+      - image: /local/images/appliances/washingmachine.jpg
+        entity_status: sensor.wasmachine_status
+        entity_switch: switch.wasmachine
+        entity_wattage: sensor.wasmachine_power
+    - !include ../../../base/includes/gap.yaml
+- type: horizontal-stack
+  cards:
+    - !include ../../../base/includes/gap.yaml
+    - !include
+      - '../../../base/templates/picture-elements/appliances-card.yaml'
+      - image: /local/images/appliances/dryer.jpg
+        entity_status: sensor.droger_status
+        entity_switch: switch.droger
+        entity_wattage: sensor.droger_power
+    - !include ../../../base/includes/gap.yaml
+- type: horizontal-stack
+  cards:
+    - !include ../../../base/includes/gap.yaml
+    - !include
+      - '../../../base/templates/picture-elements/appliances-card.yaml'
+      - image: /local/images/appliances/dishwasher.jpg
+        entity_status: sensor.vaatwasser_status
+        entity_switch: switch.vaatwasser
+        entity_wattage: sensor.vaatwasser_power
+    - !include ../../../base/includes/gap.yaml
+- type: horizontal-stack
+  cards:
+    - !include ../../../base/includes/gap.yaml
+    - !include
+      - '../../../base/templates/picture-elements/appliances-card.yaml'
+      - image: /local/images/appliances/refrigerator.jpg
+        entity_status: switch.koelkast
+        entity_switch: switch.koelkast
+        entity_wattage: sensor.koelkast_power
+    - !include ../../../base/includes/gap.yaml
+- type: horizontal-stack
+  cards:
+    - !include ../../../base/includes/gap.yaml
+    - !include
+      - '../../../base/templates/picture-elements/appliances-card.yaml'
+      - image: /local/images/appliances/freezer.jpg
+        entity_status: switch.vriezer
+        entity_switch: switch.vriezer
+        entity_wattage: sensor.power_52
+    - !include ../../../base/includes/gap.yaml  
