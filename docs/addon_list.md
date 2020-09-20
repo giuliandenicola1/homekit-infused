@@ -49,6 +49,7 @@
   - [Waze Card](addons/waze-card.md)
   
 #### Media 
+  - [Frontpage Glances](addons/frontpage-glances.md) *new
   - [Google Home Card](addons/google-home-card.md)
   - [Upcoming Media Card](addons/upcoming-recently-added.md)
   - [Remote Control Card](addons/nvidia-remote.md) (for Nvidia SHIELD TV/Android TV)
