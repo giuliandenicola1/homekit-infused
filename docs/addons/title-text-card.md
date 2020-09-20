@@ -58,14 +58,14 @@ This card is probably best used when placed inside a vertical-stack (this will a
 - type: vertical-stack
   cards:
     - type: horizontal-stack
-       cards:
-         - !include
-           - '../../../base/templates/other/title-text.yaml'
-           - name: Bedroom
-         - !include
-           - '../../../base/templates/other/title-text.yaml'
-           - name: "[[[ return states['sensor.bedroom_temperature'].state °C; ]]]"
-             justify_self: end
+      cards:
+        - !include
+          - '../../../base/templates/other/title-text.yaml'
+          - name: Bedroom
+        - !include
+          - '../../../base/templates/other/title-text.yaml'
+          - name: "[[[ return states['sensor.bedroom_temperature'].state °C; ]]]"
+            justify_self: end
     - type: horizontal-stack
       cards:
         - type: entity-button
