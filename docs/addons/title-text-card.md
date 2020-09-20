@@ -16,7 +16,7 @@ This card is used to create a header style name for the views (see screenshot)
 
 | Properties | Required | Default | Description |
 |----------------------------------|-------------|----------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| name | yes | none | Sets the name/title to show |
+| name | yes | none | Sets the name/title to show (accepts JS templates!)|
 | justify_self | no | start | Justify the content choose between `start`, `center` or `end` |
 | background_color | no | 'rgba(0,0,0,0.0)' | Sets the background color of the card, by default this is transparant |
 | box_shadow | no | none | Sets a box-shadow (only useful when background is not transparant) |
