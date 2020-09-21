@@ -27,23 +27,8 @@ All the cards that were previously included in HKI will be available separately 
 - Obviously download this project, you can grab the latest release from [here](https://github.com/jimz011/homekit-infused/releases)
 
 ##### Requirements
-- Create a custom alarm, HKI has a lock/alarm in the header, you MUST set this up even if you are never going to use it! https://www.home-assistant.io/integrations/manual/. There is an example config in the configuration.yaml file of this project. You MUST set a secret inside of the `secrets.yaml` file. The code can be anything you want as long as it is inside this file. Just create a line and copy this, put it anywhere, if it is empty just put it on the first line. `alarm_code: 123456`.
-- Create a time sensor https://www.home-assistant.io/integrations/time_date/, you MUST have this for the homepage greeting to work properly.
+- Create a secrets.yaml file in the root of your HA installation if you do not have it already. Add the following line on any line within that file `alarm_code: 123456`. You can change the code to whatever number you want. DO NOT SKIP THIS PART or HKI will fail to start.
 - Install HACS https://hacs.xyz/docs/installation/manual
-- Create/edit a `customize.yaml` file, this file is automatically created whenever you edit an entity through the UI configuration>customize. However you can create this file yourself if you don't have it already. Just put the file at the root of your config, you can also download the example customize.yaml file instead.
-You might need the following entry in your `configuration.yaml` file
-```
-homeassistant:
-    customize: !include customize.yaml
-```
-Now if you have created this file we will start and fill it with our own entities.
-If you already have items in that file just add them below the last item, else just start typing exactly as in the example below. You do NOT need to do all of your entities. Just do the ones that are going to get shown in the frontend (e.g. lights, switches, sensors, binary_sensors and your vacuum).
-```
-switch.washingmachine:
-    friendly_name: Washing Machine
-    icon: mdi:washing-machine
-```
-NOTE: The customize.yaml file is the only way that you can change the names/icons for buttons that use HKI autofill addons. If you do not intend to use any of the HKI addons and just the framework you can skip doing this, however you will not be able to use any of the features besides the HKI framework itself.
 
 ### HACS
 Below is a list of all the addons required to run the framework, you can install all of them through HACS
@@ -58,7 +43,7 @@ Below is a list of all the addons required to run the framework, you can install
 | [State Switch](https://github.com/thomasloven/lovelace-state-switch) | Frontend | This is used to make cards appear based on certain conditions, like a conditional-card but better |
 | [Card Tools](https://github.com/thomasloven/lovelace-card-tools) | Frontend | This is needed for various custom cards to run |
 | [Swipe Card](https://github.com/bramkragten/swipe-card) | Frontend | This card is needed for the scrolling notifications, but also for most popups |
-| [Browser Mod](https://github.com/thomasloven/hass-browser_mod) | Integration | Browser-mod makes the browser more useful and gives us the opportunity to show/create custom popups and many more, make sure you have `browser_mod:` in your `configuration.yaml` after you have installed it. Click the link for instructions! |
+| [Browser Mod](https://github.com/thomasloven/hass-browser_mod) | Integration | Browser-mod makes the browser more useful and gives us the opportunity to show/create custom popups and many more! |
 | [Lovelace Gen](https://github.com/thomasloven/hass-lovelace_gen) | Integration | This is the MOST important piece of the setup, without this HKI will not work! Don't add this to your `configuration.yaml` file as the included package already does so for you, if you already have `lovelace_gen:` in your `configuration.yaml` please remove or comment that line! |
 
 All the frontend addons must be installed as `Module`.
@@ -92,31 +77,11 @@ Copy the following files/folders to the root of your Home Assistant installation
 ```
 homeassistant:
     packages: !include_dir_named packages/
-```
-Note: If you have an existing setup and already have packages, you must cut/paste the packages folder inside your currently exising packages folder! (depending on the way the folder is included within your configuration.yaml file)
-
-- This will already work if you have used HACS for themes in the past, but to be safe add the following line to your `configuration.yaml` file:
-```
-frontend:
-    themes: !include_dir_merge_named themes/
-```
-
-- You must set the following lines in your own `configuration.yaml` file. Without it, it will NOT work:
-```
+    
 lovelace:
     mode: storage
-    dashboards:
-      homekit-infused:
-        mode: yaml
-        title: Homekit Infused
-        icon: mdi:home-assistant
-        show_in_sidebar: true
-        filename: homekit-infused.yaml
 ```
-- As a reminder for if you have missed it when installing the plugins from HACS
-```
-browser_mod:
-```
+Note: If you have an existing setup and already have packages, you must cut/paste the packages/homekit_infused folder inside your currently exising packages folder! (depending on the way the folder is included within your configuration.yaml file)
 
 The copying process should now be completed and we can move on to the configuration part.
 
@@ -131,7 +96,7 @@ To make the header sensors work (the three icons on the upper right side), you M
 
 To create notifications you can open the `/homekit-infused/user/notifications.yaml` file, there are some included examples.
 
-You can change the theme settings by going to the `/themes/name_of_theme/user/` folder, it has a little configuration file where you can change the border-radius and/or some basic colors and/or font-type/family/size. (This feature is NOT available yet and will be introduced in the 3.0.1 Framework Update)
+You can change the theme settings by going to the `/themes/` folder, it has a little configuration piece at the top of the file where you can change the border-radius and/or some basic colors and/or font-type/family/size.
 
 ### Addons
 Addons are the cards to fill the framework with, you are not required to install any of the addons if you don't want to. You can always create your own cards in the exact same way addons work. Please read the addons section of the documentation on how to install or create addons yourself.
@@ -142,6 +107,22 @@ If you have created an addon and would like to include this on this repo, you ca
 The HKI Framework comes with a preset amount of views that can be manipulated in any way you want (you can even change the names of the views if you so please). Note that the code does NOT allow for path name changes (e.g. you've renamed the lights view to anything else, the path will always remain /lights). The path is only visible in a browser and never in the HA App, so even if you'd rename a view you will most probably not notice it. 
 
 To know which views are available you can simply open the `homekit-infused/user/views/` folder, every view has its own folder and these are the views you can refer to if you need to (the folder name is also the path name, which will make creating navigation buttons easier, if you don't want to use the included menu).
+
+### Extra Information
+- Create/edit a `customize.yaml` file, this file is automatically created whenever you edit an entity through the UI configuration>customize. However you can create this file yourself if you don't have it already. Just put the file at the root of your config, you can also download the example customize.yaml file instead.
+You might need the following entry in your `configuration.yaml` file
+```
+homeassistant:
+    customize: !include customize.yaml
+```
+Now if you have created this file we will start and fill it with our own entities.
+If you already have items in that file just add them below the last item, else just start typing exactly as in the example below. You do NOT need to do all of your entities. Just do the ones that are going to get shown in the frontend (e.g. lights, switches, sensors, binary_sensors and your vacuum).
+```
+switch.washingmachine:
+    friendly_name: Washing Machine
+    icon: mdi:washing-machine
+```
+NOTE: The customize.yaml file is the only way that you can change the names/icons for buttons that use HKI autofill addons. If you do not intend to use any of the HKI addons and just the framework you can skip doing this, however you will not be able to use any of the features besides the HKI framework itself.
 
 ### Previous HKI Installs
 For users of v2.x.x I have slightly bad news, the HKI Framework is completely different and it has been restructured and much lighter. The advantages of the new version are clear, it is MUCH faster than previous versions and because of the split code (framework and addons separately) I can push updates separately and much faster than I could when needing to update the entire package. 
