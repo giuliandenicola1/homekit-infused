@@ -46,7 +46,7 @@
 
 #### Map
   - [Map Card](addons/map-card.md)
-  - [Waze Card](addons/waze-card.md)
+  - [Waze Card]*deprecated, this is now included in the framework!
   
 #### Media 
   - [Google Home Card](addons/google-home-card.md)
