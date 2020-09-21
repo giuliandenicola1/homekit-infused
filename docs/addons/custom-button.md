@@ -3,7 +3,7 @@
 
 Back to [Addon List](../addon_list.md)
 
-# Button (custom)
+# Button (custom) *note: this button is meant for intermediate/experienced users, starting home assistant users should consider using any of the other buttons instead)
 
 ![Homekit Infused](../images/button-switch.png)
 
