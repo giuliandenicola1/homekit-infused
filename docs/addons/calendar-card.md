@@ -24,26 +24,17 @@ This is a calendar card for use with calendar entities.
 - Copy the code below and make changes if needed
 
 ```
-- type: horizontal-stack
-  cards:
-    - !include ../../../base/includes/gap.yaml
-    - type: custom:calendar-card
-      style: |
-        ha-card {
-          border-radius: var(--border-radius);
-          box-shadow: var(--box-shadow);
-          font-family: Helvetica;
-          font-size: 12px;
-          opacity: 0.8;
-          overflow: hidden;
-        }
-      numberOfDays: 14
-      hideHeader: true
-      entities:
-        - calendar.your_calendar_1
-        - calendar.your_calendar_2
-      showColors: true
-    - !include ../../../base/includes/gap.yaml  
+- type: calendar
+  style: |
+    ha-card {
+      border-radius: var(--border-radius);
+      box-shadow: var(--box-shadow);
+      margin-left: 15px;
+      margin-right; 15px;
+    }
+  entities:
+    - calendar.personal
+    - calendar.family
 ```
 
 ### Layout card and horizontal/vertical stacks
