@@ -29,8 +29,8 @@ This is a calendar card for use with calendar entities.
     ha-card {
       border-radius: var(--border-radius);
       box-shadow: var(--box-shadow);
-      margin-left: 15px;
-      margin-right; 15px;
+      margin-left: 7px;
+      margin-right: 7px;
     }
   entities:
     - calendar.personal
