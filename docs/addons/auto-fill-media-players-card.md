@@ -24,32 +24,28 @@ This card will automatically fetch your media players and create cards for them.
 - Copy the code below and make changes if needed
 
 ```
-- type: horizontal-stack
-  cards:
-    - !include ../../../base/includes/gap.yaml
-    - type: custom:auto-entities
-      filter:
-        exclude:
-          - entity_id: media_player.plex_chrome
-          - entity_id: media_player.2651ab215423234hb
-        include:
-          - domain: media_player
-            options:
-              type: media-control
-              style: |
-                ha-card {
-                  border-radius: var(--border-radius);
-                  box-shadow: var(--box-shadow);
-                }
-              entity: this.entity_id
-      show_empty: false
-      sort:
-        method: name
-        numeric: true
-      card:
-        type: custom:layout-card
-        column_num: 1
-        justify_content: start
-        layout: horizontal
-    - !include ../../../base/includes/gap.yaml
+- type: custom:auto-entities
+  filter:
+    exclude:
+      - entity_id: media_player.plex_chrome
+      - entity_id: media_player.2651ab215423234hb
+    include:
+      - domain: media_player
+        options:
+          type: media-control
+          style: |
+            ha-card {
+              border-radius: var(--border-radius);
+              box-shadow: var(--box-shadow);
+            }
+          entity: this.entity_id
+  show_empty: false
+  sort:
+    method: name
+    numeric: true
+  card:
+    type: custom:layout-card
+    column_num: 1
+    justify_content: start
+    layout: horizontal
 ```
