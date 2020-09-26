@@ -39,25 +39,21 @@ Add the following line to your lovelace resources
 - Copy the code below and make changes if needed
 
 ```
-- type: horizontal-stack
-  cards:
-    - !include ../../../base/includes/gap.yaml
-    - type: custom:simple-weather-card                    
-      style: |
-        ha-card {
-          border-radius: var(--border-radius);
-          box-shadow: var(--box-shadow);
-          opacity: 0.8;
-          font-size: var(--name-font-size);
-          font-family: var(--font-family);
-        }                      
-      entity: weather.dark_sky
-      name: Eindhoven
-      backdrop: false
-      tap_action:
-        action: navigate
-        navigation_path: /homekit-infused/weather
-    - !include ../../../base/includes/gap.yaml
+- type: custom:simple-weather-card                    
+  style: |
+    ha-card {
+      border-radius: var(--border-radius);
+      box-shadow: var(--box-shadow);
+      opacity: 0.8;
+      font-size: var(--name-font-size);
+      font-family: var(--font-family);
+    }                      
+  entity: weather.dark_sky
+  name: Eindhoven
+  backdrop: false
+  tap_action:
+    action: navigate
+    navigation_path: /homekit-infused/weather
 ```
 
 ### Layout card and horizontal/vertical stacks
