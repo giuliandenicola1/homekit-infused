@@ -37,16 +37,15 @@
   - [Climate Preset Buttons](addons/climate-preset-buttons.md)
   - [Frontpage Button Row](addons/frontpage-buttons.md) (navigation)
   - [Menu Card](addons/menu-card.md)
-  - [Single Homekit Button](addons/custom-button.md) (fully customizable) *new
+  - [Single Homekit Button](addons/custom-button.md) (fully customizable)
   - [Single Homekit Button](addons/button-navigation.md) (navigation)
   - [Single Homekit Button](addons/button-light-switch.md) (light, switch or sensor)
   
 #### Calendar
-  - [Calendar Card](addons/calendar-card.md) *updated
+  - [Calendar Card](addons/calendar-card.md)
 
 #### Map
   - [Map Card](addons/map-card.md)
-  - [Waze Card] *deprecated, this is now included in the framework!
   
 #### Media 
   - [Google Home Card](addons/google-home-card.md)
@@ -54,7 +53,7 @@
   - [Remote Control Card](addons/nvidia-remote.md) (for Nvidia SHIELD TV/Android TV)
 
 #### Other
-  - [Frontpage Glances](addons/frontpage-glances.md) *new
+  - [Frontpage Glances](addons/frontpage-glances.md)
   - [iFrame Card](addons/iframe-card.md)
   - [Mini Graph Card](addons/mini-graph-card.md)
   - [Search Card](addons/search-card.md)
