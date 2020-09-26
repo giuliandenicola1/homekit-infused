@@ -54,7 +54,6 @@ This is a button that can call a service to either clean a zone or go to a spot.
 # example of a row with 2 zoned cleaning and a go to spot preset button
 - type: horizontal-stack
   cards:
-    - !include ../../../base/includes/gap.yaml
     - !include
       - '../../../base/templates/vacuum/zoned-preset-button.yaml'
       - name: Woonkamer
@@ -73,7 +72,6 @@ This is a button that can call a service to either clean a zone or go to a spot.
         icon: mdi:trash-can
         entity: vacuum.rockrobo
         spot_id: 'Trash Can'
-    - !include ../../../base/includes/gap.yaml
 ```
 
 ### Layout card and horizontal/vertical stacks
