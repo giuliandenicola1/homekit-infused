@@ -38,78 +38,66 @@ switch.jimmy_docker_bitwardenrs:
 
 ```
 # example code to show docker containers that are running
-- type: horizontal-stack
-  cards:
-    - !include ../../../base/includes/gap.yaml
-    - type: custom:auto-entities
-      filter:
-        include:
-          - entity_id: '*docker*'
-            state: "on"
-      show_empty: false
-      sort:
-        method: name
-        numeric: true
-      card:
-        type: glance
-        style: |
-          ha-card {
-            border-radius: var(--border-radius);
-            box-shadow: var(--box-shadow);
-          }
-        show_state: false
-        columns: 3
-    - !include ../../../base/includes/gap.yaml
+- type: custom:auto-entities
+  filter:
+    include:
+      - entity_id: '*docker*'
+        state: "on"
+  show_empty: false
+  sort:
+    method: name
+    numeric: true
+  card:
+    type: glance
+    style: |
+      ha-card {
+        border-radius: var(--border-radius);
+        box-shadow: var(--box-shadow);
+      }
+    show_state: false
+    columns: 3
 ```
 ``` 
 # example code to show docker containers that are not running
-- type: horizontal-stack
-  cards:
-    - !include ../../../base/includes/gap.yaml
-    - type: custom:auto-entities
-      filter:
-        include:
-          - entity_id: '*docker*'
-            state: "off"
-      show_empty: false
-      sort:
-        method: name
-        numeric: true
-      card:
-        type: glance
-        style: |
-          ha-card {
-            border-radius: var(--border-radius);
-            box-shadow: var(--box-shadow);
-          }
-        show_state: false
-        columns: 3
-    - !include ../../../base/includes/gap.yaml
+- type: custom:auto-entities
+  filter:
+    include:
+      - entity_id: '*docker*'
+        state: "off"
+  show_empty: false
+  sort:
+    method: name
+    numeric: true
+  card:
+    type: glance
+    style: |
+      ha-card {
+        border-radius: var(--border-radius);
+        box-shadow: var(--box-shadow);
+      }
+    show_state: false
+    columns: 3
 ```
 ```
 # example code of fetching vm's and always showing the state
-- type: horizontal-stack
-  cards:
-    - !include ../../../base/includes/gap.yaml
-    - type: custom:auto-entities
-      filter:
-        exclude:
-          - entity_id: '*usb*'
-        include:
-          - entity_id: 'switch.jimmy_vm*' ### Replace jimmy with your own server name, check the dev_tools if you aren't sure!
-      show_empty: false
-      sort:
-        method: name
-        numeric: true
-      card:
-        type: glance
-        style: |
-          ha-card {
-            border-radius: var(--border-radius);
-            box-shadow: var(--box-shadow);
-          }
-        columns: 3
-    - !include ../../../base/includes/gap.yaml
+- type: custom:auto-entities
+  filter:
+    exclude:
+      - entity_id: '*usb*'
+    include:
+      - entity_id: 'switch.jimmy_vm*' ### Replace jimmy with your own server name, check the dev_tools if you aren't sure!
+  show_empty: false
+  sort:
+    method: name
+    numeric: true
+  card:
+    type: glance
+    style: |
+      ha-card {
+        border-radius: var(--border-radius);
+        box-shadow: var(--box-shadow);
+      }
+    columns: 3
 ```
 
 ### Layout card and horizontal/vertical stacks
