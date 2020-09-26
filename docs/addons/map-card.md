@@ -24,28 +24,24 @@ This is a map card to show the location of person and/or device_trackers.
 - Copy the code below and make changes if needed
 
 ```
-- type: horizontal-stack
-  cards:
-    - !include ../../../base/includes/gap.yaml
-    - type: map                    
-      style: |
-        ha-card {
-          --paper-item-icon-color: black;
-          color: black;
-          border-radius: var(--border-radius);
-          box-shadow: var(--box-shadow);
-          font-family: var(--font-family);
-          font-size: var(--name-font-size);
-          opacity: 0.8;
-          overflow: hidden;
-        }                      
-      default_zoom: 15
-      aspect_ratio: 4x6
-      entities:
-        - person.person_1
-        - person.person_2
-        - person.person_3
-    - !include ../../../base/includes/gap.yaml
+- type: map                    
+  style: |
+    ha-card {
+      --paper-item-icon-color: black;
+      color: black;
+      border-radius: var(--border-radius);
+      box-shadow: var(--box-shadow);
+      font-family: var(--font-family);
+      font-size: var(--name-font-size);
+      opacity: 0.8;
+      overflow: hidden;
+    }                      
+  default_zoom: 15
+  aspect_ratio: 4x6
+  entities:
+    - person.person_1
+    - person.person_2
+    - person.person_3
 ```
 
 ### Layout card and horizontal/vertical stacks
