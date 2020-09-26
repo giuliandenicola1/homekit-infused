@@ -24,28 +24,24 @@ This is an iFrame to embed a websites in.
 - Copy the code below and make changes if needed
 
 ```
-- type: horizontal-stack
-  cards:
-    - !include ../../../base/includes/gap.yaml
-    - type: iframe
-      style: |
-        ha-card {
-          position: relative !important;
-          overflow: hidden !important;
-          border-radius: var(--border-radius) !important;
-          box-shadow: var(--box-shadow);
-          -webkit-border-radius: var(--border-radius) !important;
-          border-radius-x: var(--border-radius) !important;
-        }
-        iframe {
-          border-radius: var(--border-radius) !important;
-          -webkit-border-radius: var(--border-radius);
-          border-radius-x: var(--border-radius) !important;
-          overflow: hidden !important;
-        }
-      aspect_ratio: 125%
-      url: https://embed.windy.com/embed2.html?lat=51.402&lon=5.467&detailLat=51.477&detailLon=5.496&width=650&height=750&zoom=10&level=surface&overlay=wind&product=ecmwf&menu=&message=true&marker=&calendar=now&pressure=true&type=map&location=coordinates&detail=true&metricWind=km%2Fh&metricTemp=%C2%B0C&radarRange=-1" frameborder="0"
-    - !include ../../../base/includes/gap.yaml
+- type: iframe
+  style: |
+    ha-card {
+      position: relative !important;
+      overflow: hidden !important;
+      border-radius: var(--border-radius) !important;
+      box-shadow: var(--box-shadow);
+      -webkit-border-radius: var(--border-radius) !important;
+      border-radius-x: var(--border-radius) !important;
+    }
+    iframe {
+      border-radius: var(--border-radius) !important;
+      -webkit-border-radius: var(--border-radius);
+      border-radius-x: var(--border-radius) !important;
+      overflow: hidden !important;
+    }
+  aspect_ratio: 125%
+  url: https://embed.windy.com/embed2.html?lat=51.402&lon=5.467&detailLat=51.477&detailLon=5.496&width=650&height=750&zoom=10&level=surface&overlay=wind&product=ecmwf&menu=&message=true&marker=&calendar=now&pressure=true&type=map&location=coordinates&detail=true&metricWind=km%2Fh&metricTemp=%C2%B0C&radarRange=-1" frameborder="0"
 ```
 
 ### Layout card and horizontal/vertical stacks
