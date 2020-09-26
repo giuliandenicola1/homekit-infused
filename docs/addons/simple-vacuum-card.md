@@ -37,16 +37,12 @@ Add the following line to your lovelace resources
 - Copy the code below and make changes if needed
 
 ```
-- type: horizontal-stack
-  cards:
-    - !include ../../../base/includes/gap.yaml
-    - type: custom:xiaomi-vacuum-card
-      style: |
-        ha-card {
-          border-radius: var(--border-radius);
-          box-shadow: var(--box-shadow);
-          opacity: 0.8;
-          overflow: hidden;
-      entity: vacuum.xiaomi_vacuum_cleaner
-    - !include ../../../base/includes/gap.yaml
+- type: custom:xiaomi-vacuum-card
+  style: |
+    ha-card {
+      border-radius: var(--border-radius);
+      box-shadow: var(--box-shadow);
+      opacity: 0.8;
+      overflow: hidden;
+  entity: vacuum.xiaomi_vacuum_cleaner
 ```
