@@ -26,26 +26,22 @@ This card will automatically create an entities card with ALL your automations w
 - Copy the code below and make changes if needed
 
 ```
-- type: horizontal-stack
+- type: custom:layout-card
   cards:
-    - !include ../../../base/includes/gap.yaml
-    - type: custom:layout-card
-      cards:
-        - type: custom:auto-entities
-          filter:
-            exclude:
-              - entity_id: automation.exclude_this
-            include:
-              - domain: automation
-          sort:
-            method: name
-            numeric: true
-          card:
-            type: entities
-            style: |
-              ha-card {
-                border-radius: var(--border-radius);
-                box-shadow: var(--box-shadow);
-              }
-    - !include ../../../base/includes/gap.yaml
+    - type: custom:auto-entities
+      filter:
+        exclude:
+          - entity_id: automation.exclude_this
+        include:
+          - domain: automation
+      sort:
+        method: name
+        numeric: true
+      card:
+        type: entities
+        style: |
+          ha-card {
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+          }
 ```
