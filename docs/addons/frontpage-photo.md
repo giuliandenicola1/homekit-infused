@@ -46,20 +46,16 @@ sensor:
 - Copy the code below and make changes if needed
 
 ```
-- type: horizontal-stack
-  cards:
-    - !include ../../../base/includes/gap.yaml
-    - !include
-      - '../../../base/templates/picture-elements/frontpage-photo.yaml'
-      - person: person.stephanie
-        image_path: /local/images/jimmy_small.png
-        navigation_path: person_1
-        alignment: left
-        text_color: white
-        phone_battery_sensor: sensor.iphone_jimmy_battery_level
-        travel_time_to_home: sensor.travel_time_to_home_jimmy
-        travel_time_to_work: sensor.travel_time_to_work_jimmy
-    - !include ../../../base/includes/gap.yaml
+- !include
+  - '../../../base/templates/picture-elements/frontpage-photo.yaml'
+  - person: person.stephanie
+    image_path: /local/images/jimmy_small.png
+    navigation_path: person_1
+    alignment: left
+    text_color: white
+    phone_battery_sensor: sensor.iphone_jimmy_battery_level
+    travel_time_to_home: sensor.travel_time_to_home_jimmy
+    travel_time_to_work: sensor.travel_time_to_work_jimmy
 ```
 
 ### Extra Information
@@ -69,7 +65,6 @@ Example 2 persons:
 ```
 - type: horizontal-stack
   cards:
-    - !include ../../../base/includes/gap.yaml
     - !include
       - '../../../base/templates/picture-elements/frontpage-photo.yaml'
       - person: person.jimmy
@@ -90,7 +85,6 @@ Example 2 persons:
         phone_battery_sensor: sensor.iphone_stephanie_battery_level
         travel_time_to_home: sensor.travel_time_to_home_stephanie
         travel_time_to_work: sensor.travel_time_to_work_stephanie
-    - !include ../../../base/includes/gap.yaml
 ```
 
 Example 4 persons:
@@ -99,7 +93,6 @@ Example 4 persons:
   cards:
     - type: horizontal-stack
       cards:
-        - !include ../../../base/includes/gap.yaml
         - !include
           - '../../../base/templates/picture-elements/frontpage-photo.yaml'
           - person: person.jimmy
@@ -120,10 +113,8 @@ Example 4 persons:
             phone_battery_sensor: sensor.iphone_stephanie_battery_level
             travel_time_to_home: sensor.travel_time_to_home_stephanie
             travel_time_to_work: sensor.travel_time_to_work_stephanie
-        - !include ../../../base/includes/gap.yaml
     - type: horizontal-stack
       cards:
-        - !include ../../../base/includes/gap.yaml
         - !include
           - '../../../base/templates/picture-elements/frontpage-photo.yaml'
           - person: person.jane
@@ -144,5 +135,4 @@ Example 4 persons:
             phone_battery_sensor: sensor.iphone_john_battery_level
             travel_time_to_home: sensor.travel_time_to_home_john
             travel_time_to_work: sensor.travel_time_to_work_john
-        - !include ../../../base/includes/gap.yaml
 ```
