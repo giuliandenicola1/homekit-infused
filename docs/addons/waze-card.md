@@ -16,11 +16,7 @@ This card will show you live traffic information on your current location (might
 - Copy the code below and make changes if needed
 
 ```
-- type: horizontal-stack
-  cards:
-    - !include ../../../base/includes/gap.yaml
-    - type: iframe
-      url: https://embed.waze.com/iframe
-      aspect_ratio: 150%
-    - !include ../../../base/includes/gap.yaml
+- type: iframe
+  url: https://embed.waze.com/iframe
+  aspect_ratio: 150%
 ```
