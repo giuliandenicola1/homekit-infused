@@ -54,26 +54,22 @@ sun:
 - Copy the code below and make changes if needed
 
 ```
-- type: horizontal-stack
-  cards:
-    - !include ../../../base/includes/gap.yaml
-    - type: custom:weather-card
-      style: |
-        ha-card {
-          font-size: var(--name-font-size);
-          font-family: var(--font-family);
-          border-radius: var(--border-radius);
-          box-shadow: var(--box-shadow);
-          opacity: 0.8;
-        }
-      entity: weather.dark_sky
-      name: Eindhoven
-      current: true
-      details: true
-      forecast: true
-      hourly_forecast: false
-      number_of_forecasts: 5
-    - !include ../../../base/includes/gap.yaml
+- type: custom:weather-card
+  style: |
+    ha-card {
+      font-size: var(--name-font-size);
+      font-family: var(--font-family);
+      border-radius: var(--border-radius);
+      box-shadow: var(--box-shadow);
+      opacity: 0.8;
+    }
+  entity: weather.dark_sky
+  name: Eindhoven
+  current: true
+  details: true
+  forecast: true
+  hourly_forecast: false
+  number_of_forecasts: 5
 ```
 
 ### Layout card and horizontal/vertical stacks
