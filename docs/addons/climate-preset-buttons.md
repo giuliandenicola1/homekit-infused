@@ -32,49 +32,45 @@ This is a predefined set of buttons to use with your climate entities. It is adv
 ```
 - type: horizontal-stack
   cards:
-    - !include ../../../base/includes/gap.yaml
-    - type: horizontal-stack
-      cards:
-        - !include
-          - '../../../base/templates/button/service-call.yaml'
-          - name: Power
-            label: All
-            icon: mdi:power
-            service: climate.turn_on
-            service_entity: all
-            margin_right: 40px
-            opacity_off: 0.8
-        - !include
-          - '../../../base/templates/button/service-call-with-option.yaml'
-          - name: Frost
-            label: Protection
-            icon: mdi:snowflake-melt
-            service: climate.set_temperature
-            service_entity: all
-            extra: temperature
-            option: 11
-            margin_right: 40px
-            opacity_off: 0.8
-        - !include
-          - '../../../base/templates/button/service-call-with-option.yaml'
-          - name: Heat
-            label: All
-            icon: mdi:fire
-            service: climate.set_temperature
-            service_entity: all
-            extra: temperature
-            option: 22
-            margin_right: 40px
-            opacity_off: 0.8
-        - !include
-          - '../../../base/templates/button/service-call.yaml'
-          - name: Power
-            label: All Off
-            icon: mdi:power
-            service: climate.turn_off
-            service_entity: all
-            margin_right: 40px
-            opacity_off: 0.8
-    - !include ../../../base/includes/gap.yaml
+    - !include
+      - '../../../base/templates/button/service-call.yaml'
+      - name: Power
+        label: All
+        icon: mdi:power
+        service: climate.turn_on
+        service_entity: all
+        margin_right: 40px
+        opacity_off: 0.8
+    - !include
+      - '../../../base/templates/button/service-call-with-option.yaml'
+      - name: Frost
+        label: Protection
+        icon: mdi:snowflake-melt
+        service: climate.set_temperature
+        service_entity: all
+        extra: temperature
+        option: 11
+        margin_right: 40px
+        opacity_off: 0.8
+    - !include
+      - '../../../base/templates/button/service-call-with-option.yaml'
+      - name: Heat
+        label: All
+        icon: mdi:fire
+        service: climate.set_temperature
+        service_entity: all
+        extra: temperature
+        option: 22
+        margin_right: 40px
+        opacity_off: 0.8
+    - !include
+      - '../../../base/templates/button/service-call.yaml'
+      - name: Power
+        label: All Off
+        icon: mdi:power
+        service: climate.turn_off
+        service_entity: all
+        margin_right: 40px
+        opacity_off: 0.8
 ```
 
