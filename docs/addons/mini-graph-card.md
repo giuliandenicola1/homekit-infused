@@ -53,40 +53,32 @@ Add the following line to your lovelace resources
 
 *Minimum required options
 ```
-- type: horizontal-stack
-  cards:
-    - !include ../../../base/includes/gap.yaml
-    - !include
-      - '../../../base/templates/other/mini-graph.yaml'
-      - entity: sensor.daily_energy
-        name: Energy Today
-    - !include ../../../base/includes/gap.yaml
+- !include
+  - '../../../base/templates/other/mini-graph.yaml'
+  - entity: sensor.daily_energy
+    name: Energy Today
 ```
 
 *Full options
 ```
-- type: horizontal-stack
-  cards:
-    - !include ../../../base/includes/gap.yaml
-    - !include
-      - '../../../base/templates/other/mini-graph.yaml'
-      - entity: sensor.daily_energy
-        name: Energy Today
-        points_per_hour: 2
-        line_width: 3
-        hour24: true
-        animate: true
-        decimals: 2
-        font_size: 53
-        height: 90
-        graph_type: line
-        show_icon: false
-        show_fill: true
-        show_extrema: true
-        show_average: true
-        font_size_header: 9
-        line_color: red
-    - !include ../../../base/includes/gap.yaml
+- !include
+  - '../../../base/templates/other/mini-graph.yaml'
+  - entity: sensor.daily_energy
+    name: Energy Today
+    points_per_hour: 2
+    line_width: 3
+    hour24: true
+    animate: true
+    decimals: 2
+    font_size: 53
+    height: 90
+    graph_type: line
+    show_icon: false
+    show_fill: true
+    show_extrema: true
+    show_average: true
+    font_size_header: 9
+    line_color: red
 ```
 
 ### Layout card and horizontal/vertical stacks
