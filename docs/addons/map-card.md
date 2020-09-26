@@ -6,10 +6,10 @@ Back to [Addon List](../addon_list.md)
 ![Homekit Infused](../images/map-card.png)
 
 ### Description
-This is a map card to show the location of person and/or device_trackers.
+This is a map card to show the location of person and/or device_trackers. This can be useful to place in a person view. The location view already has a preprogrammed view within the HKI Framework starting HKI 3.4.0.
 
 ### Configuration
-- To use this you can simply change and/or add person and/or device_tracker entities to the list
+- To use this you can simply change and/or add person and/or device_tracker entities to the list.
 
 ### Advanced
 
@@ -20,7 +20,7 @@ This is a map card to show the location of person and/or device_trackers.
 | entities | yes | none | Sets the entities that will be shown on the map |
 
 ### Install
-- Create a new file inside the folder of the view you want (e.g. /homekit-infused/user/views/location/), you can name the file however you want (e.g. map-card.yaml)
+- Create a new file inside the folder of the view you want (e.g. /homekit-infused/user/views/person_1/), you can name the file however you want (e.g. map-card.yaml)
 - Copy the code below and make changes if needed
 
 ```
