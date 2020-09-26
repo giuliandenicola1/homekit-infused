@@ -39,22 +39,18 @@ Add the following line to your lovelace resources
 - Copy the code below and make changes if needed
 
 ```
-- type: horizontal-stack
-  cards:
-    - !include ../../../base/includes/gap.yaml
-    - type: custom:air-visual-card
-      style: |
-        ha-card {
-          border-radius: var(--border-radius);
-          box-shadow: var(--box-shadow);
-          overflow: hidden;
-        }
-      air_pollution_level: sensor.u_s_air_pollution_level
-      air_quality_index: sensor.u_s_air_quality_index
-      main_pollutant: sensor.u_s_main_pollutant
-      temp: weather.dark_sky
-      city: Eindhoven
-    - !include ../../../base/includes/gap.yaml
+- type: custom:air-visual-card
+  style: |
+    ha-card {
+      border-radius: var(--border-radius);
+      box-shadow: var(--box-shadow);
+      overflow: hidden;
+    }
+  air_pollution_level: sensor.u_s_air_pollution_level
+  air_quality_index: sensor.u_s_air_quality_index
+  main_pollutant: sensor.u_s_main_pollutant
+  temp: weather.dark_sky
+  city: Eindhoven
 ```
 
 ### Layout card and horizontal/vertical stacks
