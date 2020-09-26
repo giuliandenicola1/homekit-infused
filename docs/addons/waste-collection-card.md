@@ -40,24 +40,19 @@ sensor.mijnafvalwijzer_restafval:
 - Copy the code below and make changes if needed
 
 ```
-- type: horizontal-stack
-  cards:
-    - !include ../../../base/includes/gap.yaml
-    - type: entities
-      style: |
-        ha-card {
-          box-shadow: var(--box-shadow);
-          border-radius: var(--border-radius);
-          font-family: var(--font-family);
-          font-size: var(--name-font-size);
-          opacity: 0.8;
-        }
-      entities:
-        - sensor.mijnafvalwijzer_gft
-        - sensor.mijnafvalwijzer_papier
-        - sensor.mijnafvalwijzer_restafval
-#     columns: 3
-    - !include ../../../base/includes/gap.yaml
+- type: entities
+  style: |
+    ha-card {
+      box-shadow: var(--box-shadow);
+      border-radius: var(--border-radius);
+      font-family: var(--font-family);
+      font-size: var(--name-font-size);
+      opacity: 0.8;
+    }
+  entities:
+    - sensor.mijnafvalwijzer_gft
+    - sensor.mijnafvalwijzer_papier
+    - sensor.mijnafvalwijzer_restafval
 ```
 
 ### Layout card and horizontal/vertical stacks
