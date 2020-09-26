@@ -39,17 +39,13 @@ Add the following line to your lovelace resources
 - Copy the code below and make changes if needed
 
 ```
-- type: horizontal-stack
-  cards:
-    - !include ../../../base/includes/gap.yaml
-    - type: 'custom:upcoming-media-card'
-      style: |
-        ha-card {
-          border-radius: var(--border-radius);
-          box-shadow: var(--box-shadow);
-        }
-      entity: sensor.recently_added_tv 
-    - !include ../../../base/includes/gap.yaml
+- type: 'custom:upcoming-media-card'
+  style: |
+    ha-card {
+      border-radius: var(--border-radius);
+      box-shadow: var(--box-shadow);
+    }
+  entity: sensor.recently_added_tv 
 ```
 
 ### Layout card and horizontal/vertical stacks
