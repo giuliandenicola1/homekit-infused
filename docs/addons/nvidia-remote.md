@@ -62,12 +62,8 @@ This is a predefined remote control solution for your Nvidia SHIELD TV (pro). Th
 
 ```
 # example of minimal required config
-- type: horizontal-stack
-  cards:
-    - !include ../../../base/includes/gap.yaml
-    - !include
-      - '../../../base/templates/other/remote-control.yaml'
-      - entity_media_player: media_player.nvidia_s_h_i_e_l_d_tv_pro
-        entity_media_player_sound: media_player.samsung_ue65ku6000
-    - !include ../../../base/includes/gap.yaml
+- !include
+  - '../../../base/templates/other/remote-control.yaml'
+  - entity_media_player: media_player.nvidia_s_h_i_e_l_d_tv_pro
+    entity_media_player_sound: media_player.samsung_ue65ku6000
 ```
