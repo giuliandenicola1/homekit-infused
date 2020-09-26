@@ -27,24 +27,20 @@ This is a simple live map for a (xiaomi) vacuum cleaner, a rooted vacuum with Va
 - Copy the code below and make changes if needed
 
 ```
-- type: horizontal-stack
-  cards:
-    - !include ../../../base/includes/gap.yaml
-    - type: picture-entity
-      style: |
-        ha-card {
-          border-radius: var(--border-radius);
-          box-shadow: var(--box-shadow);
-        }
-      entity: camera.rockrobo_map
-      show_name: false
-      show_state: false
-      tap_action:
-        action: none
-      hold_action:
-        action: none
-      camera_view: live
-    - !include ../../../base/includes/gap.yaml
+- type: picture-entity
+  style: |
+    ha-card {
+      border-radius: var(--border-radius);
+      box-shadow: var(--box-shadow);
+    }
+  entity: camera.rockrobo_map
+  show_name: false
+  show_state: false
+  tap_action:
+    action: none
+  hold_action:
+    action: none
+  camera_view: live
 ```
 
 ### Layout card and horizontal/vertical stacks
