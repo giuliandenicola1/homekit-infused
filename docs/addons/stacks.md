@@ -24,32 +24,27 @@ WARNING! The light and devices view do NOT have a layout-card fixed, to properly
 
 ### Vertical and Horizontal stacks
 ```
-# example with a vertical and horizontal stack (3 buttons horizontally)
-# I use a vertical-stack so that the next horizontal-stack is always together in place with the first horizontal-stack. This will make the buttons stick together even when the desktop browser decides to move the cards.
-- type: vertical-stack
+# example with a horizontal stack (3 buttons horizontally)
+- type: horizontal-stack
   cards:
-    - type: horizontal-stack
-      cards:
-        - !include ../../../base/includes/gap.yaml
-        - name: Lights
-          label: Overview
-          icon: mdi:floor-lamp
-          navigation_path: /homekit-infused/lights
-          notification: "[[[ if (states['input_number.empty'].state == 0) return '&nbsp'; else return `${states['input_number.empty'].state}`; ]]]"
-          background_color: "[[[ if (states['input_number.empty'].state == 0) return 'rgba(0,0,0,0.0)'; else return 'var(--paper-item-icon-color)'; ]]]"  
-        - name: Devices
-          label: Overview
-          icon: mdi:power-plug
-          navigation_path: /homekit-infused/devices
-          notification: "[[[ if (states['input_number.empty'].state == 0) return '&nbsp'; else return `${states['input_number.empty'].state}`; ]]]"
-          background_color: "[[[ if (states['input_number.empty'].state == 0) return 'rgba(0,0,0,0.0)'; else return 'var(--paper-item-icon-color)'; ]]]" 
-        - name: Security
-          label: Overview
-          icon: mdi:cctv
-          navigation_path: /homekit-infused/security
-          notification: "[[[ if (states['input_number.empty'].state == 0) return '&nbsp'; else return `${states['input_number.empty'].state}`; ]]]"
-          background_color: "[[[ if (states['input_number.empty'].state == 0) return 'rgba(0,0,0,0.0)'; else return 'var(--paper-item-icon-color)'; ]]]"  
-        - !include ../../../base/includes/gap.yaml
+    - name: Lights
+      label: Overview
+      icon: mdi:floor-lamp
+      navigation_path: /homekit-infused/lights
+      notification: "[[[ if (states['input_number.empty'].state == 0) return '&nbsp'; else return `${states['input_number.empty'].state}`; ]]]"
+      background_color: "[[[ if (states['input_number.empty'].state == 0) return 'rgba(0,0,0,0.0)'; else return 'var(--paper-item-icon-color)'; ]]]"  
+    - name: Devices
+      label: Overview
+      icon: mdi:power-plug
+      navigation_path: /homekit-infused/devices
+      notification: "[[[ if (states['input_number.empty'].state == 0) return '&nbsp'; else return `${states['input_number.empty'].state}`; ]]]"
+      background_color: "[[[ if (states['input_number.empty'].state == 0) return 'rgba(0,0,0,0.0)'; else return 'var(--paper-item-icon-color)'; ]]]" 
+    - name: Security
+      label: Overview
+      icon: mdi:cctv
+      navigation_path: /homekit-infused/security
+      notification: "[[[ if (states['input_number.empty'].state == 0) return '&nbsp'; else return `${states['input_number.empty'].state}`; ]]]"
+      background_color: "[[[ if (states['input_number.empty'].state == 0) return 'rgba(0,0,0,0.0)'; else return 'var(--paper-item-icon-color)'; ]]]"  
 ```
 ```
 # example with a vertical and horizontal stack (6 buttons with 2 rows of 3 buttons horizontally each)
@@ -57,7 +52,6 @@ WARNING! The light and devices view do NOT have a layout-card fixed, to properly
   cards:
     - type: horizontal-stack
       cards:
-        - !include ../../../base/includes/gap.yaml
         - type: entity-button
           name: Lights
           label: Overview
@@ -70,10 +64,8 @@ WARNING! The light and devices view do NOT have a layout-card fixed, to properly
           name: Security
           label: Overview
           icon: mdi:cctv
-        - !include ../../../base/includes/gap.yaml
     - type: horizontal-stack
       cards:
-        - !include ../../../base/includes/gap.yaml
         - type: entity-button
           name: Lights
           label: Overview
@@ -86,7 +78,6 @@ WARNING! The light and devices view do NOT have a layout-card fixed, to properly
           name: Security
           label: Overview
           icon: mdi:cctv
-        - !include ../../../base/includes/gap.yaml
 ```
 ```
 # example with 2 markdown cards aligned horizontally
@@ -111,72 +102,64 @@ As you can see the stacks in Home Assistant are pretty versatile, see it this wa
 ### Layout Card
 ```
 # example with a layout-card (3 buttons horizontally)
-- type: horizontal-stack
+- type: custom:layout-card
+  column_num: 3
+  justify_content: start
+  layout: horizontal
   cards:
-    - !include ../../../base/includes/gap.yaml
-    - type: custom:layout-card
-      column_num: 3
-      justify_content: start
-      layout: horizontal
-      cards:
-        - !include
-          - '../../../base/templates/button/button-badge.yaml'
-          - name: {Automations
-            label: Overview
-            icon: mdi:alpha-a-box 
-        - !include
-          - '../../../base/templates/button/button-badge.yaml'
-          - name: Battery
-            label: Overview
-            icon: mdi:battery-50
-        - !include
-          - '../../../base/templates/button/button-badge.yaml'
-          - name: Calendar
-            label: Overview
-            icon: mdi:calendar-account     
-    - !include ../../../base/includes/gap.yaml
+    - !include
+      - '../../../base/templates/button/button-badge.yaml'
+      - name: {Automations
+        label: Overview
+        icon: mdi:alpha-a-box 
+    - !include
+      - '../../../base/templates/button/button-badge.yaml'
+      - name: Battery
+        label: Overview
+        icon: mdi:battery-50
+    - !include
+      - '../../../base/templates/button/button-badge.yaml'
+      - name: Calendar
+        label: Overview
+        icon: mdi:calendar-account     
 ```
 ```
 # example with a layout-card (6 buttons with 2 rows of 3 buttons horizontally each)
-- type: horizontal-stack
+- type: custom:layout-card
+  column_num: 3
+  justify_content: start
+  layout: horizontal
   cards:
-    - !include ../../../base/includes/gap.yaml
-    - type: custom:layout-card
-      column_num: 3
-      justify_content: start
-      layout: horizontal
-      cards:
-        - !include
-          - '../../../base/templates/button/button-badge.yaml'
-          - name: {Automations
-            label: Overview
-            icon: mdi:alpha-a-box
-        - !include
-          - '../../../base/templates/button/button-badge.yaml'
-          - name: Battery
-            label: Overview
-            icon: mdi:battery-50
-        - !include
-          - '../../../base/templates/button/button-badge.yaml'
-          - name: Calendar
-            label: Overview
-            icon: mdi:calendar-account
-        - !include
-          - '../../../base/templates/button/button-badge.yaml'
-          - name: {Automations
-            label: Overview
-            icon: mdi:alpha-a-box 
-        - !include
-          - '../../../base/templates/button/button-badge.yaml'
-          - name: Battery
-            label: Overview
-            icon: mdi:battery-50
-        - !include
-          - '../../../base/templates/button/button-badge.yaml'
-          - name: Calendar
-            label: Overview
-            icon: mdi:calendar-account
-    - !include ../../../base/includes/gap.yaml
+    - !include
+      - '../../../base/templates/button/button-badge.yaml'
+      - name: {Automations
+        label: Overview
+        icon: mdi:alpha-a-box
+    - !include
+      - '../../../base/templates/button/button-badge.yaml'
+      - name: Battery
+        label: Overview
+        icon: mdi:battery-50
+    - !include
+      - '../../../base/templates/button/button-badge.yaml'
+      - name: Calendar
+        label: Overview
+        icon: mdi:calendar-account
+    - !include
+      - '../../../base/templates/button/button-badge.yaml'
+      - name: {Automations
+        label: Overview
+        icon: mdi:alpha-a-box 
+    - !include
+      - '../../../base/templates/button/button-badge.yaml'
+      - name: Battery
+        label: Overview
+        icon: mdi:battery-50
+    - !include
+      - '../../../base/templates/button/button-badge.yaml'
+      - name: Calendar
+        label: Overview
+        icon: mdi:calendar-account
 ```
 
 As you can see with a layout card you can continue to add buttons without the need of an extra horizontal-stack after each row. You can also easily set the amount of columns on each row by simply adjusting the column_num number.
