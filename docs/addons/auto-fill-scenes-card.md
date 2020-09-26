@@ -27,34 +27,30 @@ This is a card that will fetch all your scenes and create a button page for it a
 - Copy the code below and make changes if needed
 
 ```
-- type: horizontal-stack
-  cards:
-    - !include ../../../base/includes/gap.yaml
-    - type: custom:auto-entities
-      filter:
-        include:
-          - domain: scene
-            options:
-              !include
-              - '../../../base/templates/button/service-call.yaml'
-              - entity: this.entity_id
-                grid: light-devices-grid
-                service_entity: this.entity_id
-                show_state: false
-          - type: custom:button-card
-            color_type: blank-card
-            aspect_ratio: 1/1
-          - type: custom:button-card
-            color_type: blank-card
-            aspect_ratio: 1/1
-      sort:
-        method: name
-        numeric: true
-      card:
-        type: custom:layout-card
-        column_num: 3
-        justify_content: start
-        layout: horizontal
-    - !include ../../../base/includes/gap.yaml
+- type: custom:auto-entities
+  filter:
+    include:
+      - domain: scene
+        options:
+          !include
+          - '../../../base/templates/button/service-call.yaml'
+          - entity: this.entity_id
+            grid: light-devices-grid
+            service_entity: this.entity_id
+            show_state: false
+      - type: custom:button-card
+        color_type: blank-card
+        aspect_ratio: 1/1
+      - type: custom:button-card
+        color_type: blank-card
+        aspect_ratio: 1/1
+  sort:
+    method: name
+    numeric: true
+  card:
+    type: custom:layout-card
+    column_num: 3
+    justify_content: start
+    layout: horizontal
 ```
 
