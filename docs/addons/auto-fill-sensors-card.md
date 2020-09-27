@@ -44,6 +44,7 @@ binary_sensor.living_room_motion:
 | grid | no | default-hki-grid | Change the grid of the button, choose from `default-hki-grid`, `light-devices-grid`, `old-hki-grid` or `old-light-devices-grid` |
 | tap_action | no | more-info | Set to show a default more-info window or to do nothing at all, NO other options available! |
 | hold_action | no | more-info | Set to show a default more-info window or a mini-graph-card popup (might now work well for some entities), choose from `more-info` or `call-service`, NO other options available, setting this to `call-service` will automatically switch this addons popup cards to a mini-graph! |
+| line_color | no | red | Sets the line color for the mini-graph (this only works when using the mini-graph popup, so `hold_action` must be set to `call-service`) |
 
 ### Install
 - Create a new file inside the folder of the view you want (e.g. /homekit-infused/user/views/climate/), you can name the file however you want (e.g. temperature-sensors-card.yaml)
@@ -56,6 +57,7 @@ binary_sensor.living_room_motion:
     tap_action: more-info
     columns: 3
     sort: name
+    line_color: blue
 ```
 
 ### Extra Information
