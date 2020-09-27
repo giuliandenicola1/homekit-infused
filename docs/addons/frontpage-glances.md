@@ -67,8 +67,6 @@ person.jimmy:
       ha-card {
         border-radius: var(--border-radius);
         box-shadow: var(--box-shadow);
-        margin-left: 15px;
-        margin-right: 15px;
       }
     show_state: false
 ```
@@ -88,8 +86,6 @@ person.jimmy:
       ha-card {
         border-radius: var(--border-radius);
         box-shadow: var(--box-shadow);
-        margin-left: 15px;
-        margin-right: 15px;
       }
     show_state: true
 ```
@@ -112,8 +108,6 @@ If you only want to track people that are home (or away) do it like the followin
       ha-card {
         border-radius: var(--border-radius);
         box-shadow: var(--box-shadow);
-        margin-left: 15px;
-        margin-right: 15px;
       }
     show_state: false
 ```
