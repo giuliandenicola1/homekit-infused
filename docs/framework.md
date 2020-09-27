@@ -81,6 +81,7 @@ homeassistant:
 lovelace:
     mode: storage
 ```
+
 Note: If you have an existing setup and already have packages, you must cut/paste the packages/homekit_infused folder inside your currently exising packages folder! (depending on the way the folder is included within your configuration.yaml file)
 
 The copying process should now be completed and we can move on to the configuration part.
