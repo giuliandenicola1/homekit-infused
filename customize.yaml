@@ -73,90 +73,107 @@ sensor.mijnafvalwijzer_restafval:
 
 # Binary Sensors
 binary_sensor.voordeur:
-  entity_picture: /local/images/icons/door-window-sensor.png
+#  entity_picture: /local/images/icons/door-window-sensor.png
+  icon: mdi:door
   friendly_name: Voordeur
   type: door
   room: gang
 
 binary_sensor.woonkamer_deur:
-  entity_picture: /local/images/icons/door-window-sensor.png
+#  entity_picture: /local/images/icons/door-window-sensor.png
+  icon: mdi:door
   friendly_name: Woonkamer
   type: door
   room: woonkamer
 
 binary_sensor.slaapkamer_deur:
-  entity_picture: /local/images/icons/door-window-sensor.png
+#  entity_picture: /local/images/icons/door-window-sensor.png
+  icon: mdi:door
   friendly_name: Slaapkamer
   type: door
   room: slaapkamer
 
 binary_sensor.bijkeukenraam:
-  entity_picture: /local/images/icons/door-window-sensor.png
+#  entity_picture: /local/images/icons/door-window-sensor.png
+  icon: mdi:window-closed
   friendly_name: Bijkeuken
   type: window
   room: bijkeuken
 
 binary_sensor.keukenraam:
-  entity_picture: /local/images/icons/door-window-sensor.png
+#  entity_picture: /local/images/icons/door-window-sensor.png
+  icon: mdi:window-closed
   friendly_name: Keuken
   type: window
   room: keuken
 
 binary_sensor.kleine_kamerraam:
-  entity_picture: /local/images/icons/door-window-sensor.png
+#  entity_picture: /local/images/icons/door-window-sensor.png
+  icon: mdi:window-closed
   friendly_name: Kleine Kamer
   type: window
   room: kleine_kamer
 
 binary_sensor.motion_bijkeuken:
-  entity_picture: /local/images/icons/motion-sensor.png
+#  entity_picture: /local/images/icons/motion-sensor.png
+  icon: mdi:motion-sensor
   friendly_name: Bijkeuken
   type: motion
   room: bijkeuken
 
 binary_sensor.motion_toilet:
-  entity_picture: /local/images/icons/motion-sensor.png
+#  entity_picture: /local/images/icons/motion-sensor.png
+  icon: mdi:motion-sensor
   friendly_name: Toilet
   type: motion
   room: toilet
 
 binary_sensor.motion_woonkamer_camera:
-  entity_picture: /local/images/icons/motion-sensor.png
+#  entity_picture: /local/images/icons/motion-sensor.png
+  icon: mdi:motion-sensor
   friendly_name: Woonkamer
   type: motion
   room: woonkamer
 
 binary_sensor.motion_gang:
-  entity_picture: /local/images/icons/motion-sensor.png
+#  entity_picture: /local/images/icons/motion-sensor.png
+  icon: mdi:motion-sensor
   friendly_name: Gang
   type: motion
   room: gang
 
 binary_sensor.motion_office:
-  entity_picture: /local/images/icons/motion-sensor.png
+#  entity_picture: /local/images/icons/motion-sensor.png
+  icon: mdi:motion-sensor
   friendly_name: Kleine Kamer
   type: motion
   room: kleine_kamer
 
 binary_sensor.motion_gallerij_camera:
-  entity_picture: /local/images/icons/motion-sensor.png
+#  entity_picture: /local/images/icons/motion-sensor.png
+  icon: mdi:motion-sensor
   friendly_name: Gallerij
   type: motion
   room: gallerij
 
 binary_sensor.smoke_sensor:
-  entity_picture: /local/images/icons/smoke-detector.png
+#  entity_picture: /local/images/icons/smoke-detector.png
+  icon: mdi:smoke-detector
   friendly_name: Rookmelder
   type: smoke
   room: keuken
 
 # Camera's
 camera.gallerij_camera:
+#  entity_picture: /local/images/icons/camera.png
+  icon: mdi:cctv
   friendly_name: Gallerij
   type: camera
   room: gallerij
 
 camera.woonkamer_camera:
+#  entity_picture: /local/images/icons/camera.png
+  icon: mdi:cctv
   friendly_name: Woonkamer
   type: camera
   room: woonkamer
@@ -194,25 +211,29 @@ device_tracker.tile_8a746078c8c64271:
 
 # Devices
 switch.ventilator:
-  entity_picture: /local/images/icons/fan.png
+#  entity_picture: /local/images/icons/fan.png
+  icon: fan
   friendly_name: Ventilator
   type: fan
   room: kleine_kamer
   lock: true
 
 switch.receiver:
+#  entity_picture: /local/images/icons/speakers.png
   icon: mdi:speaker-multiple
   friendly_name: Receiver
   type: switch
   room: woonkamer
 
 switch.samsung_tv:
+#  entity_picture: /local/images/icons/tv.png
   icon: mdi:television
   friendly_name: TV
   type: switch
   room: woonkamer
 
 switch.receiver_slaapkamer_2:
+#  entity_picture: /local/images/icons/speakers.png
   icon: mdi:speaker-multiple
   friendly_name: Receiver
   type: switch
@@ -220,6 +241,7 @@ switch.receiver_slaapkamer_2:
   lock: true
 
 switch.tv_slaapkamer:
+#  entity_picture: /local/images/icons/tv.png
   icon: mdi:television
   friendly_name: TV
   type: switch
@@ -227,6 +249,7 @@ switch.tv_slaapkamer:
   lock: true
 
 switch.pc_van_stephanie:
+#  entity_picture: /local/images/icons/usb.png
   icon: mdi:desktop-tower
   friendly_name: PC Stephanie
   type: switch
@@ -234,6 +257,7 @@ switch.pc_van_stephanie:
   lock: true
 
 switch.pc_van_jimmy:
+#  entity_picture: /local/images/icons/usb.png
   icon: mdi:desktop-tower
   friendly_name: PC Jimmy
   type: switch
@@ -241,6 +265,7 @@ switch.pc_van_jimmy:
   lock: true
 
 switch.monitors_stephanie:
+#  entity_picture: /local/images/icons/display.png
   icon: mdi:monitor
   friendly_name: Monitor Steph
   type: switch
@@ -248,6 +273,7 @@ switch.monitors_stephanie:
   lock: true
 
 switch.monitors_jimmy:
+#  entity_picture: /local/images/icons/display.png
   icon: mdi:monitor
   friendly_name: Monitor Jim
   type: switch
@@ -267,13 +293,6 @@ switch.printer:
   room: kleine_kamer
   lock: true
 
-switch.xbox_one:
-  icon: mdi:microsoft-xbox
-  friendly_name: Xbox One
-  type: switch
-  room: woonkamer
-  lock: true
-
 switch.waterkoker:
   icon: mdi:tea
   friendly_name: Waterkoker
@@ -281,6 +300,7 @@ switch.waterkoker:
   room: keuken
 
 switch.afzuigkap:
+#  entity_picture: /local/images/icons/fan.png
   icon: mdi:fan
   friendly_name: Afzuigkap
   type: non-climate-fan
@@ -299,6 +319,7 @@ switch.cappumaker:
   room: keuken
 
 switch.koelkast_always_on:
+#  entity_picture: /local/images/icons/fridge.png
   icon: mdi:fridge
   friendly_name: Koelkast
   type: switch
@@ -313,12 +334,14 @@ switch.vriezer_always_on:
   lock: true
 
 switch.oven:
+#  entity_picture: /local/images/icons/oven.png
   icon: mdi:toaster-oven
   friendly_name: Oven
   type: switch
   room: keuken
 
 switch.vaatwasser:
+#  entity_picture: /local/images/icons/dishwasher.png
   icon: mdi:dishwasher
   friendly_name: Vaatwasser
   type: switch
@@ -331,12 +354,14 @@ switch.nespresso_apparaat:
   room: keuken
 
 switch.wasmachine:
+#  entity_picture: /local/images/icons/washing-machine.png
   icon: mdi:washing-machine
   friendly_name: Wasmachine
   type: switch
   room: bijkeuken
 
 switch.droger:
+#  entity_picture: /local/images/icons/tumble-dryer.png
   icon: mdi:tumble-dryer
   friendly_name: Wasdroger
   type: switch
@@ -348,42 +373,49 @@ switch.network_switch_always_on:
 
 # Lights
 light.plafond:
+#  entity_picture: /local/images/icons/ceiling-light.png
   icon: mdi:ceiling-light
   friendly_name: Plafond
   room: woonkamer
   type: light-standard
 
 light.eettafel:
+#  entity_picture: /local/images/icons/ceiling-light.png
   icon: mdi:ceiling-light
   friendly_name: Eettafel
   room: woonkamer
   type: light-standard
 
 light.tafellamp:
+#  entity_picture: /local/images/icons/light.png
   icon: mdi:lamp
   friendly_name: Tafellamp
   room: woonkamer
   type: light-color-temp
   
 light.vloerlamp:
+#  entity_picture: /local/images/icons/light.png
   icon: mdi:floor-lamp
   friendly_name: Vloerlamp
   room: woonkamer
   type: light-color-temp
 
 light.woonkamer_led_lampen:
+#  entity_picture: /local/images/icons/led-strip.png
   icon: mdi:led-strip-variant
   friendly_name: LEDs
   room: woonkamer
   type: light-rgb
 
 light.gateway_light_7811dcdef324:
+#  entity_picture: /local/images/icons/led-strip.png
   icon: mdi:hockey-puck
   friendly_name: Xiaomi LED
   room: woonkamer
   type: light-rgb
 
 light.nachtkastje_stephanie:
+#  entity_picture: /local/images/icons/light.png
   icon: mdi:lamp
   friendly_name: Stephanie
   room: slaapkamer
@@ -391,6 +423,7 @@ light.nachtkastje_stephanie:
   lock: true
   
 light.nachtkastje_jimmy:
+#  entity_picture: /local/images/icons/light.png
   icon: mdi:lamp
   friendly_name: Jimmy
   room: slaapkamer
@@ -398,6 +431,7 @@ light.nachtkastje_jimmy:
   lock: true
 
 light.slaapkamer_led_lampen:
+#  entity_picture: /local/images/icons/led-strip.png
   icon: mdi:led-strip-variant
   friendly_name: LEDs
   room: slaapkamer
@@ -411,6 +445,7 @@ light.bfb4e244cda19c807fhz5e:
   supported_features: 191
 
 light.kast_lamp:
+#  entity_picture: /local/images/icons/ceiling-light.png
   icon: mdi:ceiling-light
   friendly_name: Kast
   room: slaapkamer
@@ -418,6 +453,7 @@ light.kast_lamp:
   lock: true
 
 light.bed_lamp:
+#  entity_picture: /local/images/icons/ceiling-light.png
   icon: mdi:ceiling-light
   friendly_name: Bed
   room: slaapkamer
@@ -425,70 +461,82 @@ light.bed_lamp:
   lock: true
   
 light.kleine_kamer:
+#  entity_picture: /local/images/icons/ceiling-light.png
   icon: mdi:ceiling-light
   friendly_name: Plafond
   room: kleine_kamer
   type: light-color-temp
 
 light.office_led_lampen:
+#  entity_picture: /local/images/icons/led-strip.png
   icon: mdi:led-strip-variant
   friendly_name: LEDs
   room: kleine_kamer
   type: light-rgb
 
 light.keuken:
+#  entity_picture: /local/images/icons/ceiling-light.png
   icon: mdi:ceiling-light
   friendly_name: Plafond
   room: keuken
   type: light-standard
 
 light.keuken_leds:
+#  entity_picture: /local/images/icons/led-strip.png
   icon: mdi:led-strip-variant
   friendly_name: LEDs
   room: keuken
   type: light-rgb
   
 light.bijkeuken:
+#  entity_picture: /local/images/icons/ceiling-light.png
   icon: mdi:ceiling-light
   friendly_name: Bijkeuken
   room: bijkeuken
   type: light-standard
 
 light.entree_lamp:
+#  entity_picture: /local/images/icons/ceiling-light.png
   icon: mdi:ceiling-light
   friendly_name: Hal
   room: gang
   type: light-standard
   
 light.gang_lamp:
+#  entity_picture: /local/images/icons/ceiling-light.png
   icon: mdi:ceiling-light
   friendly_name: Gang
   room: gang
   type: light-standard
 
 switch.koogeek_sw_056ce9:
+#  entity_picture: /local/images/icons/ceiling-light.png
   icon: mdi:ceiling-light
   friendly_name: Badkamer
 
 light.koogeek_sw_056ce9:
+#  entity_picture: /local/images/icons/ceiling-light.png
   icon: mdi:ceiling-light
   friendly_name: Badkamer
   room: badkamer
   type: light-standard
 
 light.toilet:
+#  entity_picture: /local/images/icons/ceiling-light.png
   icon: mdi:ceiling-light
   friendly_name: Toilet
   room: toilet
   type: light-standard
 
 light.balkon:
+#  entity_picture: /local/images/icons/light.png
   icon: mdi:coach-lamp
   friendly_name: Balkon
   room: balkon
   type: light-standard
   
 light.berging:
+#  entity_picture: /local/images/icons/ceiling-light.png
   icon: mdi:ceiling-light
   friendly_name: Berging
   room: berging
@@ -513,65 +561,73 @@ media_player.samsung_ue46es5500:
 # Person
 person.stephanie:
   entity_picture: /local/images/stephanie_small.png
-  friendly_name: Stephanie Schings
+  friendly_name: Stephanie
 person.jimmy:
   entity_picture: /local/images/jimmy_small.png
-  friendly_name: Jimmy Schings
+  friendly_name: Jimmy
 person.tala:
   entity_picture: /local/images/tala.png
-  friendly_name: tala
+  friendly_name: Tala
 
 # Sensors
 ## Temperature
 sensor.woonkamer:
   friendly_name: Woonkamer
-  entity_picture: /local/images/icons/temperature.png
+#  entity_picture: /local/images/icons/temperature.png
+  icon: mdi:thermometer
   type: temperature
   room: woonkamer
 
 sensor.kleine_kamer_temperatuur:
   friendly_name: Kleine Kamer
-  entity_picture: /local/images/icons/temperature.png
+#  entity_picture: /local/images/icons/temperature.png
+  icon: mdi:thermometer
   device_class: temperature
   type: temperature
   room: kleine_kamer
 
 sensor.slaapkamer:
   friendly_name: Slaapkamer
-  entity_picture: /local/images/icons/temperature.png
+#  entity_picture: /local/images/icons/temperature.png
+  icon: mdi:thermometer
   type: temperature
   room: slaapkamer
 
 sensor.keuken_temperatuur:
   friendly_name: Keuken
-  entity_picture: /local/images/icons/temperature.png
+#  entity_picture: /local/images/icons/temperature.png
+  icon: mdi:thermometer
   device_class: temperature
   type: temperature
   room: keuken
 
 sensor.badkamer:
   friendly_name: Badkamer
-  entity_picture: /local/images/icons/temperature.png
+#  entity_picture: /local/images/icons/temperature.png
+  icon: mdi:thermometer
   type: temperature
   room: badkamer
 
 sensor.motion_bijkeuken_temperature:
   friendly_name: Bijkeuken
-  entity_picture: /local/images/icons/temperature.png
+#  entity_picture: /local/images/icons/temperature.png
+  icon: mdi:thermometer
   device_class: temperature
   type: temperature
   room: bijkeuken
 
 sensor.voordeur_temperature:
   friendly_name: Hal
-  entity_picture: /local/images/icons/temperature.png
+#  entity_picture: /local/images/icons/temperature.png
+  icon: mdi:thermometer
   device_class: temperature
   type: temperature
   room: gang
 
 sensor.motion_toilet_temperature:
   friendly_name: Toilet
-  entity_picture: /local/images/icons/temperature.png
+#  entity_picture: /local/images/icons/temperature.png
+  icon: mdi:thermometer
   device_class: temperature
   type: temperature
   room: toilet
@@ -579,46 +635,55 @@ sensor.motion_toilet_temperature:
 ## Humidity
 sensor.woonkamer_2:
   friendly_name: Woonkamer
-  entity_picture: /local/images/icons/humidity.png
+#  entity_picture: /local/images/icons/humidity.png
+  icon: mdi:water-percent
   type: humidity
   room: woonkamer
 
 sensor.kleine_kamer_luchtvochtigheid:
   friendly_name: Kleine Kamer
-  entity_picture: /local/images/icons/humidity.png
+#  entity_picture: /local/images/icons/humidity.png
+  icon: mdi:water-percent
   device_class: humidity
   type: humidity
   room: kleine_kamer
 
 sensor.slaapkamer_2:
   friendly_name: Slaapkamer
-  entity_picture: /local/images/icons/humidity.png
+#  entity_picture: /local/images/icons/humidity.png
+  icon: mdi:water-percent
   type: humidity
   room: slaapkamer
 
 sensor.keuken_luchtvochtigheid:
   friendly_name: Keuken
-  entity_picture: /local/images/icons/humidity.png
+#  entity_picture: /local/images/icons/humidity.png
+  icon: mdi:water-percent
   device_class: humidity
   type: humidity
   room: keuken
 
 sensor.badkamer_2:
   friendly_name: Badkamer
-  entity_picture: /local/images/icons/humidity.png
+#  entity_picture: /local/images/icons/humidity.png
+  icon: mdi:water-percent
   type: humidity
   room: badkamer
 
 ## Air Pressure
 sensor.slaapkamer_3:
   friendly_name: Slaapkamer
-  entity_picture: /local/images/icons/pressure.png
+#  entity_picture: /local/images/icons/pressure.png
+  icon: mdi:gauge
+  icon: mdi:water-percent
   type: pressure
   room: slaapkamer
 
 sensor.badkamer_3:
   friendly_name: Badkamer
-  entity_picture: /local/images/icons/pressure.png
+#  entity_picture: /local/images/icons/pressure.png
+  icon: mdi:gauge
+  icon: mdi:water-percent
   type: pressure
   room: badkamer
   
