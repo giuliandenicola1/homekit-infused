@@ -1,163 +1,158 @@
 # lovelace_gen
 
-- type: vertical-stack
-  cards:
-    # Simple Weather Card
-    - type: horizontal-stack
-      cards:
-        - !include ../../../base/includes/gap.yaml
-        - type: custom:simple-weather-card                    
-          style: |
-            ha-card {
-              border-radius: var(--border-radius);
-              box-shadow: var(--box-shadow);
-              opacity: 0.8;
-              font-size: 12px;
-              font-family: var(--font-family);
-            }                      
-          entity: weather.dark_sky
-          name: Eindhoven
-          backdrop: false
-          tap_action:
-            action: navigate
-            navigation_path: /homekit-infused/weather
-        - !include ../../../base/includes/gap.yaml
-
-    # Frontpage Photos
-    - type: horizontal-stack
-      cards:
-        - !include ../../../base/includes/gap.yaml
-        - !include
-          - '../../../base/templates/picture-elements/frontpage-photo.yaml'
-          - person: person.stephanie
-            image_path: /local/images/stephanie_small.png
-            navigation_path: person_1
-            alignment: left
-            text_color: white
-            phone_battery_sensor: sensor.iphone_stephanie_battery_level
-            travel_time_to_home: sensor.reistijd_stephanie
-            travel_time_to_work: sensor.reistijd_stephanie_work
-        - !include
-          - '../../../base/templates/picture-elements/frontpage-photo.yaml'
-          - person: person.jimmy
-            image_path: /local/images/jimmy_small.png
-            navigation_path: person_2
-            alignment: right
-            text_color: white
-            phone_battery_sensor: sensor.sm_n976b_battery_level
-            travel_time_to_home: sensor.reistijd_jimmy
-            travel_time_to_work: sensor.reistijd_jimmy_work
-        - !include ../../../base/includes/gap.yaml
-    - type: horizontal-stack
-      cards:
-        - !include ../../../base/includes/gap.yaml
-        - type: picture-elements
-          style: |
-            ha-card {  
-              border-radius: var(--border-radius);
-              box-shadow: var(--box-shadow);
-              overflow: hidden;
-            }
-          image: /local/images/tala2.png
-          elements:
-            - type: image
-              entity: person.tala
-              image: /local/images/tala2.png
-              tap_action:
-                action: navigate
-                navigation_path: /homekit-infused/person_3
-              hold_action:
-                action: none
-              style:
-                left: 50%
-                top: 50%
-                width: 100%
-                heigth: 100%
-            - type: state-label
-              entity: person.tala
-              style:
-                right: 0
-                bottom: 0
-                pointer-events: none
-                font-size: 13px
-                line-height: 15px
-                color: white
-                background-color: rgba(0, 0, 0, 0.3)
-                width: 100%
-                transform: initial
-                text-align: left
-        - !include ../../../base/includes/gap.yaml
-
-    # Frontpage Buttons
-    - type: horizontal-stack
-      cards:
-        - !include ../../../base/includes/gap.yaml
-        - !include
-          - '../../../base/templates/button/button-badge.yaml'
-          - name: Climate
-            label: Control
-            icon: mdi:thermometer
-            navigation_path: /homekit-infused/climate
-            notification: "[[[ if (states['sensor.average_house_temperature'].state == 0) return '&nbsp'; else return `${states['sensor.average_house_temperature'].state}`; ]]]"
-            background_color: "[[[ if (states['sensor.average_house_temperature'].state == 0) return 'rgba(0,0,0,0.0)'; else return 'var(--paper-item-icon-color)'; ]]]"   
-        - !include
-          - '../../../base/templates/button/button-badge.yaml'
-          - name: Devices
-            label: Overview
-            icon: mdi:power-plug
-            navigation_path: /homekit-infused/devices
-            notification: "[[[ if (states['sensor.current_devices_on'].state == 0) return '&nbsp'; else return `${states['sensor.current_devices_on'].state}`; ]]]"
-            background_color: "[[[ if (states['sensor.current_devices_on'].state == 0) return 'rgba(0,0,0,0.0)'; else return 'var(--paper-item-icon-color)'; ]]]"                                             
-        - !include
-          - '../../../base/templates/button/button-badge.yaml'
-          - name: Lights
-            label: Overview
-            icon: mdi:floor-lamp
-            navigation_path: /homekit-infused/lights
-            notification: "[[[ if (states['sensor.current_lights_on'].state == 0) return '&nbsp'; else return `${states['sensor.current_lights_on'].state}`; ]]]"
-            background_color: "[[[ if (states['sensor.current_lights_on'].state == 0) return 'rgba(0,0,0,0.0)'; else return 'var(--paper-item-icon-color)'; ]]]"   
-        - !include
-          - '../../../base/templates/button/button-badge.yaml'
-          - name: Security
-            label: Panel
-            icon: mdi:cctv
-            navigation_path: /homekit-infused/security
-            notification: "[[[ if (states['sensor.current_binary_sensors_on'].state == 0) return '&nbsp'; else return `${states['sensor.current_binary_sensors_on'].state}`; ]]]"
-            background_color: "[[[ if (states['sensor.current_binary_sensors_on'].state == 0) return 'rgba(0,0,0,0.0)'; else return 'var(--paper-item-icon-color)'; ]]]" 
-        - !include ../../../base/includes/gap.yaml
-    - type: horizontal-stack
-      cards:
-        - !include ../../../base/includes/gap.yaml
-        - !include
-          - '../../../base/templates/button/button-badge.yaml'
-          - name: Energy
-            label: Overview
-            icon: mdi:chart-line
-            navigation_path: /homekit-infused/energy
-            notification: "[[[ if (states['sensor.current_power_usage'].state == 0) return '&nbsp'; else return `${states['sensor.current_power_usage'].state}`; ]]]"
-            background_color: "[[[ if (states['sensor.current_power_usage'].state == 0) return 'rgba(0,0,0,0.0)'; else return 'var(--paper-item-icon-color)'; ]]]" 
-        - !include
-          - '../../../base/templates/button/button-badge.yaml'
-          - name: Scenes
-            label: Overview
-            icon: mdi:arrange-send-backward
-            navigation_path: /homekit-infused/scenes
-            notification: "[[[ if (states['sensor.current_scenes_on'].state == 0) return '&nbsp'; else return `${states['sensor.current_scenes_on'].state}`; ]]]"
-            background_color: "[[[ if (states['sensor.current_scenes_on'].state == 0) return 'rgba(0,0,0,0.0)'; else return 'var(--paper-item-icon-color)'; ]]]"  
-        - !include
-          - '../../../base/templates/button/button-badge.yaml'
-          - name: Media
-            label: Center
-            icon: mdi:plex
-            navigation_path: /homekit-infused/media
-            notification: "[[[ if (states['sensor.media_players_playing'].state == 0) return '&nbsp'; else return `${states['sensor.media_players_playing'].state}`; ]]]"
-            background_color: "[[[ if (states['sensor.media_players_playing'].state == 0) return 'rgba(0,0,0,0.0)'; else return 'var(--paper-item-icon-color)'; ]]]"     
-        - !include
-          - '../../../base/templates/button/button-badge.yaml'
-          - name: Vacuum
-            label: Control
-            icon: mdi:robot-vacuum
-            navigation_path: /homekit-infused/vacuum
-            notification: "[[[ if (states['vacuum.xiaomi_vacuum_cleaner'].state == 0) return '&nbsp'; else return `${states['vacuum.xiaomi_vacuum_cleaner'].state}`; ]]]"
-            background_color: "[[[ if (states['vacuum.xiaomi_vacuum_cleaner'].state == 0) return 'rgba(0,0,0,0.0)'; else return 'var(--paper-item-icon-color)'; ]]]"    
-        - !include ../../../base/includes/gap.yaml
+- type: custom:mod-card
+  style: |
+    ha-card {
+      margin-left: 7px;
+      margin-right: 7px;
+    }
+  card:
+    type: vertical-stack
+    cards:
+      # Simple Weather Card
+      - type: horizontal-stack
+        cards:
+          - type: custom:simple-weather-card                    
+            style: |
+              ha-card {
+                border-radius: var(--border-radius);
+                box-shadow: var(--box-shadow);
+                opacity: 0.8;
+                font-size: 12px;
+                font-family: var(--font-family);
+              }                      
+            entity: weather.dark_sky
+            name: Eindhoven
+            backdrop: false
+            tap_action:
+              action: navigate
+              navigation_path: /homekit-infused/weather
+  
+      # Frontpage Photos
+      - type: horizontal-stack
+        cards:
+          - !include
+            - '../../../base/templates/picture-elements/frontpage-photo.yaml'
+            - person: person.stephanie
+              image_path: /local/images/stephanie_small.png
+              navigation_path: person_1
+              alignment: left
+              text_color: white
+              phone_battery_sensor: sensor.iphone_stephanie_battery_level
+              travel_time_to_home: sensor.reistijd_stephanie
+              travel_time_to_work: sensor.reistijd_stephanie_work
+          - !include
+            - '../../../base/templates/picture-elements/frontpage-photo.yaml'
+            - person: person.jimmy
+              image_path: /local/images/jimmy_small.png
+              navigation_path: person_2
+              alignment: right
+              text_color: white
+              phone_battery_sensor: sensor.sm_n976b_battery_level
+              travel_time_to_home: sensor.reistijd_jimmy
+              travel_time_to_work: sensor.reistijd_jimmy_work
+      - type: picture-elements
+        style: |
+          ha-card {  
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            overflow: hidden;
+          }
+        image: /local/images/tala2.png
+        elements:
+          - type: image
+            entity: person.tala
+            image: /local/images/tala2.png
+            tap_action:
+              action: navigate
+              navigation_path: /homekit-infused/person_3
+            hold_action:
+              action: none
+            style:
+              left: 50%
+              top: 50%
+              width: 100%
+              heigth: 100%
+          - type: state-label
+            entity: person.tala
+            style:
+              right: 0
+              bottom: 0
+              pointer-events: none
+              font-size: 13px
+              line-height: 15px
+              color: white
+              background-color: rgba(0, 0, 0, 0.3)
+              width: 100%
+              transform: initial
+              text-align: left
+  
+      # Frontpage Buttons
+      - type: horizontal-stack
+        cards:
+          - !include
+            - '../../../base/templates/button/button-badge.yaml'
+            - name: Climate
+              label: Control
+              icon: mdi:thermometer
+              navigation_path: /homekit-infused/climate
+              notification: "[[[ if (states['sensor.average_house_temperature'].state == 0) return '&nbsp'; else return `${states['sensor.average_house_temperature'].state}`; ]]]"
+              background_color: "[[[ if (states['sensor.average_house_temperature'].state == 0) return 'rgba(0,0,0,0.0)'; else return 'var(--paper-item-icon-color)'; ]]]"   
+          - !include
+            - '../../../base/templates/button/button-badge.yaml'
+            - name: Devices
+              label: Overview
+              icon: mdi:power-plug
+              navigation_path: /homekit-infused/devices
+              notification: "[[[ if (states['sensor.current_devices_on'].state == 0) return '&nbsp'; else return `${states['sensor.current_devices_on'].state}`; ]]]"
+              background_color: "[[[ if (states['sensor.current_devices_on'].state == 0) return 'rgba(0,0,0,0.0)'; else return 'var(--paper-item-icon-color)'; ]]]"                                             
+          - !include
+            - '../../../base/templates/button/button-badge.yaml'
+            - name: Lights
+              label: Overview
+              icon: mdi:floor-lamp
+              navigation_path: /homekit-infused/lights
+              notification: "[[[ if (states['sensor.current_lights_on'].state == 0) return '&nbsp'; else return `${states['sensor.current_lights_on'].state}`; ]]]"
+              background_color: "[[[ if (states['sensor.current_lights_on'].state == 0) return 'rgba(0,0,0,0.0)'; else return 'var(--paper-item-icon-color)'; ]]]"   
+          - !include
+            - '../../../base/templates/button/button-badge.yaml'
+            - name: Security
+              label: Panel
+              icon: mdi:cctv
+              navigation_path: /homekit-infused/security
+              notification: "[[[ if (states['sensor.current_binary_sensors_on'].state == 0) return '&nbsp'; else return `${states['sensor.current_binary_sensors_on'].state}`; ]]]"
+              background_color: "[[[ if (states['sensor.current_binary_sensors_on'].state == 0) return 'rgba(0,0,0,0.0)'; else return 'var(--paper-item-icon-color)'; ]]]" 
+      - type: horizontal-stack
+        cards:
+          - !include
+            - '../../../base/templates/button/button-badge.yaml'
+            - name: Energy
+              label: Overview
+              icon: mdi:chart-line
+              navigation_path: /homekit-infused/energy
+              notification: "[[[ if (states['sensor.current_power_usage'].state == 0) return '&nbsp'; else return `${states['sensor.current_power_usage'].state}`; ]]]"
+              background_color: "[[[ if (states['sensor.current_power_usage'].state == 0) return 'rgba(0,0,0,0.0)'; else return 'var(--paper-item-icon-color)'; ]]]" 
+          - !include
+            - '../../../base/templates/button/button-badge.yaml'
+            - name: Scenes
+              label: Overview
+              icon: mdi:arrange-send-backward
+              navigation_path: /homekit-infused/scenes
+              notification: "[[[ if (states['sensor.current_scenes_on'].state == 0) return '&nbsp'; else return `${states['sensor.current_scenes_on'].state}`; ]]]"
+              background_color: "[[[ if (states['sensor.current_scenes_on'].state == 0) return 'rgba(0,0,0,0.0)'; else return 'var(--paper-item-icon-color)'; ]]]"  
+          - !include
+            - '../../../base/templates/button/button-badge.yaml'
+            - name: Media
+              label: Center
+              icon: mdi:plex
+              navigation_path: /homekit-infused/media
+              notification: "[[[ if (states['sensor.media_players_playing'].state == 0) return '&nbsp'; else return `${states['sensor.media_players_playing'].state}`; ]]]"
+              background_color: "[[[ if (states['sensor.media_players_playing'].state == 0) return 'rgba(0,0,0,0.0)'; else return 'var(--paper-item-icon-color)'; ]]]"     
+          - !include
+            - '../../../base/templates/button/button-badge.yaml'
+            - name: Vacuum
+              label: Control
+              icon: mdi:robot-vacuum
+              navigation_path: /homekit-infused/vacuum
+              notification: "[[[ if (states['vacuum.xiaomi_vacuum_cleaner'].state == 0) return '&nbsp'; else return `${states['vacuum.xiaomi_vacuum_cleaner'].state}`; ]]]"
+              background_color: "[[[ if (states['vacuum.xiaomi_vacuum_cleaner'].state == 0) return 'rgba(0,0,0,0.0)'; else return 'var(--paper-item-icon-color)'; ]]]"    

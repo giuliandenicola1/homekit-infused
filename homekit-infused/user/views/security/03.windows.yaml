@@ -1,27 +1,32 @@
-- type: vertical-stack
-  cards:
-    - !include
-      - '../../../base/templates/other/title-text.yaml'
-      - name: Windows
-    - type: horizontal-stack
-      cards:
-        - !include ../../../base/includes/gap.yaml
-        - !include
-          - '../../../base/templates/button/button.yaml'
-          - entity: binary_sensor.kleine_kamerraam
-            tap_action: more-info
-            hold_action: more-info
-            show_last_changed: true
-        - !include
-          - '../../../base/templates/button/button.yaml'
-          - entity: binary_sensor.keukenraam
-            tap_action: more-info
-            hold_action: more-info
-            show_last_changed: true
-        - !include
-          - '../../../base/templates/button/button.yaml'
-          - entity: binary_sensor.bijkeukenraam
-            tap_action: more-info
-            hold_action: more-info
-            show_last_changed: true
-        - !include ../../../base/includes/gap.yaml
+- type: custom:mod-card
+  style: |
+    ha-card {
+      margin-left: 7px;
+      margin-right: 7px;
+    }
+  card:
+    type: vertical-stack
+    cards:
+      - !include
+        - '../../../base/templates/other/title-text.yaml'
+        - name: Windows
+      - type: horizontal-stack
+        cards:
+          - !include
+            - '../../../base/templates/button/button.yaml'
+            - entity: binary_sensor.kleine_kamerraam
+              tap_action: more-info
+              hold_action: more-info
+              show_last_changed: true
+          - !include
+            - '../../../base/templates/button/button.yaml'
+            - entity: binary_sensor.keukenraam
+              tap_action: more-info
+              hold_action: more-info
+              show_last_changed: true
+          - !include
+            - '../../../base/templates/button/button.yaml'
+            - entity: binary_sensor.bijkeukenraam
+              tap_action: more-info
+              hold_action: more-info
+              show_last_changed: true

@@ -1,260 +1,285 @@
-- type: vertical-stack
-  cards:
-    - !include
-      - '../../../base/templates/other/title-text.yaml'
-      - name: 'Total Usage Electricity'
-    - type: horizontal-stack
-      cards:
-        - !include ../../../base/includes/gap.yaml
-        - !include
-          - '../../../base/templates/other/mini-graph.yaml'
-          - entity: sensor.daily_energy
-            name: Vandaag
-            line_color: '"#0062ff"'
-            graph_type: line
-            decimals: 3
-            font_size: 65
-        - !include
-          - '../../../base/templates/other/mini-graph.yaml'
-          - entity: sensor.monthly_energy
-            name: Deze Maand
-            line_color: '"#ddff00"'
-            graph_type: line
-            decimals: 3
-            font_size: 65
-        - !include ../../../base/includes/gap.yaml
-- type: vertical-stack
-  cards:
-    - !include
-      - '../../../base/templates/other/title-text.yaml'
-      - name: Total Usage Gas
-    - type: horizontal-stack
-      cards:
-        - !include ../../../base/includes/gap.yaml
-        - !include
-          - '../../../base/templates/other/mini-graph.yaml'
-          - entity: sensor.daily_gas
-            name: Today
-            line_color: '"#9000ff"'
-            graph_type: line
-            decimals: 3
-            font_size: 65
-        - !include
-          - '../../../base/templates/other/mini-graph.yaml'
-          - entity: sensor.monthly_gas
-            name: This Month
-            line_color: '"#ff7300"'
-            graph_type: line
-            decimals: 3
-            font_size: 65
-        - !include ../../../base/includes/gap.yaml
-- type: vertical-stack
-  cards:
-    - !include
-      - '../../../base/templates/other/title-text.yaml'
-      - name: Current Meter Readings
-    - type: horizontal-stack
-      cards:
-        - !include ../../../base/includes/gap.yaml
-        - !include
-          - '../../../base/templates/other/mini-graph.yaml'
-          - entity: sensor.energy_consumption_tarif_1
-            name: Low Tariff
-            line_color: '"#fc0303"'
-            graph_type: line
-            show_extrema: true
-            decimals: 3
-            font_size: 65
-        - !include
-          - '../../../base/templates/other/mini-graph.yaml'
-          - entity: sensor.energy_consumption_tarif_2
-            name: High Tariff
-            line_color: '"#24fc03"'
-            graph_type: line
-            show_extrema: true
-            decimals: 3
-            font_size: 65
-        - !include ../../../base/includes/gap.yaml
-    - type: horizontal-stack
-      cards:
-        - !include ../../../base/includes/gap.yaml
-        - !include
-          - '../../../base/templates/other/mini-graph.yaml'
-          - entity: sensor.gas_consumption
-            name: Gas
-            line_color: '"#ee00ff"'
-            graph_type: line
-            show_extrema: true
-            decimals: 3
-            font_size: 65 
-        - !include ../../../base/includes/gap.yaml
-- type: vertical-stack
-  cards:
-    - !include
-      - '../../../base/templates/other/title-text.yaml'
-      - name: 'Wattage'
-    - type: horizontal-stack
-      cards:
-        - !include ../../../base/includes/gap.yaml
-        - !include
-          - '../../../base/templates/other/mini-graph.yaml'
-          - entity: sensor.wasmachine_power
-            name: Wasmachine
-            line_color: '"#1427ff"'
-            graph_type: line
-            show_extrema: true
-            decimals: 0
-            font_size: 65
-        - !include
-          - '../../../base/templates/other/mini-graph.yaml'
-          - entity: sensor.droger_power
-            name: Droger
-            line_color: '"#1427ff"'
-            graph_type: line
-            show_extrema: true
-            decimals: 0
-            font_size: 65
-        - !include ../../../base/includes/gap.yaml
-    - type: horizontal-stack
-      cards:
-        - !include ../../../base/includes/gap.yaml
-        - !include
-          - '../../../base/templates/other/mini-graph.yaml'
-          - entity: sensor.koelkast_power
-            name: Koelkast
-            line_color: '"#1427ff"'
-            graph_type: line
-            show_extrema: true
-            decimals: 0
-            font_size: 65
-        - !include
-          - '../../../base/templates/other/mini-graph.yaml'
-          - entity: sensor.vaatwasser_power
-            name: Vaatwasser
-            line_color: '"#1427ff"'
-            graph_type: line
-            show_extrema: true
-            decimals: 0
-            font_size: 65
-        - !include ../../../base/includes/gap.yaml
-    - type: horizontal-stack
-      cards:
-        - !include ../../../base/includes/gap.yaml
-        - !include
-          - '../../../base/templates/other/mini-graph.yaml'
-          - entity: sensor.power_52
-            name: Vriezer
-            line_color: '"#1427ff"'
-            graph_type: line
-            show_extrema: true
-            decimals: 0
-            font_size: 65
-        - !include
-          - '../../../base/templates/other/mini-graph.yaml'
-          - entity: sensor.power_43
-            name: Server en Netwerk
-            line_color: '"#1427ff"'
-            graph_type: line
-            show_extrema: true
-            decimals: 0
-            font_size: 65
-        - !include ../../../base/includes/gap.yaml
-- type: vertical-stack
-  cards:
-    - !include
-      - '../../../base/templates/other/title-text.yaml'
-      - name: 'Ampèrage'
-    - type: horizontal-stack
-      cards:
-        - !include ../../../base/includes/gap.yaml
-        - !include
-          - '../../../base/templates/other/mini-graph.yaml'
-          - entity: sensor.wasmachine_current
-            name: Wasmachine
-            line_color: '"#ffb414"'
-            graph_type: line
-            show_extrema: true
-            decimals: 0
-            font_size: 65
-        - !include
-          - '../../../base/templates/other/mini-graph.yaml'
-          - entity: sensor.droger_current
-            name: Droger
-            line_color: '"#ffb414"'
-            graph_type: line
-            show_extrema: true
-            decimals: 0
-            font_size: 65
-        - !include ../../../base/includes/gap.yaml
-    - type: horizontal-stack
-      cards:
-        - !include ../../../base/includes/gap.yaml
-        - !include
-          - '../../../base/templates/other/mini-graph.yaml'
-          - entity: sensor.koelkast_current
-            name: Koelkast
-            line_color: '"#ffb414"'
-            graph_type: line
-            show_extrema: true
-            decimals: 0
-            font_size: 65
-        - !include
-          - '../../../base/templates/other/mini-graph.yaml'
-          - entity: sensor.vaatwasser_current
-            name: Vaatwasser
-            line_color: '"#ffb414"'
-            graph_type: line
-            show_extrema: true
-            decimals: 0
-            font_size: 65
-        - !include ../../../base/includes/gap.yaml
-- type: vertical-stack
-  cards:
-    - !include
-      - '../../../base/templates/other/title-text.yaml'
-      - name: 'Voltage'
-    - type: horizontal-stack
-      cards:
-        - !include ../../../base/includes/gap.yaml
-        - !include
-          - '../../../base/templates/other/mini-graph.yaml'
-          - entity: sensor.wasmachine_voltage
-            name: Wasmachine
-            line_color: '"#00d8ff"'
-            graph_type: line
-            show_extrema: true
-            decimals: 0
-            font_size: 65
-        - !include
-          - '../../../base/templates/other/mini-graph.yaml'
-          - entity: sensor.droger_voltage
-            name: Droger
-            line_color: '"#00d8ff"'
-            graph_type: line
-            show_extrema: true
-            decimals: 0
-            font_size: 65
-        - !include ../../../base/includes/gap.yaml
-    - type: horizontal-stack
-      cards:
-        - !include ../../../base/includes/gap.yaml
-        - !include
-          - '../../../base/templates/other/mini-graph.yaml'
-          - entity: sensor.koelkast_voltage
-            name: Koelkast
-            line_color: '"#00d8ff"'
-            graph_type: line
-            show_extrema: true
-            decimals: 0
-            font_size: 65
-        - !include
-          - '../../../base/templates/other/mini-graph.yaml'
-          - entity: sensor.vaatwasser_voltage
-            name: Vaatwasser
-            line_color: '"#00d8ff"'
-            graph_type: line
-            show_extrema: true
-            decimals: 0
-            font_size: 65 
-        - !include ../../../base/includes/gap.yaml
-    
+- type: custom:mod-card
+  style: |
+    ha-card {
+      margin-left: 7px;
+      margin-right: 7px;
+    }
+  card:
+    type: vertical-stack
+    cards:
+      - !include
+        - '../../../base/templates/other/title-text.yaml'
+        - name: 'Total Usage Electricity'
+      - type: horizontal-stack
+        cards:
+          - !include
+            - '../../../base/templates/other/mini-graph.yaml'
+            - entity: sensor.daily_energy
+              name: Vandaag
+              line_color: '"#0062ff"'
+              graph_type: line
+              decimals: 3
+              font_size: 65
+          - !include
+            - '../../../base/templates/other/mini-graph.yaml'
+            - entity: sensor.monthly_energy
+              name: Deze Maand
+              line_color: '"#ddff00"'
+              graph_type: line
+              decimals: 3
+              font_size: 65
+
+- type: custom:mod-card
+  style: |
+    ha-card {
+      margin-left: 7px;
+      margin-right: 7px;
+    }
+  card:
+    type: vertical-stack
+    cards:
+      - !include
+        - '../../../base/templates/other/title-text.yaml'
+        - name: Total Usage Gas
+      - type: horizontal-stack
+        cards:
+          - !include
+            - '../../../base/templates/other/mini-graph.yaml'
+            - entity: sensor.daily_gas
+              name: Today
+              line_color: '"#9000ff"'
+              graph_type: line
+              decimals: 3
+              font_size: 65
+          - !include
+            - '../../../base/templates/other/mini-graph.yaml'
+            - entity: sensor.monthly_gas
+              name: This Month
+              line_color: '"#ff7300"'
+              graph_type: line
+              decimals: 3
+              font_size: 65
+
+- type: custom:mod-card
+  style: |
+    ha-card {
+      margin-left: 7px;
+      margin-right: 7px;
+    }
+  card:
+    type: vertical-stack
+    cards:
+      - !include
+        - '../../../base/templates/other/title-text.yaml'
+        - name: Current Meter Readings
+      - type: horizontal-stack
+        cards:
+          - !include
+            - '../../../base/templates/other/mini-graph.yaml'
+            - entity: sensor.energy_consumption_tarif_1
+              name: Low Tariff
+              line_color: '"#fc0303"'
+              graph_type: line
+              show_extrema: true
+              decimals: 3
+              font_size: 65
+          - !include
+            - '../../../base/templates/other/mini-graph.yaml'
+            - entity: sensor.energy_consumption_tarif_2
+              name: High Tariff
+              line_color: '"#24fc03"'
+              graph_type: line
+              show_extrema: true
+              decimals: 3
+              font_size: 65
+      - type: horizontal-stack
+        cards:
+          - !include
+            - '../../../base/templates/other/mini-graph.yaml'
+            - entity: sensor.gas_consumption
+              name: Gas
+              line_color: '"#ee00ff"'
+              graph_type: line
+              show_extrema: true
+              decimals: 3
+              font_size: 65 
+
+- type: custom:mod-card
+  style: |
+    ha-card {
+      margin-left: 7px;
+      margin-right: 7px;
+    }
+  card:
+    type: vertical-stack
+    cards:
+      - !include
+        - '../../../base/templates/other/title-text.yaml'
+        - name: 'Wattage'
+      - type: horizontal-stack
+        cards:
+          - !include
+            - '../../../base/templates/other/mini-graph.yaml'
+            - entity: sensor.wasmachine_power
+              name: Wasmachine
+              line_color: '"#1427ff"'
+              graph_type: line
+              show_extrema: true
+              decimals: 0
+              font_size: 65
+          - !include
+            - '../../../base/templates/other/mini-graph.yaml'
+            - entity: sensor.droger_power
+              name: Droger
+              line_color: '"#1427ff"'
+              graph_type: line
+              show_extrema: true
+              decimals: 0
+              font_size: 65
+      - type: horizontal-stack
+        cards:
+          - !include
+            - '../../../base/templates/other/mini-graph.yaml'
+            - entity: sensor.koelkast_power
+              name: Koelkast
+              line_color: '"#1427ff"'
+              graph_type: line
+              show_extrema: true
+              decimals: 0
+              font_size: 65
+          - !include
+            - '../../../base/templates/other/mini-graph.yaml'
+            - entity: sensor.vaatwasser_power
+              name: Vaatwasser
+              line_color: '"#1427ff"'
+              graph_type: line
+              show_extrema: true
+              decimals: 0
+              font_size: 65
+      - type: horizontal-stack
+        cards:
+          - !include
+            - '../../../base/templates/other/mini-graph.yaml'
+            - entity: sensor.power_52
+              name: Vriezer
+              line_color: '"#1427ff"'
+              graph_type: line
+              show_extrema: true
+              decimals: 0
+              font_size: 65
+          - !include
+            - '../../../base/templates/other/mini-graph.yaml'
+            - entity: sensor.power_43
+              name: Server en Netwerk
+              line_color: '"#1427ff"'
+              graph_type: line
+              show_extrema: true
+              decimals: 0
+              font_size: 65
+
+- type: custom:mod-card
+  style: |
+    ha-card {
+      margin-left: 7px;
+      margin-right: 7px;
+    }
+  card:
+    type: vertical-stack
+    cards:
+      - !include
+        - '../../../base/templates/other/title-text.yaml'
+        - name: 'Ampèrage'
+      - type: horizontal-stack
+        cards:
+          - !include
+            - '../../../base/templates/other/mini-graph.yaml'
+            - entity: sensor.wasmachine_current
+              name: Wasmachine
+              line_color: '"#ffb414"'
+              graph_type: line
+              show_extrema: true
+              decimals: 0
+              font_size: 65
+          - !include
+            - '../../../base/templates/other/mini-graph.yaml'
+            - entity: sensor.droger_current
+              name: Droger
+              line_color: '"#ffb414"'
+              graph_type: line
+              show_extrema: true
+              decimals: 0
+              font_size: 65
+      - type: horizontal-stack
+        cards:
+          - !include
+            - '../../../base/templates/other/mini-graph.yaml'
+            - entity: sensor.koelkast_current
+              name: Koelkast
+              line_color: '"#ffb414"'
+              graph_type: line
+              show_extrema: true
+              decimals: 0
+              font_size: 65
+          - !include
+            - '../../../base/templates/other/mini-graph.yaml'
+            - entity: sensor.vaatwasser_current
+              name: Vaatwasser
+              line_color: '"#ffb414"'
+              graph_type: line
+              show_extrema: true
+              decimals: 0
+              font_size: 65
+
+- type: custom:mod-card
+  style: |
+    ha-card {
+      margin-left: 7px;
+      margin-right: 7px;
+    }
+  card:
+    type: vertical-stack
+    cards:
+      - !include
+        - '../../../base/templates/other/title-text.yaml'
+        - name: 'Voltage'
+      - type: horizontal-stack
+        cards:
+          - !include
+            - '../../../base/templates/other/mini-graph.yaml'
+            - entity: sensor.wasmachine_voltage
+              name: Wasmachine
+              line_color: '"#00d8ff"'
+              graph_type: line
+              show_extrema: true
+              decimals: 0
+              font_size: 65
+          - !include
+            - '../../../base/templates/other/mini-graph.yaml'
+            - entity: sensor.droger_voltage
+              name: Droger
+              line_color: '"#00d8ff"'
+              graph_type: line
+              show_extrema: true
+              decimals: 0
+              font_size: 65
+      - type: horizontal-stack
+        cards:
+          - !include
+            - '../../../base/templates/other/mini-graph.yaml'
+            - entity: sensor.koelkast_voltage
+              name: Koelkast
+              line_color: '"#00d8ff"'
+              graph_type: line
+              show_extrema: true
+              decimals: 0
+              font_size: 65
+          - !include
+            - '../../../base/templates/other/mini-graph.yaml'
+            - entity: sensor.vaatwasser_voltage
+              name: Vaatwasser
+              line_color: '"#00d8ff"'
+              graph_type: line
+              show_extrema: true
+              decimals: 0
+              font_size: 65 
+      

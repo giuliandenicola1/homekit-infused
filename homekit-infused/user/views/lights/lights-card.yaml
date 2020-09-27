@@ -1,338 +1,359 @@
-- type: custom:layout-card
-  max_columns: 3
-  layout: horizontal
-  cards:
-    - type: vertical-stack
-      cards:
-        - type: horizontal-stack
-          cards:
-            - !include
-              - '../../../base/templates/other/title-text.yaml'
-              - name: Woonkamer
-            - !include
-              - '../../../base/templates/other/title-text.yaml'
-              - name: "[[[ return `${states['sensor.woonkamer'].state} °C`; ]]]"
-                justify_self: end
-        - type: horizontal-stack
-          cards:
-            - !include ../../../base/includes/gap.yaml
-            - !include
-              - '../../../base/templates/button/button.yaml'
-              - entity: light.plafond
-                label: !include ../../../base/includes/brightness-label.yaml
-                #hold_action: more-info
-                grid: light-devices-grid
-                template: '../popup-cards/light-switch.yaml'
-            - !include
-              - '../../../base/templates/button/button.yaml'
-              - entity: light.eettafel
-                label: !include ../../../base/includes/brightness-label.yaml
-                #hold_action: more-info
-                grid: light-devices-grid
-                template: '../popup-cards/light-switch.yaml'
-            - !include
-              - '../../../base/templates/button/button.yaml'
-              - entity: light.woonkamer_led_lampen
-                label: !include ../../../base/includes/brightness-label.yaml
-                #hold_action: more-info
-                grid: light-devices-grid
-                template: '../popup-cards/light-rgb.yaml'
-            - !include ../../../base/includes/gap.yaml
-        - type: horizontal-stack
-          cards:
-            - !include ../../../base/includes/gap.yaml
-            - !include
-              - '../../../base/templates/button/button.yaml'
-              - entity: light.tafellamp
-                label: !include ../../../base/includes/brightness-label.yaml
-                #hold_action: more-info
-                grid: light-devices-grid
-                template: '../popup-cards/light-color-temp.yaml'
-            - !include
-              - '../../../base/templates/button/button.yaml'
-              - entity: light.vloerlamp
-                label: !include ../../../base/includes/brightness-label.yaml
-                #hold_action: more-info
-                grid: light-devices-grid
-                template: '../popup-cards/light-color-temp.yaml'
-            - !include
-              - '../../../base/templates/button/button.yaml'
-              - entity: light.gateway_light_7811dcdef324
-                label: !include ../../../base/includes/brightness-label.yaml
-                #hold_action: more-info
-                grid: light-devices-grid
-                template: '../popup-cards/light-rgb.yaml'
-            - !include ../../../base/includes/gap.yaml
+- type: custom:mod-card
+  style: |
+    ha-card {
+      margin-left: 7px;
+      margin-right: 7px;
+    }
+  card:
+    type: vertical-stack
+    cards:
+      - type: horizontal-stack
+        cards:
+          - !include
+            - '../../../base/templates/other/title-text.yaml'
+            - name: Woonkamer
+          - !include
+            - '../../../base/templates/other/title-text.yaml'
+            - name: "[[[ return `${states['sensor.woonkamer'].state} °C`; ]]]"
+              justify_self: end
+      - type: horizontal-stack
+        cards:
+          - !include
+            - '../../../base/templates/button/button.yaml'
+            - entity: light.plafond
+              label: !include ../../../base/includes/brightness-label.yaml
+              grid: light-devices-grid
+              template: '../popup-cards/light-switch.yaml'
+          - !include
+            - '../../../base/templates/button/button.yaml'
+            - entity: light.eettafel
+              label: !include ../../../base/includes/brightness-label.yaml
+              grid: light-devices-grid
+              template: '../popup-cards/light-switch.yaml'
+          - !include
+            - '../../../base/templates/button/button.yaml'
+            - entity: light.woonkamer_led_lampen
+              label: !include ../../../base/includes/brightness-label.yaml
+              grid: light-devices-grid
+              template: '../popup-cards/light-rgb.yaml'
+      - type: horizontal-stack
+        cards:
+          - !include
+            - '../../../base/templates/button/button.yaml'
+            - entity: light.tafellamp
+              label: !include ../../../base/includes/brightness-label.yaml
+              grid: light-devices-grid
+              template: '../popup-cards/light-color-temp.yaml'
+          - !include
+            - '../../../base/templates/button/button.yaml'
+            - entity: light.vloerlamp
+              label: !include ../../../base/includes/brightness-label.yaml
+              grid: light-devices-grid
+              template: '../popup-cards/light-color-temp.yaml'
+          - !include
+            - '../../../base/templates/button/button.yaml'
+            - entity: light.gateway_light_7811dcdef324
+              label: !include ../../../base/includes/brightness-label.yaml
+              grid: light-devices-grid
+              template: '../popup-cards/light-rgb.yaml'
+
+- type: custom:mod-card
+  style: |
+    ha-card {
+      margin-left: 7px;
+      margin-right: 7px;
+    }
+  card:
+    type: vertical-stack
+    cards:
+      - type: horizontal-stack
+        cards:
+          - !include
+            - '../../../base/templates/other/title-text.yaml'
+            - name: Slaapkamer
+          - !include
+            - '../../../base/templates/other/title-text.yaml'
+            - name: "[[[ return `${states['sensor.slaapkamer'].state} °C`; ]]]"
+              justify_self: end
+      - type: horizontal-stack
+        cards:
+          - !include
+            - '../../../base/templates/button/button.yaml'
+            - entity: light.nachtkastje_stephanie
+              label: !include ../../../base/includes/brightness-label.yaml
+              grid: light-devices-grid
+              template: '../popup-cards/light-switch.yaml'
+              lock: true
+          - !include
+            - '../../../base/templates/button/button.yaml'
+            - entity: light.nachtkastje_jimmy
+              label: !include ../../../base/includes/brightness-label.yaml
+              grid: light-devices-grid
+              template: '../popup-cards/light-switch.yaml'
+              lock: true
+          - !include
+            - '../../../base/templates/button/button.yaml'
+            - entity: light.slaapkamer_led_lampen
+              label: !include ../../../base/includes/brightness-label.yaml
+              grid: light-devices-grid
+              template: '../popup-cards/light-rgb.yaml'
+              lock: true
+      - type: horizontal-stack
+        cards:
+          - !include
+            - '../../../base/templates/button/button.yaml'
+            - entity: light.bed_lamp
+              label: !include ../../../base/includes/brightness-label.yaml
+              grid: light-devices-grid
+              template: '../popup-cards/light-switch.yaml'
+              lock: true
+          - !include
+            - '../../../base/templates/button/button.yaml'
+            - entity: light.kast_lamp
+              label: !include ../../../base/includes/brightness-label.yaml
+              grid: light-devices-grid
+              template: '../popup-cards/light-switch.yaml'
+              lock: true
+          - !include ../../../base/includes/empty-button.yaml
+
+- type: custom:mod-card
+  style: |
+    ha-card {
+      margin-left: 7px;
+      margin-right: 7px;
+    }
+  card:
+    type: vertical-stack
+    cards:
+      - type: horizontal-stack
+        cards:
+          - !include
+            - '../../../base/templates/other/title-text.yaml'
+            - name: Kleine Kamer
+          - !include
+            - '../../../base/templates/other/title-text.yaml'
+            - name: "[[[ return `${states['sensor.kleine_kamer_temperatuur'].state} °C`; ]]]"
+              justify_self: end
+      - type: horizontal-stack
+        cards:
+          - !include
+            - '../../../base/templates/button/button.yaml'
+            - entity: light.office_led_lampen
+              label: !include ../../../base/includes/brightness-label.yaml
+              grid: light-devices-grid
+              template: '../popup-cards/light-rgb.yaml'
+          - !include
+            - '../../../base/templates/button/button.yaml'
+            - entity: light.kleine_kamer
+              label: !include ../../../base/includes/brightness-label.yaml
+              grid: light-devices-grid
+              template: '../popup-cards/light-color-temp.yaml'
+          - !include ../../../base/includes/empty-button.yaml
   
-    - type: vertical-stack
-      cards:
-        - type: horizontal-stack
-          cards:
-            - !include
-              - '../../../base/templates/other/title-text.yaml'
-              - name: Slaapkamer
-            - !include
-              - '../../../base/templates/other/title-text.yaml'
-              - name: "[[[ return `${states['sensor.slaapkamer'].state} °C`; ]]]"
-                justify_self: end
-        - type: horizontal-stack
-          cards:
-            - !include ../../../base/includes/gap.yaml
-            - !include
-              - '../../../base/templates/button/button.yaml'
-              - entity: light.nachtkastje_stephanie
-                label: !include ../../../base/includes/brightness-label.yaml
-                #hold_action: more-info
-                grid: light-devices-grid
-                template: '../popup-cards/light-switch.yaml'
-                lock: true
-            - !include
-              - '../../../base/templates/button/button.yaml'
-              - entity: light.nachtkastje_jimmy
-                label: !include ../../../base/includes/brightness-label.yaml
-                #hold_action: more-info
-                grid: light-devices-grid
-                template: '../popup-cards/light-switch.yaml'
-                lock: true
-            - !include
-              - '../../../base/templates/button/button.yaml'
-              - entity: light.slaapkamer_led_lampen
-                label: !include ../../../base/includes/brightness-label.yaml
-                #hold_action: more-info
-                grid: light-devices-grid
-                template: '../popup-cards/light-rgb.yaml'
-                lock: true
-            - !include ../../../base/includes/gap.yaml
-        - type: horizontal-stack
-          cards:
-            - !include ../../../base/includes/gap.yaml
-            - !include
-              - '../../../base/templates/button/button.yaml'
-              - entity: light.bed_lamp
-                label: !include ../../../base/includes/brightness-label.yaml
-                #hold_action: more-info
-                grid: light-devices-grid
-                template: '../popup-cards/light-switch.yaml'
-                lock: true
-            - !include
-              - '../../../base/templates/button/button.yaml'
-              - entity: light.kast_lamp
-                label: !include ../../../base/includes/brightness-label.yaml
-                #hold_action: more-info
-                grid: light-devices-grid
-                template: '../popup-cards/light-switch.yaml'
-                lock: true
-            - !include ../../../base/includes/empty-button.yaml
-            - !include ../../../base/includes/gap.yaml
+- type: custom:mod-card
+  style: |
+    ha-card {
+      margin-left: 7px;
+      margin-right: 7px;
+    }
+  card:
+    type: vertical-stack
+    cards:
+      - type: horizontal-stack
+        cards:
+          - !include
+            - '../../../base/templates/other/title-text.yaml'
+            - name: Keuken
+          - !include
+            - '../../../base/templates/other/title-text.yaml'
+            - name: "[[[ return `${states['sensor.keuken_temperatuur'].state} °C`; ]]]"
+              justify_self: end
+      - type: horizontal-stack
+        cards:
+          - !include
+            - '../../../base/templates/button/button.yaml'
+            - entity: light.keuken
+              label: !include ../../../base/includes/brightness-label.yaml
+              grid: light-devices-grid
+              template: '../popup-cards/light-switch.yaml'
+          - !include
+            - '../../../base/templates/button/button.yaml'
+            - entity: light.keuken_leds
+              label: !include ../../../base/includes/brightness-label.yaml
+              grid: light-devices-grid
+              template: '../popup-cards/light-color-temp.yaml'
+          - !include ../../../base/includes/empty-button.yaml
+
+- type: custom:mod-card
+  style: |
+    ha-card {
+      margin-left: 7px;
+      margin-right: 7px;
+    }
+  card:
+    type: vertical-stack
+    cards:
+      - type: horizontal-stack
+        cards:
+          - !include
+            - '../../../base/templates/other/title-text.yaml'
+            - name: Bijkeuken
+          - !include
+            - '../../../base/templates/other/title-text.yaml'
+            - name: "[[[ return `${states['sensor.motion_bijkeuken_temperature'].state} °C`; ]]]"
+              justify_self: end
+      - type: horizontal-stack
+        cards:
+          - !include
+            - '../../../base/templates/button/button.yaml'
+            - entity: light.bijkeuken
+              label: !include ../../../base/includes/brightness-label.yaml
+              grid: light-devices-grid
+              template: '../popup-cards/light-switch.yaml'
+          - !include ../../../base/includes/empty-button.yaml
+          - !include ../../../base/includes/empty-button.yaml
+      
+- type: custom:mod-card
+  style: |
+    ha-card {
+      margin-left: 7px;
+      margin-right: 7px;
+    }
+  card:
+    type: vertical-stack
+    cards:
+      - type: horizontal-stack
+        cards:
+          - !include
+            - '../../../base/templates/other/title-text.yaml'
+            - name: Gang
+          - !include
+            - '../../../base/templates/other/title-text.yaml'
+            - name: "[[[ return `${states['sensor.voordeur_temperature'].state} °C`; ]]]"
+              justify_self: end
+      - type: horizontal-stack
+        cards:
+          - !include
+            - '../../../base/templates/button/button.yaml'
+            - entity: light.entree_lamp
+              label: !include ../../../base/includes/brightness-label.yaml
+              grid: light-devices-grid
+              template: '../popup-cards/light-switch.yaml'
+          - !include
+            - '../../../base/templates/button/button.yaml'
+            - entity: light.gang_lamp
+              label: !include ../../../base/includes/brightness-label.yaml
+              grid: light-devices-grid
+              template: '../popup-cards/light-switch.yaml'
+          - !include ../../../base/includes/empty-button.yaml
   
-    - type: vertical-stack
-      cards:
-        - type: horizontal-stack
-          cards:
-            - !include
-              - '../../../base/templates/other/title-text.yaml'
-              - name: Kleine Kamer
-            - !include
-              - '../../../base/templates/other/title-text.yaml'
-              - name: "[[[ return `${states['sensor.kleine_kamer_temperatuur'].state} °C`; ]]]"
-                justify_self: end
-        - type: horizontal-stack
-          cards:
-            - !include ../../../base/includes/gap.yaml
-            - !include
-              - '../../../base/templates/button/button.yaml'
-              - entity: light.office_led_lampen
-                label: !include ../../../base/includes/brightness-label.yaml
-                #hold_action: more-info
-                grid: light-devices-grid
-                template: '../popup-cards/light-rgb.yaml'
-            - !include
-              - '../../../base/templates/button/button.yaml'
-              - entity: light.kleine_kamer
-                label: !include ../../../base/includes/brightness-label.yaml
-                #hold_action: more-info
-                grid: light-devices-grid
-                template: '../popup-cards/light-color-temp.yaml'
-            - !include ../../../base/includes/empty-button.yaml
-            - !include ../../../base/includes/gap.yaml
+- type: custom:mod-card
+  style: |
+    ha-card {
+      margin-left: 7px;
+      margin-right: 7px;
+    }
+  card:
+    type: vertical-stack
+    cards:
+      - type: horizontal-stack
+        cards:
+          - !include
+            - '../../../base/templates/other/title-text.yaml'
+            - name: Balkon
+          - !include
+            - '../../../base/templates/other/title-text.yaml'
+            - name: "[[[ return `${states['weather.dark_sky'].attributes.temperature} °C`; ]]]"
+              justify_self: end
+      - type: horizontal-stack
+        cards:
+          - !include
+            - '../../../base/templates/button/button.yaml'
+            - entity: light.balkon
+              label: !include ../../../base/includes/brightness-label.yaml
+              grid: light-devices-grid
+              template: '../popup-cards/light-switch.yaml'
+          - !include ../../../base/includes/empty-button.yaml
+          - !include ../../../base/includes/empty-button.yaml
   
-    - type: vertical-stack
-      cards:
-        - type: horizontal-stack
-          cards:
-            - !include
-              - '../../../base/templates/other/title-text.yaml'
-              - name: Keuken
-            - !include
-              - '../../../base/templates/other/title-text.yaml'
-              - name: "[[[ return `${states['sensor.keuken_temperatuur'].state} °C`; ]]]"
-                justify_self: end
-        - type: horizontal-stack
-          cards:
-            - !include ../../../base/includes/gap.yaml
-            - !include
-              - '../../../base/templates/button/button.yaml'
-              - entity: light.keuken
-                label: !include ../../../base/includes/brightness-label.yaml
-                #hold_action: more-info
-                grid: light-devices-grid
-                template: '../popup-cards/light-switch.yaml'
-            - !include
-              - '../../../base/templates/button/button.yaml'
-              - entity: light.keuken_leds
-                label: !include ../../../base/includes/brightness-label.yaml
-                #hold_action: more-info
-                grid: light-devices-grid
-                template: '../popup-cards/light-color-temp.yaml'
-            - !include ../../../base/includes/empty-button.yaml
-            - !include ../../../base/includes/gap.yaml
-  
-    - type: vertical-stack
-      cards:
-        - type: horizontal-stack
-          cards:
-            - !include
-              - '../../../base/templates/other/title-text.yaml'
-              - name: Bijkeuken
-            - !include
-              - '../../../base/templates/other/title-text.yaml'
-              - name: "[[[ return `${states['sensor.motion_bijkeuken_temperature'].state} °C`; ]]]"
-                justify_self: end
-        - type: horizontal-stack
-          cards:
-            - !include ../../../base/includes/gap.yaml
-            - !include
-              - '../../../base/templates/button/button.yaml'
-              - entity: light.bijkeuken
-                label: !include ../../../base/includes/brightness-label.yaml
-                #hold_action: more-info
-                grid: light-devices-grid
-                template: '../popup-cards/light-switch.yaml'
-            - !include ../../../base/includes/empty-button.yaml
-            - !include ../../../base/includes/empty-button.yaml
-            - !include ../../../base/includes/gap.yaml
-  
-    - type: vertical-stack
-      cards:
-        - type: horizontal-stack
-          cards:
-            - !include
-              - '../../../base/templates/other/title-text.yaml'
-              - name: Gang
-            - !include
-              - '../../../base/templates/other/title-text.yaml'
-              - name: "[[[ return `${states['sensor.voordeur_temperature'].state} °C`; ]]]"
-                justify_self: end
-        - type: horizontal-stack
-          cards:
-            - !include ../../../base/includes/gap.yaml
-            - !include
-              - '../../../base/templates/button/button.yaml'
-              - entity: light.entree_lamp
-                label: !include ../../../base/includes/brightness-label.yaml
-                #hold_action: more-info
-                grid: light-devices-grid
-                template: '../popup-cards/light-switch.yaml'
-            - !include
-              - '../../../base/templates/button/button.yaml'
-              - entity: light.gang_lamp
-                label: !include ../../../base/includes/brightness-label.yaml
-                #hold_action: more-info
-                grid: light-devices-grid
-                template: '../popup-cards/light-switch.yaml'
-            - !include ../../../base/includes/empty-button.yaml
-            - !include ../../../base/includes/gap.yaml
-  
-    - type: vertical-stack
-      cards:
-        - type: horizontal-stack
-          cards:
-            - !include
-              - '../../../base/templates/other/title-text.yaml'
-              - name: Balkon
-            - !include
-              - '../../../base/templates/other/title-text.yaml'
-              - name: "[[[ return `${states['weather.dark_sky'].attributes.temperature} °C`; ]]]"
-                justify_self: end
-        - type: horizontal-stack
-          cards:
-            - !include ../../../base/includes/gap.yaml
-            - !include
-              - '../../../base/templates/button/button.yaml'
-              - entity: light.balkon
-                label: !include ../../../base/includes/brightness-label.yaml
-                #hold_action: more-info
-                grid: light-devices-grid
-                template: '../popup-cards/light-switch.yaml'
-            - !include ../../../base/includes/empty-button.yaml
-            - !include ../../../base/includes/empty-button.yaml
-            - !include ../../../base/includes/gap.yaml
-  
-    - type: vertical-stack
-      cards:
-        - type: horizontal-stack
-          cards:
-            - !include
-              - '../../../base/templates/other/title-text.yaml'
-              - name: Badkamer
-            - !include
-              - '../../../base/templates/other/title-text.yaml'
-              - name: "[[[ return `${states['sensor.badkamer'].state} °C`; ]]]"
-                justify_self: end
-        - type: horizontal-stack
-          cards:
-            - !include ../../../base/includes/gap.yaml
-            - !include
-              - '../../../base/templates/button/button.yaml'
-              - entity: light.koogeek_sw_056ce9
-                label: !include ../../../base/includes/brightness-label.yaml
-                #hold_action: more-info
-                grid: light-devices-grid
-                template: '../popup-cards/light-switch.yaml'
-            - !include ../../../base/includes/empty-button.yaml
-            - !include ../../../base/includes/empty-button.yaml
-            - !include ../../../base/includes/gap.yaml
-  
-    - type: vertical-stack
-      cards:
-        - type: horizontal-stack
-          cards:
-            - !include
-              - '../../../base/templates/other/title-text.yaml'
-              - name: Toilet
-            - !include
-              - '../../../base/templates/other/title-text.yaml'
-              - name: "[[[ return `${states['sensor.motion_toilet_temperature'].state} °C`; ]]]"
-                justify_self: end
-        - type: horizontal-stack
-          cards:
-            - !include ../../../base/includes/gap.yaml
-            - !include
-              - '../../../base/templates/button/button.yaml'
-              - entity: light.toilet
-                label: !include ../../../base/includes/brightness-label.yaml
-                #hold_action: more-info
-                grid: light-devices-grid
-                template: '../popup-cards/light-switch.yaml'
-            - !include ../../../base/includes/empty-button.yaml
-            - !include ../../../base/includes/empty-button.yaml
-            - !include ../../../base/includes/gap.yaml
-    - type: vertical-stack
-      cards:
-        - !include
-          - '../../../base/templates/other/title-text.yaml'
-          - name: Berging
-        - type: horizontal-stack
-          cards:
-            - !include ../../../base/includes/gap.yaml
-            - !include
-              - '../../../base/templates/button/button.yaml'
-              - entity: light.berging
-                label: !include ../../../base/includes/brightness-label.yaml
-                #hold_action: more-info
-                grid: light-devices-grid
-                template: '../popup-cards/light-switch.yaml'
-            - !include ../../../base/includes/empty-button.yaml
-            - !include ../../../base/includes/empty-button.yaml
-            - !include ../../../base/includes/gap.yaml
-    - !include ../../../base/includes/empty-button.yaml
+- type: custom:mod-card
+  style: |
+    ha-card {
+      margin-left: 7px;
+      margin-right: 7px;
+    }
+  card:
+    type: vertical-stack
+    cards:
+      - type: horizontal-stack
+        cards:
+          - !include
+            - '../../../base/templates/other/title-text.yaml'
+            - name: Badkamer
+          - !include
+            - '../../../base/templates/other/title-text.yaml'
+            - name: "[[[ return `${states['sensor.badkamer'].state} °C`; ]]]"
+              justify_self: end
+      - type: horizontal-stack
+        cards:
+          - !include
+            - '../../../base/templates/button/button.yaml'
+            - entity: light.koogeek_sw_056ce9
+              label: !include ../../../base/includes/brightness-label.yaml
+              grid: light-devices-grid
+              template: '../popup-cards/light-switch.yaml'
+          - !include ../../../base/includes/empty-button.yaml
+          - !include ../../../base/includes/empty-button.yaml
+      
+- type: custom:mod-card
+  style: |
+    ha-card {
+      margin-left: 7px;
+      margin-right: 7px;
+    }
+  card:
+    type: vertical-stack
+    cards:
+      - type: horizontal-stack
+        cards:
+          - !include
+            - '../../../base/templates/other/title-text.yaml'
+            - name: Toilet
+          - !include
+            - '../../../base/templates/other/title-text.yaml'
+            - name: "[[[ return `${states['sensor.motion_toilet_temperature'].state} °C`; ]]]"
+              justify_self: end
+      - type: horizontal-stack
+        cards:
+          - !include
+            - '../../../base/templates/button/button.yaml'
+            - entity: light.toilet
+              label: !include ../../../base/includes/brightness-label.yaml
+              grid: light-devices-grid
+              template: '../popup-cards/light-switch.yaml'
+          - !include ../../../base/includes/empty-button.yaml
+          - !include ../../../base/includes/empty-button.yaml
+
+- type: custom:mod-card
+  style: |
+    ha-card {
+      margin-left: 7px;
+      margin-right: 7px;
+    }
+  card:
+    type: vertical-stack
+    cards:
+      - !include
+        - '../../../base/templates/other/title-text.yaml'
+        - name: Berging
+      - type: horizontal-stack
+        cards:
+          - !include
+            - '../../../base/templates/button/button.yaml'
+            - entity: light.berging
+              label: !include ../../../base/includes/brightness-label.yaml
+              grid: light-devices-grid
+              template: '../popup-cards/light-switch.yaml'
+          - !include ../../../base/includes/empty-button.yaml
+          - !include ../../../base/includes/empty-button.yaml
+      - !include ../../../base/includes/empty-button.yaml

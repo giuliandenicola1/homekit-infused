@@ -1,12 +1,19 @@
-- type: vertical-stack
-  cards:
-    - !include
-      - '../../../base/templates/other/title-text.yaml'
-      - name: Modus
-    - !include
-      - '../../../base/templates/vacuum/modes.yaml'
-      - name_silent: Silent
-        name_turbo: Turbo
-        name_max: Max
-        name_balanced: Balanced
-        name_mop: Mop
+- type: custom:mod-card
+  style: |
+    ha-card {
+      margin-left: 7px;
+      margin-right: 7px;
+    }
+  card:
+    type: vertical-stack
+    cards:
+      - !include
+        - '../../../base/templates/other/title-text.yaml'
+        - name: Modus
+      - !include
+        - '../../../base/templates/vacuum/modes.yaml'
+        - name_silent: Silent
+          name_turbo: Turbo
+          name_max: Max
+          name_balanced: Balanced
+          name_mop: Mop

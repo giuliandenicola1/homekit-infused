@@ -69,7 +69,7 @@ header:
   location_subtitle: "[[[ if (states['group.device_status'].state == 'home') return `Someone is home`; else return `Everyone is away!`; ]]]"
   
   media_title: Media
-  media_subtitle: "[[[ if (states['sensor.media_players_playing'].state == Playing) return `A media player is playing right now`; else return `${states['sensor.media_players_playing'].state} All mediaplayers have stopped playing`; ]]]"
+  media_subtitle: "[[[ if (states['sensor.media_players_playing'].state == 'Playing') return `A media player is playing right now`; else return `All mediaplayers have stopped playing`; ]]]"
   
   floorplan_title: Floorplan
   floorplan_subtitle: Overview

@@ -1,206 +1,213 @@
-- type: custom:layout-card
-  max_columns: 3
-  layout: horizontal
-  cards:
-    - type: vertical-stack
-      cards:
-        - type: horizontal-stack
-          cards:
-            - !include
-              - '../../../base/templates/other/title-text.yaml'
-              - name: Woonkamer
-            - !include
-              - '../../../base/templates/other/title-text.yaml'
-              - name: "[[[ return `${states['sensor.woonkamer'].state} °C`; ]]]"
-                justify_self: end
-        - type: horizontal-stack
-          cards:
-            - !include ../../../base/includes/gap.yaml
-            - !include
-              - '../../../base/templates/button/button.yaml'
-              - entity: switch.receiver
-                grid: light-devices-grid
-            - !include
-              - '../../../base/templates/button/button.yaml'
-              - entity: switch.samsung_tv
-                grid: light-devices-grid
-            - !include
-              - '../../../base/templates/button/button.yaml'
-              - entity: switch.xbox_one
-                grid: light-devices-grid
-                lock: false
-                color: green
-                spin_on: true
-            - !include ../../../base/includes/gap.yaml
+- type: custom:mod-card
+  style: |
+    ha-card {
+      margin-left: 7px;
+      margin-right: 7px;
+    }
+  card:
+    type: vertical-stack
+    cards:
+      - type: horizontal-stack
+        cards:
+          - !include
+            - '../../../base/templates/other/title-text.yaml'
+            - name: Woonkamer
+          - !include
+            - '../../../base/templates/other/title-text.yaml'
+            - name: "[[[ return `${states['sensor.woonkamer'].state} °C`; ]]]"
+              justify_self: end
+      - type: horizontal-stack
+        cards:
+          - !include
+            - '../../../base/templates/button/button.yaml'
+            - entity: switch.receiver
+              grid: light-devices-grid
+          - !include
+            - '../../../base/templates/button/button.yaml'
+            - entity: switch.samsung_tv
+              grid: light-devices-grid
+          - !include ../../../base/includes/empty-button.yaml
+      
+- type: custom:mod-card
+  style: |
+    ha-card {
+      margin-left: 7px;
+      margin-right: 7px;
+    }
+  card:
+    type: vertical-stack
+    cards:
+      - type: horizontal-stack
+        cards:
+          - !include
+            - '../../../base/templates/other/title-text.yaml'
+            - name: Slaapkamer
+          - !include
+            - '../../../base/templates/other/title-text.yaml'
+            - name: "[[[ return `${states['sensor.slaapkamer'].state} °C`; ]]]"
+              justify_self: end
+      - type: horizontal-stack
+        cards:
+          - !include
+            - '../../../base/templates/button/button.yaml'
+            - entity: switch.receiver_slaapkamer_2
+              grid: light-devices-grid
+          - !include
+            - '../../../base/templates/button/button.yaml'
+            - entity: switch.tv_slaapkamer
+              grid: light-devices-grid
+          - !include ../../../base/includes/empty-button.yaml
     
-    - type: vertical-stack
-      cards:
-        - type: horizontal-stack
-          cards:
-            - !include
-              - '../../../base/templates/other/title-text.yaml'
-              - name: Slaapkamer
-            - !include
-              - '../../../base/templates/other/title-text.yaml'
-              - name: "[[[ return `${states['sensor.slaapkamer'].state} °C`; ]]]"
-                justify_self: end
-        - type: horizontal-stack
-          cards:
-            - !include ../../../base/includes/gap.yaml
-            - !include
-              - '../../../base/templates/button/button.yaml'
-              - entity: switch.receiver_slaapkamer_2
-                grid: light-devices-grid
-            - !include
-              - '../../../base/templates/button/button.yaml'
-              - entity: switch.tv_slaapkamer
-                grid: light-devices-grid
-            - !include ../../../base/includes/empty-button.yaml
-            - !include ../../../base/includes/gap.yaml
-    
-    - type: vertical-stack
-      cards:
-        - type: horizontal-stack
-          cards:
-            - !include
-              - '../../../base/templates/other/title-text.yaml'
-              - name: Kleine Kamer
-            - !include
-              - '../../../base/templates/other/title-text.yaml'
-              - name: "[[[ return `${states['sensor.kleine_kamer_temperatuur'].state} °C`; ]]]"
-                justify_self: end
-        - type: horizontal-stack
-          cards:
-            - !include ../../../base/includes/gap.yaml
-            - !include
-              - '../../../base/templates/button/button.yaml'
-              - entity: switch.monitors_jimmy
-                grid: light-devices-grid
-                lock: true
-            - !include
-              - '../../../base/templates/button/button.yaml'
-              - entity: switch.monitors_stephanie
-                grid: light-devices-grid
-                lock: true
-            - !include
-              - '../../../base/templates/button/button.yaml'
-              - entity: switch.printer
-                grid: light-devices-grid
-                lock: true
-            - !include ../../../base/includes/gap.yaml
-    
-        - type: horizontal-stack
-          cards:
-            - !include ../../../base/includes/gap.yaml
-            - !include
-              - '../../../base/templates/button/button.yaml'
-              - entity: switch.pc_van_jimmy
-                grid: light-devices-grid
-                lock: true
-            - !include
-              - '../../../base/templates/button/button.yaml'
-              - entity: switch.pc_van_stephanie
-                grid: light-devices-grid
-                lock: true
-            - !include
-              - '../../../base/templates/button/button.yaml'
-              - entity: switch.piano
-                grid: light-devices-grid
-            - !include ../../../base/includes/gap.yaml
-    
-    - type: vertical-stack
-      cards:
-        - type: horizontal-stack
-          cards:
-            - !include
-              - '../../../base/templates/other/title-text.yaml'
-              - name: Keuken
-            - !include
-              - '../../../base/templates/other/title-text.yaml'
-              - name: "[[[ return `${states['sensor.keuken_temperatuur'].state} °C`; ]]]"
-                justify_self: end
-        - type: horizontal-stack
-          cards:
-            - !include ../../../base/includes/gap.yaml
-            - !include
-              - '../../../base/templates/button/button.yaml'
-              - entity: switch.afzuigkap
-                grid: light-devices-grid
-                spin_on: true
-                color: DodgerBlue
-            - !include
-              - '../../../base/templates/button/button.yaml'
-              - entity: switch.oven
-                grid: light-devices-grid
-            - !include
-              - '../../../base/templates/button/button.yaml'
-              - entity: switch.airfryer
-                grid: light-devices-grid
-            - !include ../../../base/includes/gap.yaml
-        - type: horizontal-stack
-          cards:
-            - !include ../../../base/includes/gap.yaml
-            - !include
-              - '../../../base/templates/button/button.yaml'
-              - entity: switch.nespresso_apparaat
-                grid: light-devices-grid
-            - !include
-              - '../../../base/templates/button/button.yaml'
-              - entity: switch.cappumaker
-                grid: light-devices-grid
-            - !include
-              - '../../../base/templates/button/button.yaml'
-              - entity: switch.waterkoker
-                grid: light-devices-grid
-            - !include ../../../base/includes/gap.yaml
-        - type: horizontal-stack
-          cards:
-            - !include ../../../base/includes/gap.yaml
-            - !include
-              - '../../../base/templates/button/button.yaml'
-              - entity: switch.vaatwasser
-                grid: light-devices-grid
-                label: "[[[ return `${states['sensor.vaatwasser_power'].state} W`; ]]]"
-            - !include
-              - '../../../base/templates/button/button.yaml'
-              - entity: switch.koelkast_always_on
-                grid: light-devices-grid
-                label: "[[[ return `${states['sensor.koelkast_power'].state} W`; ]]]"
-                lock: true
-            - !include ../../../base/includes/empty-button.yaml
-            - !include ../../../base/includes/gap.yaml
-    
-    - type: vertical-stack
-      cards:
-        - type: horizontal-stack
-          cards:
-            - !include
-              - '../../../base/templates/other/title-text.yaml'
-              - name: Bijkeuken
-            - !include
-              - '../../../base/templates/other/title-text.yaml'
-              - name: "[[[ return `${states['sensor.motion_bijkeuken_temperature'].state} °C`; ]]]"
-                justify_self: end
-        - type: horizontal-stack
-          cards:
-            - !include ../../../base/includes/gap.yaml
-            - !include
-              - '../../../base/templates/button/button.yaml'
-              - entity: switch.wasmachine
-                grid: light-devices-grid
-                label: "[[[ return `${states['sensor.wasmachine_power'].state} W`; ]]]"
-            - !include
-              - '../../../base/templates/button/button.yaml'
-              - entity: switch.droger
-                grid: light-devices-grid
-                label: "[[[ return `${states['sensor.droger_power'].state} W`; ]]]"
-            - !include
-              - '../../../base/templates/button/button.yaml'
-              - entity: switch.vriezer_always_on
-                grid: light-devices-grid
-                label: "[[[ return `${states['sensor.power_52'].state} W`; ]]]"
-                lock: true
-            - !include ../../../base/includes/gap.yaml
+- type: custom:mod-card
+  style: |
+    ha-card {
+      margin-left: 7px;
+      margin-right: 7px;
+    }
+  card:
+    type: vertical-stack
+    cards:
+      - type: horizontal-stack
+        cards:
+          - !include
+            - '../../../base/templates/other/title-text.yaml'
+            - name: Kleine Kamer
+          - !include
+            - '../../../base/templates/other/title-text.yaml'
+            - name: "[[[ return `${states['sensor.kleine_kamer_temperatuur'].state} °C`; ]]]"
+              justify_self: end
+      - type: horizontal-stack
+        cards:
+          - !include
+            - '../../../base/templates/button/button.yaml'
+            - entity: switch.monitors_jimmy
+              grid: light-devices-grid
+              lock: true
+          - !include
+            - '../../../base/templates/button/button.yaml'
+            - entity: switch.monitors_stephanie
+              grid: light-devices-grid
+              lock: true
+          - !include
+            - '../../../base/templates/button/button.yaml'
+            - entity: switch.printer
+              grid: light-devices-grid
+              lock: true
+      - type: horizontal-stack
+        cards:
+          - !include
+            - '../../../base/templates/button/button.yaml'
+            - entity: switch.pc_van_jimmy
+              grid: light-devices-grid
+              lock: true
+          - !include
+            - '../../../base/templates/button/button.yaml'
+            - entity: switch.pc_van_stephanie
+              grid: light-devices-grid
+              lock: true
+          - !include
+            - '../../../base/templates/button/button.yaml'
+            - entity: switch.piano
+              grid: light-devices-grid
 
-    - !include ../../../base/includes/empty-button.yaml
+- type: custom:mod-card
+  style: |
+    ha-card {
+      margin-left: 7px;
+      margin-right: 7px;
+    }
+  card:
+    type: vertical-stack
+    cards:
+      - type: horizontal-stack
+        cards:
+          - !include
+            - '../../../base/templates/other/title-text.yaml'
+            - name: Keuken
+          - !include
+            - '../../../base/templates/other/title-text.yaml'
+            - name: "[[[ return `${states['sensor.keuken_temperatuur'].state} °C`; ]]]"
+              justify_self: end
+      - type: horizontal-stack
+        cards:
+          - !include
+            - '../../../base/templates/button/button.yaml'
+            - entity: switch.afzuigkap
+              grid: light-devices-grid
+              spin_on: true
+              color: DodgerBlue
+          - !include
+            - '../../../base/templates/button/button.yaml'
+            - entity: switch.oven
+              grid: light-devices-grid
+          - !include
+            - '../../../base/templates/button/button.yaml'
+            - entity: switch.airfryer
+              grid: light-devices-grid
+      - type: horizontal-stack
+        cards:
+          - !include
+            - '../../../base/templates/button/button.yaml'
+            - entity: switch.nespresso_apparaat
+              grid: light-devices-grid
+          - !include
+            - '../../../base/templates/button/button.yaml'
+            - entity: switch.cappumaker
+              grid: light-devices-grid
+          - !include
+            - '../../../base/templates/button/button.yaml'
+            - entity: switch.waterkoker
+              grid: light-devices-grid
+      - type: horizontal-stack
+        cards:
+          - !include
+            - '../../../base/templates/button/button.yaml'
+            - entity: switch.vaatwasser
+              grid: light-devices-grid
+              label: "[[[ return `${states['sensor.vaatwasser_power'].state} W`; ]]]"
+          - !include
+            - '../../../base/templates/button/button.yaml'
+            - entity: switch.koelkast_always_on
+              grid: light-devices-grid
+              label: "[[[ return `${states['sensor.koelkast_power'].state} W`; ]]]"
+              lock: true
+          - !include ../../../base/includes/empty-button.yaml
+
+- type: custom:mod-card
+  style: |
+    ha-card {
+      margin-left: 7px;
+      margin-right: 7px;
+    }
+  card:
+    type: vertical-stack
+    cards:
+      - type: horizontal-stack
+        cards:
+          - !include
+            - '../../../base/templates/other/title-text.yaml'
+            - name: Bijkeuken
+          - !include
+            - '../../../base/templates/other/title-text.yaml'
+            - name: "[[[ return `${states['sensor.motion_bijkeuken_temperature'].state} °C`; ]]]"
+              justify_self: end
+      - type: horizontal-stack
+        cards:
+          - !include
+            - '../../../base/templates/button/button.yaml'
+            - entity: switch.wasmachine
+              grid: light-devices-grid
+              label: "[[[ return `${states['sensor.wasmachine_power'].state} W`; ]]]"
+          - !include
+            - '../../../base/templates/button/button.yaml'
+            - entity: switch.droger
+              grid: light-devices-grid
+              label: "[[[ return `${states['sensor.droger_power'].state} W`; ]]]"
+          - !include
+            - '../../../base/templates/button/button.yaml'
+            - entity: switch.vriezer_always_on
+              grid: light-devices-grid
+              label: "[[[ return `${states['sensor.power_52'].state} W`; ]]]"
+              lock: true
+- !include ../../../base/includes/empty-button.yaml
     
