@@ -20,13 +20,7 @@ The docs might be incomplete or not completely comprehensible for all. Remember 
 
 #### Known Issues
   - Sometimes notifications would suddenly stop scrolling, solution is to touch the notification slightly, it will go back to automatic scrolling if you do that. I can't and wont fix this as it is a non-issue.
-  - The interface can scroll slightly from left to right, this is a byproduct of using panel view (to make it compatible with desktops) also on ios it might give a white scroll bar at the right side. I will look into this in the future.
-  - When having 3 or more columns set in view_config the interface might become unstable when resizing the browser window, this is inherent to the same problem mentioned above and I will look into this in the future.
+  - Some themes require extra tweaking, if you feel like you can help you can always do a PR
 
 #### QUESTIONS?
-
-Please ask any question you have on the Home Assistant community forums, follow the link to go to my thread [HA Community Forum](https://community.home-assistant.io/t/homekit-infused-hki-v0-13-3-updated-07-01-2020-hki-preview-video-1-0a-online-now/117086)
-
-## [Click here](https://discord.gg/WZvK4Cb) to join our Discord Server which I maintain with @Dwains. With over 800+ members from noobs to pro's. You'll be sure to get your answers fast here!
-Thank you and I hope you've enjoyed this release (please leave a comment on the forum/yt or privately so I can estimate what people think of the project)
-Thanks once again!
+For questions please visit any of the support links on the [main page](https://github.com/jimz011/homekit-infused) of this repo.
