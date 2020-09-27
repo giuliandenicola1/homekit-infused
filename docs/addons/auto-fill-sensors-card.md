@@ -52,6 +52,7 @@ binary_sensor.living_room_motion:
 - !include
   - '../../../base/templates/auto-fill/auto-fill-sensors-template.yaml'
   - type: temperature
+    tap_action: more-info
     columns: 3
     sort: name
 ```
