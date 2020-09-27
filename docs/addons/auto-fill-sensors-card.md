@@ -42,7 +42,8 @@ binary_sensor.living_room_motion:
 | columns | no | 3 | Sets the number of buttons stacked horizontally |
 | sort | no | name | Sorts the cards in a different order, choose from: domain, entity_id, name, state, attribute, last_changed last_updated or last_triggered |
 | grid | no | default-hki-grid | Change the grid of the button, choose from `default-hki-grid`, `light-devices-grid`, `old-hki-grid` or `old-light-devices-grid` |
-| tap_action | no | more-info | Set to show a default more-info window or a mini-graph-card popup (might now work well for some entities), choose from `more-info` or `call-service`, NO other options available, setting this to `call-service` will automatically switch this addons popup cards to a mini-graph! |
+| tap_action | no | more-info | Set to show a default more-info window or to do nothing at all, NO other options available! |
+| hold_action | no | more-info | Set to show a default more-info window or a mini-graph-card popup (might now work well for some entities), choose from `more-info` or `call-service`, NO other options available, setting this to `call-service` will automatically switch this addons popup cards to a mini-graph! |
 
 ### Install
 - Create a new file inside the folder of the view you want (e.g. /homekit-infused/user/views/climate/), you can name the file however you want (e.g. temperature-sensors-card.yaml)
@@ -58,7 +59,8 @@ binary_sensor.living_room_motion:
 ```
 
 ### Extra Information
-For the mini-graph-card to work you must download it through HACS and add the resources to your dashboard! (Only needed when `tap_action` is `call-service`)
+For the mini-graph-card to work you must download it through HACS and add the resources to your dashboard! (Only needed when `hold_action` is `call-service`)
+*Note: Unfortunately the way the button template is currently written, this popup can only be applied to the hold_action (hold_action and double_tap actions are the same in HKI!). If you really don't want to see the default more-info windows anymore, set `tap_action` to `none`!
 
 ### Requirements (HACS)
 
