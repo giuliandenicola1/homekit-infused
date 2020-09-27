@@ -69,7 +69,7 @@
 #### Utilities
   - [Empty Button](addons/empty-button.md)
   - [Title Text](addons/title-text-card.md)
-  - [Gaps](addons/gap-card.md) *Pending rework in HKI 3.4.0
+  - [Gaps](addons/gap-card.md) *Reworked in 3.4.0
   
 #### Vacuum
   - [Simple Vacuum Card](addons/simple-vacuum-card.md) (Any Vacuum)
