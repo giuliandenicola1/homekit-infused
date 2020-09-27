@@ -11,6 +11,7 @@ By default lovelace doesn't create gaps between the left and right side of the s
 
 ### Configuration
 - Wrap your cards inside of the code below
+- You can entirely choose how wide the gaps should be by adjusting the amount of pixels. More pixels means a wider gap.
 
 ### Install
 - Copy the code wherever you need this
