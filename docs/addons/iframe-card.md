@@ -41,7 +41,7 @@ This is an iFrame to embed a websites in.
       overflow: hidden !important;
     }
   aspect_ratio: 125%
-  url: https://embed.windy.com/embed2.html?lat=51.402&lon=5.467&detailLat=51.477&detailLon=5.496&width=650&height=750&zoom=10&level=surface&overlay=wind&product=ecmwf&menu=&message=true&marker=&calendar=now&pressure=true&type=map&location=coordinates&detail=true&metricWind=km%2Fh&metricTemp=%C2%B0C&radarRange=-1" frameborder="0"
+  url: YOUR_URL_HERE
 ```
 
 ### Layout card and horizontal/vertical stacks
