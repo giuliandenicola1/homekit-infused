@@ -42,6 +42,7 @@ binary_sensor.living_room_motion:
 | columns | no | 3 | Sets the number of buttons stacked horizontally |
 | sort | no | name | Sorts the cards in a different order, choose from: domain, entity_id, name, state, attribute, last_changed last_updated or last_triggered |
 | grid | no | default-hki-grid | Change the grid of the button, choose from `default-hki-grid`, `light-devices-grid`, `old-hki-grid` or `old-light-devices-grid` |
+| tap_action | no | more-info | Set to show a default more-info window or a mini-graph-card (might now work well for some entities), choose from `more-info` or `call-service`, NO other options available, setting this to `call-service` will automatically switch this addons popup cards to a mini-graph! |
 
 ### Install
 - Create a new file inside the folder of the view you want (e.g. /homekit-infused/user/views/climate/), you can name the file however you want (e.g. temperature-sensors-card.yaml)
@@ -55,3 +56,17 @@ binary_sensor.living_room_motion:
     sort: name
 ```
 
+### Extra Information
+For the mini-graph-card to work you must download it through HACS and add the resources to your dashboard!
+
+### Requirements (HACS)
+
+| Name | Type  | Description |
+|----------------------------------|-------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [Mini Graph Card](https://github.com/kalkih/mini-graph-card) | Frontend | This is an elegant mini-graph-card for creating cards with graphs and bars |
+
+### Resources
+Add the following line to your lovelace resources 
+```
+/hacsfiles/mini-graph-card/mini-graph-card-bundle.js
+```
