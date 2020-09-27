@@ -38,7 +38,6 @@ Below is a list of all the addons required to run the framework, you can install
 | [Auto Entities](https://github.com/thomasloven/lovelace-auto-entities) | Frontend | This mod will help with auto filling entities and such |
 | [Card Mod](https://github.com/thomasloven/lovelace-card-mod) | Frontend | This mod allows for custom css on any card |
 | [Button Card](https://github.com/custom-cards/button-card) | Frontend | This is the button used throughout the entire setup |
-| [Layout Card](https://github.com/thomasloven/lovelace-layout-card) | Frontend | Make sure you install version 13, do NOT install a version beyond that, it will NOT look good! |
 | [Custom Header](https://github.com/maykar/custom-header) | Frontend | This is used to modify the standard Home Assistant header |
 | [State Switch](https://github.com/thomasloven/lovelace-state-switch) | Frontend | This is used to make cards appear based on certain conditions, like a conditional-card but better |
 | [Card Tools](https://github.com/thomasloven/lovelace-card-tools) | Frontend | This is needed for various custom cards to run |
@@ -67,6 +66,8 @@ To make it easier on you, I have compiled a list with all used resources that yo
 /hacsfiles/lovelace-state-switch/state-switch.js
 ``` 
 
+*Note: notice that layout-card was not installed through HACS, layout-card is included in the release and should not be downloaded from HACS, though you must add this to your resources!
+
 ### Installation
 Copy the following files/folders to the root of your Home Assistant installation
 
@@ -74,7 +75,7 @@ Copy the following files/folders to the root of your Home Assistant installation
 - Copy the `/themes/` folder to the root of your setup
 - Copy the `homekit-infused.yaml` file to the root of your setup
 - Copy the `/packages/` folder to the root of your setup
-- Copy the `/www/images/` folder to the `/www/` folder
+- Copy the `/www/` folder to the root of your setup
 - Add the following lines to your `configuration.yaml` file
 
 ```
