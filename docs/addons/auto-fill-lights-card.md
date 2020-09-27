@@ -16,12 +16,13 @@ This is an auto filled light card with a homekit style popup embedded.
 | Name | Type  | Description |
 |----------------------------------|-------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [Light Popup Card](https://github.com/DBuit/light-popup-card) | Frontend | This is the popup that opens when holding/double tapping the buttons |
+| [Light Entity Card](https://github.com/ljmerza/light-entity-card) | Frontend | This is the card that shows a beautifully styled color wheel in conjunction with the light popup card |
 
 ### Resources
 Add the following lines to your lovelace resources 
 ```
 /hacsfiles/light-popup-card/light-popup-card.js
-
+/hacsfiles/light-entity-card/light-entity-card.js
 ```
 
 ### Configuration
