@@ -55,6 +55,7 @@ NOTE: If you do NOT see a resources tab, please open the sidebar > profile > ena
 
 Add the following resources, you should select `javascript module` for each of them. 
 To make it easier on you, I have compiled a list with all used resources that you can easily copy and enter.
+
 ```
 /hacsfiles/lovelace-auto-entities/auto-entities.js
 /hacsfiles/button-card/button-card.js
@@ -65,6 +66,7 @@ To make it easier on you, I have compiled a list with all used resources that yo
 /hacsfiles/swipe-card/swipe-card.js
 /hacsfiles/lovelace-state-switch/state-switch.js
 ``` 
+
 ### Installation
 Copy the following files/folders to the root of your Home Assistant installation
 
@@ -74,6 +76,7 @@ Copy the following files/folders to the root of your Home Assistant installation
 - Copy the `/packages/` folder to the root of your setup
 - Copy the `/www/images/` folder to the `/www/` folder
 - Add the following lines to your `configuration.yaml` file
+
 ```
 homeassistant:
     packages: !include_dir_named packages/
@@ -112,17 +115,21 @@ To know which views are available you can simply open the `homekit-infused/user/
 ### Extra Information
 - Create/edit a `customize.yaml` file, this file is automatically created whenever you edit an entity through the UI configuration>customize. However you can create this file yourself if you don't have it already. Just put the file at the root of your config, you can also download the example customize.yaml file instead.
 You might need the following entry in your `configuration.yaml` file
+
 ```
 homeassistant:
     customize: !include customize.yaml
 ```
+
 Now if you have created this file we will start and fill it with our own entities.
 If you already have items in that file just add them below the last item, else just start typing exactly as in the example below. You do NOT need to do all of your entities. Just do the ones that are going to get shown in the frontend (e.g. lights, switches, sensors, binary_sensors and your vacuum).
+
 ```
 switch.washingmachine:
     friendly_name: Washing Machine
     icon: mdi:washing-machine
 ```
+
 NOTE: The customize.yaml file is the only way that you can change the names/icons for buttons that use HKI autofill addons. If you do not intend to use any of the HKI addons and just the framework you can skip doing this, however you will not be able to use any of the features besides the HKI framework itself.
 
 ### Previous HKI Installs
