@@ -92,8 +92,7 @@ The copying process should now be completed and we can move on to the configurat
 
 ### Configuring
 There isn't much to configure from here on out, however you do need to setup a few things.
-First make sure you have created the alarm entity and that you have the time sensor setup.
-Next go to the menu > hki settings and change the theme to your liking, also set the frontpage welcome message!.
+Go to the menu > hki settings and change the theme to your liking, also set the frontpage welcome message!.
 
 To change names and icons that are shown in the header, please open the `/homekit-infused/user/config/header_config.yaml` file and change any setting you like. You will also need to set your alarm_entity inside of this file.
 
