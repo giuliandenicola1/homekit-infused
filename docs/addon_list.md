@@ -13,10 +13,11 @@
 - [Addon List](https://github.com/jimz011/homekit-infused/blob/master/docs/addon_list.md)
 
 # Addon List
-*Updated 27/09/2020
+*Updated 28/09/2020
 
 ### Select an addon below, each addon has an image and documentation on how to install.
-*note: the addons on this page will ONLY work with the HKI 3.x.x framework, they can not be used standalone (experienced users might be able to figure it out though). The addons on this page are ready to use cards and will only require a copy/paste with slight adjustments. 
+*note: the addons on this page are specifically written to work with the HKI 3.x.x framework, however many of the addon's code can be used in any lovelace setup. If you don't see any includes in the code you can safely assume that it will work for your own setup. 
+The addons on this page are ready to use cards and will only require a copy/paste with slight adjustments, assuming you use the HKI Framework!
 
 *note: None of the custom cards/addons that you will need to download through HACS are created by me and ALL the [credit](thanks.md) should go to their original creators!!!
 
