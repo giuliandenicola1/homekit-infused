@@ -94,7 +94,7 @@ By default lovelace doesn't create gaps between the left and right side of the s
             entity: light.light_6
 ```
 ### Advanced
-Sometimes you will only need a single card (without title-text addons), when using a single card we can avoid using the mod-card and style it directly into the cards styles. This is only ever useful when using one single card in the horizontal space. When using two cards horizontally we are using a horizontal-stack and we should use a mod-card around the horizontal-stack instead! (Experienced users could style the cards separately, see last example)
+Sometimes you will only need a single card, when using a single card we can avoid using the mod-card and style it directly into the cards styles. This is only ever useful when using one single card in the horizontal space. When using two cards horizontally we are using a horizontal-stack and we should use a mod-card around the horizontal-stack instead! (Experienced users could style the cards separately, see last example)
 ```
 # example of a single card without gaps
 - type: entities
@@ -117,7 +117,7 @@ Sometimes you will only need a single card (without title-text addons), when usi
     - light.light_3
 ```
 ```
-# example of two cards with gaps, but without mod-card (this should only be done by experienced users, else I'd recommend using mod-card instead!)
+# example of two cards with gaps, but without mod-card
 - type: horizontal-stack
   cards:
     - type: entities
