@@ -20,6 +20,7 @@ This is a card that will fetch all your scenes and create a button page for it a
 | column_num | no | 1 | Sets how many battery entities should be stacked horizontally on each column |
 | method | no | name | Sorts the cards in a different order, choose from: domain, entity_id, name, state, attribute, last_changed last_updated or last_triggered |
 | grid | no | default-hki-grid | Change the grid of the button, choose from `default-hki-grid`, `light-devices-grid`, `old-hki-grid` or `old-light-devices-grid` |
+| size | no | 25% | Set the icon size for all the auto filled entities within this card |
 | other | | | It is probably best if you leave all the other settings alone! |
 
 ### Install
@@ -38,6 +39,7 @@ This is a card that will fetch all your scenes and create a button page for it a
             grid: light-devices-grid
             service_entity: this.entity_id
             show_state: false
+            size: 25%
       - type: custom:button-card
         color_type: blank-card
         aspect_ratio: 1/1
