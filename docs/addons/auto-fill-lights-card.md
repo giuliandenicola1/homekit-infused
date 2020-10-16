@@ -57,6 +57,7 @@ When using multi floor setups you will have to change the code slightly, you can
 | Properties | Required | Default | Description |
 |----------------------------------|-------------|----------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | state | yes/no | 0 | Sets a floor number, this is needed to create conditions as to when to show what floors (the conditional card is only required when using multiple floors) |
+| icon_size | no | 25% | Set the icon size for all the auto filled entities within this card |
 | max_columns | no | 3 | Do NOT touch this!! Use the parameter below for setting the columns! |
 | columns | no | 3 | Sets the number of buttons stacked horizontally |
 | sort | no | name | Sorts the cards in a different order, choose from: domain, entity_id, name, state, attribute, last_changed last_updated or last_triggered |
