@@ -6,7 +6,7 @@ If you find any information on this page useful, feel free to buy me a coffee:
 Latest working Home Assistant version is 0.116.4 (do not update past this number for best compatibility)
 
 ### About
-Homekit Infused is a project that consists out of two major components, the framework and the addons. The framework can be run standalone and will not require any of the addons to be installed. This is useful for people that just want the header/footer and the menu that is present in HKI.
+Homekit Infused is a project for Home Assistant that consists out of two major components, the framework and the addons. The framework can be run standalone and will not require any of the addons to be installed. This is useful for people that just want the header/footer and the menu that is present in HKI.
 
 ### Quick Links
 #### [Click here](https://jimz011.github.io/homekit-infused/) for the full documentation
