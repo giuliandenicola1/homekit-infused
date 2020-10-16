@@ -38,27 +38,22 @@ Below is a list of all the addons required to run the framework, you can install
 | [Auto Entities](https://github.com/thomasloven/lovelace-auto-entities) | Frontend | This mod will help with auto filling entities and such |
 | [Card Mod](https://github.com/thomasloven/lovelace-card-mod) | Frontend | This mod allows for custom css on any card |
 | [Button Card](https://github.com/custom-cards/button-card) | Frontend | This is the button used throughout the entire setup |
-| [Custom Header](https://github.com/maykar/custom-header) | Frontend | This is used to modify the standard Home Assistant header |
 | [State Switch](https://github.com/thomasloven/lovelace-state-switch) | Frontend | This is used to make cards appear based on certain conditions, like a conditional-card but better |
 | [Card Tools](https://github.com/thomasloven/lovelace-card-tools) | Frontend | This is needed for various custom cards to run |
 | [Swipe Card](https://github.com/bramkragten/swipe-card) | Frontend | This card is needed for the scrolling notifications, but also for most popups |
 | [Browser Mod](https://github.com/thomasloven/hass-browser_mod) | Integration | Browser-mod makes the browser more useful and gives us the opportunity to show/create custom popups and many more! |
 | [Lovelace Gen](https://github.com/thomasloven/hass-lovelace_gen) | Integration | This is the MOST important piece of the setup, without this HKI will not work! Don't add this to your `configuration.yaml` file as the included package already does so for you, if you already have `lovelace_gen:` in your `configuration.yaml` please remove or comment that line! |
 
-All the frontend addons must be installed as `Module`.
-
 ### Adding Resources
 Resources MUST be added manually which can be done within the Home Assistant configuration panel. Go to the Sidebar > Configuration > Lovelace Dashboards > Resources and add all of the following resources one by one. This makes it possible to use custom resources whenever you might need them and also makes sure you can still use the Home Assistant dashboard you have already created with the UI editor.
 
 NOTE: If you do NOT see a resources tab, please open the sidebar > profile > enable advanced mode. This should make the tab appear.
 
-Add the following resources, you should select `javascript module` for each of them. 
-To make it easier on you, I have compiled a list with all used resources that you can easily copy and enter.
+Add the following resources, to make it easier on you, I have compiled a list with all used resources that you can easily copy and enter.
 
 ```
 /hacsfiles/lovelace-auto-entities/auto-entities.js
 /hacsfiles/button-card/button-card.js
-/hacsfiles/custom-header/custom-header.js
 /hacsfiles/lovelace-card-mod/card-mod.js
 /hacsfiles/lovelace-card-tools/card-tools.js
 /hacsfiles/lovelace-layout-card/layout-card.js
@@ -131,16 +126,6 @@ switch.washingmachine:
 ```
 
 NOTE: The customize.yaml file is the only way that you can change the names/icons for buttons that use HKI autofill addons. If you do not intend to use any of the HKI addons and just the framework you can skip doing this, however you will not be able to use any of the features besides the HKI framework itself.
-
-### Previous HKI Installs
-For users of v2.x.x I have slightly bad news, the HKI Framework is completely different and it has been restructured and much lighter. The advantages of the new version are clear, it is MUCH faster than previous versions and because of the split code (framework and addons separately) I can push updates separately and much faster than I could when needing to update the entire package. 
-
-There is good news however, you can copy user_content you had already created over to the new structure (which looks pretty similar). Note that the paths and template names have changed, if you relied on templates I have created, it is best to copy them over to the new user folder (/homekit-infused/user/templates/) and reference to that template instead of the ones included by HKI (this will also ensure that your user_content continues to work if the HKI templates gets updated). 
-
-As for cards and auto-filled groups, they no longer exist. Groups and basically all input_texts have been removed (oh boy you'll love the speed improvements that come with this). If you decide to copy this to your existing setup, please remove everything related to HKI from your setup (themes, dashboards, packages, etc) and then install the new ones. Make a backup of your old setup so that you can easily find what you had so the copy process will be easier on you.
-Auto-filled-views still exist but can now be downloaded as an addon (instructions can be found on the specific addons page). The purpose of splitting this up is so that you only use the addons you actually need/want (this means no more excessive unused code which will improve the performance of your Home Assistant setup). 
-
-Everything that was included in HKI 2.x.x is now available separately. After installation over an existing one I recommend to go to the sidebar>configuration>entities and then sort entities by status and remove EVERY SINGLE entity that is in red (unavailable). This will take a while on existing setups. If started clean this is not an issue and you can simply ignore this. The purpose of this is to remove all the entities that HKI 2.x.x introduced and to clean out the entities we no longer need. Most notably the largest speed improvements are because of this!
 
 ## That's it! You have succesfully installed the Homekit Infused Framework.
 To continue on with the addon documentation [click here](addons.md)
