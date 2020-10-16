@@ -21,6 +21,7 @@ This card is used to automatically fill your battery entities and make a nice ov
 | column_num | no | 1 | Sets how many battery entities should be stacked horizontally on each column |
 | method | no | name | Sorts the cards in a different order, choose from: domain, entity_id, name, state, attribute, last_changed last_updated or last_triggered |
 | grid | no | light-devices-grid | Change the grid of the button, choose from `default-hki-grid`, `light-devices-grid`, `old-hki-grid` or `old-light-devices-grid` |
+| size | no | 25% | Change the icon size |
 | other | | | It is probably best if you leave all the other settings alone! |
 
 ### Install
@@ -45,6 +46,7 @@ This card is used to automatically fill your battery entities and make a nice ov
             - default-hki-grid
             - battery-state
           entity: this.entity_id
+          size: 25%
           icon: "[[[ if (states[`this.entity_id`].state < 10) return `mdi:battery-10`; if (states[`this.entity_id`].state < 20) return `mdi:battery-20`; if (states[`this.entity_id`].state < 30) return `mdi:battery-30`; if (states[`this.entity_id`].state < 40) return `mdi:battery-40`; if (states[`this.entity_id`].state < 50) return `mdi:battery-50`; if (states[`this.entity_id`].state < 60) return `mdi:battery-60`; if (states[`this.entity_id`].state < 70) return `mdi:battery-70`; if (states[`this.entity_id`].state < 80) return `mdi:battery-80`; if (states[`this.entity_id`].state < 90) return `mdi:battery-90`; return `mdi:battery`; ]]]"
       - type: custom:button-card
         color_type: blank-card
