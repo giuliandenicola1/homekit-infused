@@ -25,6 +25,7 @@ switch.living_room_fan:
 | Properties | Required | Default | Description |
 |----------------------------------|-------------|----------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | columns | no | 3 | Sets the number of images stacked horizontally |
+| icon_size | no | 25% | Set the icon size for all the auto filled entities within this card |
 | sort | no | name | Sorts the cards in a different order, choose from: domain, entity_id, name, state, attribute, last_changed last_updated or last_triggered |
 | grid | no | light-devices-grid | Change the grid of the button, choose from `default-hki-grid`, `light-devices-grid`, `old-hki-grid` or `old-light-devices-grid` |
 
