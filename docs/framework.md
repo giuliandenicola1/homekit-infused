@@ -13,7 +13,7 @@
 - [Addon List](https://github.com/jimz011/homekit-infused/blob/master/docs/addon_list.md)
 
 # Homekit Infused Framework
-This is the Homekit Infused 3.x.x framework, this is only the framework and will contain unfilled views. The framework contains a set of predefined (empty) views, a beautiful header with embedded alarm management, sensor event monitoring, a greeting and notifications. It also contains a footer with the user currently logged in and two buttons that goes to home or the menu. The Homekit Infused Framework can run standalone, the views can be setup manually.
+This is the Homekit Infused 3.x.x framework, this is only the framework and will contain unfilled views. The framework contains a set of predefined (empty) views, a beautiful header with embedded alarm management, sensor event monitoring, a greeting and notifications. It also contains a navigation button so that you can easily navigate through the menu's. The Homekit Infused Framework can run standalone, the views can be setup manually.
 
 For the entire Homekit Infused Package you will need to install this first! This is the base of Homekit Infused, without it none of the addons will work.
 After the installation of the framework you can go on to install the addons (or create your own cards), the addons will decide the looks and layout of your installation.
