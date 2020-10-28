@@ -2,25 +2,37 @@
 
 Back to [Addon List](../addon_list.md)
 
-# Remote Control (Nvidia SHIELD TV/Android TV)
+# Remote Control (Nvidia SHIELD TV/Android TV/Apple TV)
 *HKI Framework 3.1.2 or higher required
 
 ![Homekit Infused](../images/remote-control.png)
 
 ### Description
-This is a predefined remote control solution for your Nvidia SHIELD TV (pro). This has only been tested on a SHIELD however there is a big chance that this will work with any Android TV (e.g. Xiaomi miBox S). Please let me know if you have any of these mediaplayers and if this addon works for you.
+This is a predefined remote control solution for your Android or Apple TV. The remote has been preconfigured for Android but can be changed to suit the needs for Apple TV's. Note that you must have either an Android TV or Apple TV setup already in your Home Assistant config.
 
-*Note: some features might not work properly as this addon is experimental, know issue is that the mute button does not work as intended!
+*Note Android: The mute button might not work as intended!
+*Note Apple: The shortcuts can NOT be used at the time of writing, this might change in the future but it depends on the developer of the ATV component to add this feature. I will make a dedicated ATV remote in the future. For now you can use this!
 
 ### Configuration
-- Configurating this addon is fairly simple and only requires a few properties.
+- Configurating this addon is fairly simple and only requires a few properties for an Android TV
+- If using an Apple TV, please change the commands to use [these](https://www.home-assistant.io/integrations/apple_tv/#remote) ones instead 
 
 ### Advanced
 
 | Properties | Required | Default | Description |
 |----------------------------------|-------------|----------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| entity_media_player | yes | none | This MUST be your Android TV entity! |
+| entity_media_player | yes | none | This can be your Android or Apple TV entity! |
+| entity_media_player_remote | yes | none | When using an Apple remote you must use the remote entity, for Android TV just use the same entity as above! |
 | entity_media_player_sound | yes | none | You can use this if you use a different media_player to control sound (this MUST be an entity in the media_player domain!). If you don't have a separate media_player for sound you must enter the same entity as above |
+| service | no | androidtv.adb_command | The service to call when one of the remote buttons are pressed, use `remote.your_apple_tv` when using an Apple TV |
+| command_up | no | UP | The command to send when the `up` arrow is pressed, use `up` for Apple TV (note that this is in lowercase!) |
+| command_menu | no | MENU | The command to send when the `menu` button is pressed, use `menu` for Apple TV (note that this is in lowercase!) |
+| command_left | no | LEFT | The command to send when the `left` arrow is pressed, use `left` for Apple TV (note that this is in lowercase!) |
+| command_center | no | CENTER | The command to send when the `center` button is pressed, use `select` for Apple TV (note that this is in lowercase!) |
+| command_right | no | RIGHT | The command to send when the `right` arrow is pressed, use `right` for Apple TV (note that this is in lowercase!) |
+| command_back | no | BACK | The command to send when the `back` button is pressed, use `menu` for Apple TV (note that this is in lowercase!) |
+| command_down | no | DOWN | The command to send when the `down` arrow is pressed, use `down` for Apple TV (note that this is in lowercase!) |
+| command_home | no | HOME | The command to send when the `home` button is pressed, use `top_menu` for Apple TV (note that this is in lowercase!) |
 ||||
 | name_volume_down | no | Volume | Change the volume down name |
 | label_volume_down | no | Down | Change the volume down label |
@@ -61,9 +73,27 @@ This is a predefined remote control solution for your Nvidia SHIELD TV (pro). Th
 - Copy the code below and make changes if needed
 
 ```
-# example of minimal required config
+# example of minimal required config for Android TV
 - !include
   - '../../../base/templates/other/remote-control.yaml'
   - entity_media_player: media_player.nvidia_s_h_i_e_l_d_tv_pro
+    entity_media_player_remote: media_player.nvidia_s_h_i_e_l_d_tv_pro
     entity_media_player_sound: media_player.samsung_ue65ku6000
+```
+```
+# example of minimal required config for Apple TV
+- !include
+  - '../../../base/templates/other/remote-control.yaml'
+  - entity_media_player_sound: media_player.samsung_ue46es5500
+    entity_media_player: media_player.slaapkamer
+    entity_media_player_remote: remote.slaapkamer
+    service: remote.send_command
+    command_up: up
+    command_menu: menu
+    command_left: left
+    command_center: select
+    command_right: right
+    command_back: menu
+    command_down: down
+    command_home: top_menu
 ```
