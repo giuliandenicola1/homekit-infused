@@ -86,7 +86,7 @@ The addons on this page are ready to use cards and will only require a copy/past
   - [Weather Card](addons/weather-card.md) (animated)
 
 ### User submitted addons
-  - [Addons by Noodlemctwoodle](https://github.com/noodlemctwoodle/homeassistant/)
+  - [Addons by Noodlemctwoodle](https://noodlemctwoodle.github.io/homeassistant/)
 
 ### Other Documentation
 #### Extra Information
