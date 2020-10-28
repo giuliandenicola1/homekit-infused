@@ -70,8 +70,9 @@ The addons on this page are ready to use cards and will only require a copy/past
 
 #### Utilities
   - [Empty Button](addons/empty-button.md)
-  - [Title Text](addons/title-text-card.md)
+  - [Floor Selector](addons/floor-selector.md)
   - [Gaps](addons/gap-card.md)
+  - [Title Text](addons/title-text-card.md)
   
 #### Vacuum
   - [Simple Vacuum Card](addons/simple-vacuum-card.md) (Any Vacuum)
