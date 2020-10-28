@@ -52,7 +52,7 @@ The addons on this page are ready to use cards and will only require a copy/past
 #### Media 
   - [Google Home Card](addons/google-home-card.md)
   - [Upcoming Media Card](addons/upcoming-recently-added.md)
-  - [Remote Control Card](addons/nvidia-remote.md) (for Nvidia SHIELD TV/Android TV)
+  - [Remote Control Card](addons/nvidia-remote.md) (for Nvidia SHIELD TV/Android TV/Apple TV)
 
 #### Other
   - [Frontpage Glances](addons/frontpage-glances.md)
@@ -71,7 +71,7 @@ The addons on this page are ready to use cards and will only require a copy/past
 #### Utilities
   - [Empty Button](addons/empty-button.md)
   - [Title Text](addons/title-text-card.md)
-  - [Gaps](addons/gap-card.md) *Reworked in 3.4.0
+  - [Gaps](addons/gap-card.md)
   
 #### Vacuum
   - [Simple Vacuum Card](addons/simple-vacuum-card.md) (Any Vacuum)
