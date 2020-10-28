@@ -39,6 +39,7 @@ Below is a list of all the addons required to run the framework, you can install
 | [Card Mod](https://github.com/thomasloven/lovelace-card-mod) | Frontend | This mod allows for custom css on any card |
 | [Button Card](https://github.com/custom-cards/button-card) | Frontend | This is the button used throughout the entire setup |
 | [State Switch](https://github.com/thomasloven/lovelace-state-switch) | Frontend | This is used to make cards appear based on certain conditions, like a conditional-card but better |
+| [Mini Graph Card](https://github.com/kalkih/mini-graph-card) | Frontend | Mini Graph Card gives the possibility to create more advanced graphs! |
 | [Card Tools](https://github.com/thomasloven/lovelace-card-tools) | Frontend | This is needed for various custom cards to run |
 | [Swipe Card](https://github.com/bramkragten/swipe-card) | Frontend | This card is needed for the scrolling notifications, but also for most popups |
 | [Browser Mod](https://github.com/thomasloven/hass-browser_mod) | Integration | Browser-mod makes the browser more useful and gives us the opportunity to show/create custom popups and many more! |
@@ -59,6 +60,7 @@ Add the following resources, to make it easier on you, I have compiled a list wi
 /hacsfiles/lovelace-layout-card/layout-card.js
 /hacsfiles/swipe-card/swipe-card.js
 /hacsfiles/lovelace-state-switch/state-switch.js
+/hacsfiles/mini-graph-card/mini-graph-card-bundle.js
 ``` 
 
 *Note: notice that layout-card was not installed through HACS, layout-card is included in the release and should not be downloaded from HACS, though you must add this to your resources!
