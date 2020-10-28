@@ -9,10 +9,12 @@ Back to [Addon List](../addon_list.md)
 
 ### Description
 This is the floor selector shown on the lights and devices view. You can change the amount of floors by copy/pasting the code below.
+Experienced HA users can change this card into anything they'd like (it doesn't even need to be a floor selector!)
 
 ### Configuration
 - This addon is already preinstalled with the maximum amount of floors, change the code with the code below if you have less floors
 - If you only use 1 floor you can simply hide the floor selector in the HKI settings
+- You can find the code for the floor selector in the `user/views/floor-selector` folder
 - Please change the parameters you need to set below if you do need to change something
 
 ### Advanced
