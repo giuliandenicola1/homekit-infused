@@ -2,7 +2,7 @@ If you find any information on this page useful, feel free to buy me a coffee:
 
 <a href="https://paypal.me/JimmySchings" target="_blank"><img src="https://github.com/jimz011/homekit-infused/blob/master/docs/paypal-donate-button.png" ></a>
 <a href="https://www.buymeacoffee.com/w8Jnf6Hit" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
-## Homekit Infused (Lovelace) by Jimz011 November 2020 v3.5.1 (*updated: 28/10/2020)
+## Homekit Infused (Lovelace) by Jimz011 November 2020 v3.5.2 (*updated: 29/10/2020)
 Latest working Home Assistant version is 0.117.0 (do not update past this number for best compatibility)
 
 ### About
@@ -19,7 +19,7 @@ Homekit Infused is a project for Home Assistant that consists out of two major c
 
 ### Support Links
 #### [Click here](https://www.youtube.com/jimz011) for my YouTube channel
-#### [Click here](https://discord.gg/7yt64uX) to join our Discord Community with over 1000+ members
+#### [Click here](https://discord.gg/7yt64uX) to join our Discord Community with over 1100+ members
 #### [Click here](https://community.home-assistant.io/t/homekit-infused-hki-v0-13-3/117086/1) for my HA Community Forum Thread
 
 ### Video and screenshots
