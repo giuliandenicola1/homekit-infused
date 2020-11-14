@@ -2,7 +2,7 @@ If you find any information on this page useful, feel free to buy me a coffee:
 
 <a href="https://paypal.me/JimmySchings" target="_blank"><img src="https://github.com/jimz011/homekit-infused/blob/master/docs/paypal-donate-button.png" ></a>
 <a href="https://www.buymeacoffee.com/w8Jnf6Hit" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
-## Homekit Infused (Lovelace) by Jimz011 November 2020 v3.5.2 (*updated: 29/10/2020)
+## Homekit Infused (Lovelace) by Jimz011 November 2020 v3.5.3 (*updated: 14/11/2020)
 Latest working Home Assistant version is 0.118.x (do not update past this number for best compatibility)
 
 ### About
@@ -14,7 +14,7 @@ Homekit Infused is a project for Home Assistant that consists out of two major c
 #### [Click here](https://jimz011.github.io/homekit-infused/addons.html) for the addons documentation
 #### [Click here](https://github.com/jimz011/homekit-infused/blob/master/docs/addon_list.md) for a list of all available addons
 #### [Click here](https://github.com/jimz011/homekit-infused/releases) to download the latest release
-#### [Click here](https://github.com/jimz011/homekit-infused/tree/updates/) to download update packages
+#### [Click here](https://github.com/jimz011/homekit-infused/blob/updates/readme.md) to download update packages
 #### [Click here](https://github.com/jimz011/homekit-infused/tree/personal/) to view how my personal Home Assistant is setup (including automations and such)
 
 ### Support Links
