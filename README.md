@@ -8,4 +8,4 @@ For documentation please visit: https://jimz011.github.io/homekit-infused/framew
 
 You can also simply visit the master branch for quick links: https://github.com/jimz011/homekit-infused/
 
-
+NOTE: The automations in this example are no longer used, I recently moved all automations over to Node-Red, though ALL automations that can be found here should work as expected!
