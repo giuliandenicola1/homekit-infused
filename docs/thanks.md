@@ -43,6 +43,7 @@ All of you really, thank you. Here are a few names I want to specially thank!
   - @diondk
   - @stephan
   - @hassan
+  - @burningstone
   - @HomeAssistantAddicts Discord Group
   - @HomeAssistantNL/BE Slack group
   - @everyone I forgot to mention
