@@ -23,6 +23,7 @@ Add the following line to your lovelace resources
 ### Configuration
 - To use this you can simply change the entity and the name (which is the city name)
 - Experienced users can play with the styles or the backdrop if they want
+- For more options check the official documentation here https://github.com/kalkih/simple-weather-card
 
 ### Advanced
 
