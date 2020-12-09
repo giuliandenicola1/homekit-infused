@@ -21,6 +21,7 @@ All of you really, thank you. Here are a few names I want to specially thank!
   - @gluwc
   - @maykar
   - @robbiet480
+  - @philhawthorne
   - @ljmerza
   - @iantrich
   - @kalkih
