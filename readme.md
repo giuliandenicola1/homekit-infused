@@ -9,6 +9,8 @@ If you find any information on this page useful, feel free to buy me a coffee:
 ### About
 Homekit Infused is a project for Home Assistant that consists out of two major components, the framework and the addons. The framework can be run standalone and will not require any of the addons to be installed. This is useful for people that just want the header/footer and the menu that is present in HKI. To get the most out of this project it is recommended that you have at least the very basic knowledge of how Home Assistant and Lovelace works.
 
+*Note: None of the custom-cards used in this project are made by me and every custom-card used has a reference to their original creators as well as the original link to their repo's. All contributors/donators and people that gave me the inspiration are mentioned in the docs on the last page!
+
 ### Quick Links
 #### [Click here](https://jimz011.github.io/homekit-infused/) for the full documentation
 #### [Click here](https://jimz011.github.io/homekit-infused/framework.html) for the framework documentation
