@@ -39,8 +39,6 @@ climate.living_room:
 | lock | no | false | Sets a lock on the button to avoid accidental presses (unlocking is done by a single tap) |
 | columns | no | 3 | Sets the number of images stacked horizontally |
 | sort | no | name | Sorts the cards in a different order, choose from: domain, entity_id, name, state, attribute, last_changed last_updated or last_triggered |
-| ambient_entity | no | this.entity_id | Sets the ambient temperature sensor, this can be handy when using e.g. Tado which doesn't always reflect the correct room temperature. This settings lets you set a different entity as the ambient sensor |
-| attributes | no | attributes.current_temperature / state | This can be used to change the attribute name or to use the state instead. You need to use this if your entity uses a different attribute or a different state. When you only need a state use `state` if you need to use an attribute always start with `attribute.` e.g. `attribute.temperature` |
 
 ### Install
 - Create a new file inside the folder of the view you want (e.g. /homekit-infused/user/views/climate/), you can name the file however you want (e.g. thermostat-card.yaml)
@@ -53,4 +51,3 @@ climate.living_room:
     columns: 3
     sort: name
 ```
-
