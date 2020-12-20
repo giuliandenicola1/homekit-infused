@@ -42,6 +42,7 @@ The addons on this page are ready to use cards and will only require a copy/past
   - [Single Homekit Button](addons/custom-button.md) (fully customizable)
   - [Single Homekit Button](addons/button-navigation.md) (navigation)
   - [Single Homekit Button](addons/button-light-switch.md) (light, switch or sensor)
+  - [Single Homekit Button](addons/button-thermostat.md) (thermostat)
   
 #### Calendar
   - [Calendar Card](addons/calendar-card.md)
