@@ -4,7 +4,7 @@ Back to [Addon List](../addon_list.md)
 
 # Button (Thermostat)
 
-![Homekit Infused](../images/thermostat-button.png)
+![Homekit Infused](../images/thermostat-card.png)
 ![Homekit Infused](../images/thermostat-popup.png)
  
 ### Description
