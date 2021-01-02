@@ -30,6 +30,6 @@ To update the HKI framework you can simply download the update pacakage from her
 
 *NOTE: check the release notes for additional things to do, in most cases this is not necessary, but sometimes it is! Failing to do so might break your setup!
 
-## Current Version 
-[Current Version](version.html)
-
+## Versions (these are always up to date and are used as sensors within Home Assistant)
+[Current HKI Version](version.html)
+[Latest Compatible HA Version](compatible_version.html)
