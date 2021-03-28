@@ -22,7 +22,7 @@ Homekit Infused is a project for Home Assistant that consists out of two major c
 
 ### Support Links
 #### [Click here](https://www.youtube.com/jimz011) for my YouTube channel
-#### [Click here](https://discord.gg/7yt64uX) to join our Discord Community with over 1100+ members
+#### [Click here](https://discord.gg/7yt64uX) to join our Discord Community with over 1500+ members
 #### [Click here](https://community.home-assistant.io/t/homekit-infused-hki-v0-13-3/117086/1) for my HA Community Forum Thread
 
 ### Video and screenshots
