@@ -6,7 +6,7 @@ Back to [Addon List](../addon_list.md)
 ![Homekit Infused](../images/header-sensor-icons.png)
 
 ### Description
-These are the header sensor icons, they can be adjusted but the changes won't be persistent. This documentation shows you how to change the sensors to something else and how to add more.
+These are the header sensor icons, they can be adjusted but the changes won't be persistent. This documentation shows you how to change the sensors to something else and how to add more. This change will unfortunately NOT be persistent. It will be overwritten in any update that has changes to this header template file. If you edit this (beyond the default settings) then I will suggest keeping a backup of this file at all times.
 
 ### Configuration
 - To use this you can simply comment/uncomment the code you want to use
@@ -26,8 +26,10 @@ These are the header sensor icons, they can be adjusted but the changes won't be
 To change the header sensors you must open the following file `/homekit-infused/base/templates/header/header-base-template.yaml`
 You can find out which sensors are included by default in HKI, if you did the initial HKI setup correctly you should have most of these working for you already! Please check out more information [HERE](device_counters.md)
 
+You can safely comment out the icons you don't want/need/use and/or add more yourself in a way described below.
+
 ```
-# Default
+# Default (3 icons)
 - !include
   - '../../templates/header/sensor-icons.yaml'
   - icon: mdi:door
@@ -49,7 +51,7 @@ You can find out which sensors are included by default in HKI, if you did the in
     entity: group.all_motion_sensor_entities
 ```
 ```
-# For Large Screens
+# For Large Screens (5 icons)
 - !include
   - '../../templates/header/sensor-icons.yaml'
   - icon: mdi:door
