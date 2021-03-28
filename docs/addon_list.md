@@ -73,6 +73,7 @@ The addons on this page are ready to use cards and will only require a copy/past
   - [Empty Button](addons/empty-button.md)
   - [Floor Selector](addons/floor-selector.md)
   - [Gaps](addons/gap-card.md)
+  - [Header Sensor Icons](addons/header-sensor-icons.md)
   - [Title Text](addons/title-text-card.md)
   
 #### Vacuum
