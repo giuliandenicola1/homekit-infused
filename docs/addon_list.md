@@ -13,7 +13,7 @@
 - [Addon List](https://github.com/jimz011/homekit-infused/blob/master/docs/addon_list.md)
 
 # Addon List
-*Updated 29/03/2021
+*Updated 03/04/2021
 
 ### Select an addon below, each addon has an image and documentation on how to install.
 *note: the addons on this page are specifically written to work with the HKI 3.x.x framework, however many of the addon's code can be used in any lovelace setup. If you don't see any includes in the code you can safely assume that it will work for your own setup. 
@@ -73,6 +73,7 @@ The addons on this page are ready to use cards and will only require a copy/past
   - [Empty Button](addons/empty-button.md)
   - [Floor Selector](addons/floor-selector.md)
   - [Gaps](addons/gap-card.md)
+  - [Footer](addons/footer.md) *NEW
   - [Header Sensor Icons](addons/header-sensor-icons.md) *NEW
   - [Title Text](addons/title-text-card.md)
   
