@@ -44,7 +44,6 @@ Below is a list of all the addons required to run the framework, you can install
 | [Swipe Card](https://github.com/bramkragten/swipe-card) | Frontend | This card is needed for the scrolling notifications, but also for most popups |
 | [Browser Mod](https://github.com/thomasloven/hass-browser_mod) | Integration | Browser-mod makes the browser more useful and gives us the opportunity to show/create custom popups and many more! |
 | [Lovelace Gen](https://github.com/thomasloven/hass-lovelace_gen) | Integration | This is the MOST important piece of the setup, without this HKI will not work! Don't add this to your `configuration.yaml` file as the included package already does so for you, if you already have `lovelace_gen:` in your `configuration.yaml` please remove or comment that line! |
-| [Kiosk Mode](https://github.com/maykar/kiosk-mode) | Frontend | This mod brings back basic functionally from the deprecated custom_header addon. This will hide the header without the need of resorting to hardcoding it inside of the themes with card-mod and makes for a better experience when used in conjunction with other dashboards. |
 
 *Note: Do NOT install layout-card, install the one packaged with HKI!!!! 
 
@@ -64,7 +63,6 @@ Add the following resources, nowadays HACS can add resources for you don't add t
 /hacsfiles/swipe-card/swipe-card.js
 /hacsfiles/lovelace-state-switch/state-switch.js
 /hacsfiles/mini-graph-card/mini-graph-card-bundle.js
-/hacsfiles/kiosk-mode/kiosk-mode.js
 ``` 
 
 *Note: notice that layout-card was not installed through HACS, layout-card is included in the release and should not be downloaded from HACS, though you must add this to your resources!
